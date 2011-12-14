@@ -1,0 +1,18 @@
+
+/*!
+Theme Name: RVB
+Template: synack-wpbp
+Author: Fredrik Broman
+Author URI: http://syn-ack.se/
+Description: Custom theme for Räddningstjänsten Västra Blekinge.
+*/
+
+
+// Parent theme resources
+@import url("../synack-wpbp/style.css");
+@import url("../synack-wpbp/sass/partials/utils");
+@import url("../synack-wpbp/sass/partials/components");
+
+// Layout
+@import "partials/page";
+@import "partials/media";
