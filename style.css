@@ -4,4 +4,4 @@ Template: synack-wpbp
 Author: Fredrik Broman
 Author URI: http://syn-ack.se/
 Description: Custom theme for Räddningstjänsten Västra Blekinge.
-*/@import url("../synack-wpbp/style.css");@import url("../synack-wpbp/sass/partials/utils");@import url("../synack-wpbp/sass/partials/components");body{padding:0 10px}#container{background:rgba(0,0,255,0.1);margin:0 auto;max-width:1378px;min-width:978px}html.lt-ie7 #container{width:978px}@media screen and (max-width: 748px){#container{background:rgba(0,128,0,0.1);margin:0 auto;max-width:460px;min-width:300px}}
+*/@import url("../synack-wpbp/style.css");@import url("../synack-wpbp/sass/partials/utils");@import url("../synack-wpbp/sass/partials/components");body{font:13px/1.231 Helvetica Neue, Arial, Liberation Sans, FreeSans, sans-serif}body{padding:0 10px}#container{background:rgba(0,0,255,0.1);margin:0 auto;max-width:1378px;min-width:978px}html.lt-ie7 #container{width:978px}@media screen and (max-width: 748px){#container{background:rgba(0,128,0,0.1);margin:0 auto;max-width:460px;min-width:300px}}

@@ -1,5 +1,12 @@
 
 /*
+ * Typography
+ */
+body {
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+/*
  * Main layout boundaries
  * Sizes inpired by http://978.gs
  */
