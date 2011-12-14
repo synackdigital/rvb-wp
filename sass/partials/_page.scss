@@ -1,6 +1,18 @@
+
+/*
+ * Main layout boundaries
+ * Sizes inpired by http://978.gs
+ */
+body {
+  padding: 0 10px;
+}
 #container {
   background: rgba( blue, .1 );
   margin: 0 auto;
   max-width: 1378px;
   min-width: 978px;
+  html.lt-ie7 & {
+    // Fixed size in IE<7
+    width: 978px;
+  }
 }
