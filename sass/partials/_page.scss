@@ -23,3 +23,12 @@ body {
     width: 978px;
   }
 }
+
+/*
+ * Image replacements
+ */
+#header {
+  .site-title {
+    @include replace-linked-text( image-url( 'rvblogo-png' ) );
+  }
+}
