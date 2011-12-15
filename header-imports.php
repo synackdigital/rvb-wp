@@ -4,7 +4,7 @@
  * Create your own header-imports.php to override these imports with your own
  *
  * @package WordPress
- * @subpackage SYNACK
+ * @subpackage RVB
  */
 
 // Scripts are concatenated, minified and placed after the content to speed up page loading

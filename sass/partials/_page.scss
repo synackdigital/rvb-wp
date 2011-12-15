@@ -29,6 +29,6 @@ body {
  */
 #header {
   .site-title {
-    @include replace-linked-text( image-url( 'rvblogo-png' ) );
+    @include replace-linked-text( 'rvblogo.png' );
   }
 }
