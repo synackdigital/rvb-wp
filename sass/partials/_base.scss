@@ -1,5 +1,14 @@
 
-$base-font-family:  unquote('Helvetica Neue, Arial, Liberation Sans, FreeSans, sans-serif');
-
+/*
+ * Typography
+ */
+$base-font-family:  unquote('Segoe UI, Segoe, Tahoma, Geneva, Liberation Sans, FreeSans, sans-serif');
 $base-font-size:    13px;
 $base-line-height:  1.231;
+
+/*
+ * Colors
+ */
+$body-bg-color:     #eee;
+$bg-color:          #fff;
+$text-color:        #444;
