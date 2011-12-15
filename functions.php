@@ -33,22 +33,13 @@ add_action( 'after_setup_theme', 'rvb_setup' );
  */
 function rvb_widgets_init() {
   register_sidebar( array(
-    'name' => __( 'Main Sidebar', 'synack' ),
-    'id' => 'sidebar-main',
-    'description' => __( 'The main sidebar is displayed on all posts and pages', 'synack' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => "</aside>",
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
-  ) );
-  register_sidebar( array(
-    'name' => __( 'Footer Sidebar', 'synack' ),
-    'id' => 'sidebar-footer',
-    'description' => __( 'The footer sidebar is displayed on all posts and pages', 'synack' ),
+    'name' => __( 'Header Sidebar', 'rvb' ),
+    'id' => 'sidebar-header',
+    'description' => __( 'The header sidebar is displayed above the navigation on all posts and pages', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',
     'after_title' => '</h2>',
   ) );
 }
-add_action( 'widgets_init', 'synack_widgets_init' );
+add_action( 'widgets_init', 'rvb_widgets_init' );

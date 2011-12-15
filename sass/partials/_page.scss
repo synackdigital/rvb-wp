@@ -27,6 +27,10 @@ body {
     margin-left: $base-hmargin;
   }
 }
+#meta {
+  float: right;
+  margin-right: $base-hmargin;
+}
 #access {
   clear: both;
   ul {

@@ -33,5 +33,5 @@ $desktop-minwidth:        300px;
 $mobile-maxwidth:         480px;
 $mobile-minwidth:         320px;
 
-$content-safewidth:       $mobile-minwidth - 2 * $base-hmargin; // this is the smallest width for content on mobile devices
+$content-safewidth:       $mobile-minwidth - 2 * $base-hmargin; // this is the smallest possible content width
 
