@@ -1,10 +1,26 @@
 
+/**
+ * Pixel ratio adjustments
+ */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  #header {
+    .site-title {
+      @include background-size( auto 100% );
+      background-image: image-url( 'rvblogo-2x.png' );
+    }
+  }
+}
+
+
+/**
+ * Size adjustments
+ */
+
 /* Mobile devices less than 749px wide get the mobile layout */
 @media screen and (max-width: 748px) {
 
   // Main layout boundaries
   #container {
-    background: rgba( green, .1 );
     margin: 0 auto;
     max-width: 460px;
     min-width: 300px;

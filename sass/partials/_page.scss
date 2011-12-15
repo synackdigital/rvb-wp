@@ -1,12 +1,5 @@
 
 /*
- * Typography
- */
-body {
-  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-}
-
-/*
  * Main layout boundaries
  * Sizes inpired by http://978.gs
  */
@@ -14,13 +7,42 @@ body {
   padding: 0 10px;
 }
 #container {
-  background: rgba( blue, .1 );
-  margin: 0 auto;
+  margin: 10px auto;
   max-width: 1378px;
   min-width: 978px;
   html.lt-ie7 & {
     // Fixed size in IE<7
     width: 978px;
+  }
+}
+#header {
+  padding-top: 10px; // safest way to push content down
+  .site-title {
+
+  }
+}
+
+/*
+ * Typography
+ */
+body {
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+/*
+ * Colors
+ */
+body {
+  background: $body-bg-color;
+  color: $text-color;
+}
+#container {
+  background: $bg-color;
+}
+#access {
+  .menu {
+    background: $text-color;
+    color: $bg-color;
   }
 }
 
