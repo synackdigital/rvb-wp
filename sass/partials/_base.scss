@@ -2,13 +2,26 @@
 /*
  * Typography
  */
-$base-font-family:  unquote('Segoe UI, Segoe, Tahoma, Geneva, Liberation Sans, FreeSans, sans-serif');
-$base-font-size:    13px;
-$base-line-height:  1.231;
+$base-font-family:        unquote('Segoe UI, Segoe, Tahoma, Geneva, Liberation Sans, FreeSans, sans-serif');
+$base-font-size:          13px;
+$base-line-height:        1.231;
 
 /*
  * Colors
  */
-$body-bg-color:     #eee;
-$bg-color:          #fff;
-$text-color:        #444;
+$body-bg-color:           #eee;
+$bg-color:                #fff;
+$text-color:              #444;
+$decor-color:             #c30;
+$decor-contrast-color:    white;
+$link-color:              #f63;
+$link-hover-color:        $decor-color;
+$link-active-color:       $link-hover-color;
+$link-visited-color:      $link-color;
+$link-focus-color:        $link-active-color;
+
+/*
+ * Measurements
+ */
+$base-hmargin:            20px;
+$base-vmargin:            10px;

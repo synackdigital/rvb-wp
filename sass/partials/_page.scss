@@ -4,10 +4,10 @@
  * Sizes inpired by http://978.gs
  */
 body {
-  padding: 0 10px;
+  padding: 0 $base-hmargin;
 }
 #container {
-  margin: 10px auto;
+  margin: $base-vmargin auto;
   max-width: 1378px;
   min-width: 978px;
   html.lt-ie7 & {
@@ -15,11 +15,38 @@ body {
     width: 978px;
   }
 }
-#header {
-  padding-top: 10px; // safest way to push content down
-  .site-title {
 
+/*
+ * Header and main navigation
+ */
+#header {
+  padding-top: $base-vmargin; // safest way to push content down
+  .site-title {
+    float: left;
+    margin-bottom: $base-vmargin;
+    margin-left: $base-hmargin;
   }
+}
+#access {
+  clear: both;
+  ul {
+    @include clearfix;
+  }
+  li {
+    @include inline-block;
+    float: left;
+  }
+  a {
+    display: block;
+    padding: $base-vmargin $base-hmargin;
+  }
+}
+
+/*
+ * Main content
+*/
+#main {
+  padding: $base-vmargin $base-hmargin;
 }
 
 /*
@@ -36,6 +63,11 @@ body {
   background: $body-bg-color;
   color: $text-color;
 }
+a {
+  @include hover-link;
+  @include link-colors( $link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color );
+  @include single-transition( color );
+}
 #container {
   background: $bg-color;
 }
@@ -43,6 +75,16 @@ body {
   .menu {
     background: $text-color;
     color: $bg-color;
+    a {
+      @include unstyled-link;
+    }
+  }
+}
+#footer {
+  background: $decor-color;
+  color: $decor-contrast-color;
+  a {
+    @include unstyled-link;
   }
 }
 
