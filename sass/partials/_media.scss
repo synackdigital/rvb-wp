@@ -17,7 +17,7 @@
  */
 
 /* Mobile devices less than 749px wide get the mobile layout */
-@media screen and (max-width: 748px) {
+@media screen and ( max-width: 748px ) {
 
   // Main layout boundaries
   body {
@@ -25,8 +25,19 @@
   }
   #container {
     margin: 0 auto;
-    max-width: 460px;
-    min-width: 300px;
+    max-width: $mobile-maxwidth;
+    min-width: $mobile-minwidth;
+  }
+
+  // Main content
+  #main {
+    input, textarea {
+      @include box-sizing( border-box );
+      display: block;
+      width: 100%;
+      padding-left: $base-hmargin;
+      padding-right: $base-hmargin;
+    }
   }
 
 } // max-width: 748px
