@@ -10,14 +10,6 @@ require_once get_template_directory() . '/inc/jw_custom_posts.php';
 
 
 /**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) )
-  $content_width = 584;
-
-
-if ( ! function_exists( 'rvb_setup' ) ):
-/**
  * Sets up theme defaults and registers support for various WordPress features.
  */
 function rvb_setup() {
@@ -30,7 +22,33 @@ function rvb_setup() {
       load_textdomain('rvb', $mofile);
   }
 
-  // Add default posts and comments RSS feed links to <head>.
-  add_theme_support( 'automatic-feed-links' );
+  // Except for the main menu, this theme uses wp_nav_menu() in two other locations.
+  register_nav_menu( 'footer', __( 'Footer Menu', 'rvb' ) );
 }
-endif; // rvb_setup
+add_action( 'after_setup_theme', 'rvb_setup' );
+
+
+/**
+ * Register our sidebars and widgetized areas.
+ */
+function rvb_widgets_init() {
+  register_sidebar( array(
+    'name' => __( 'Main Sidebar', 'synack' ),
+    'id' => 'sidebar-main',
+    'description' => __( 'The main sidebar is displayed on all posts and pages', 'synack' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => "</aside>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name' => __( 'Footer Sidebar', 'synack' ),
+    'id' => 'sidebar-footer',
+    'description' => __( 'The footer sidebar is displayed on all posts and pages', 'synack' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => "</aside>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'synack_widgets_init' );
