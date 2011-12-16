@@ -17,6 +17,10 @@ var rvb = {
       // Bind click event to the search field toggle link in the main navigation
       metaSidebarToggleLink.on('click', 'a', function() {
         metaSidebar.toggleClass('js-visible');
+        // Auto-focus on search field
+        if (metaSidebar.hasClass('js-visible')) {
+          metaSidebar.find('input.field.search').focus();
+        }
       });
     }
   },
