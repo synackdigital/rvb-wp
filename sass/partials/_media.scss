@@ -29,6 +29,12 @@
     min-width: $mobile-minwidth;
   }
 
+  // Forms
+  input, label {
+    display: block;
+    width: $content-minwidth;
+  }
+
   // Header and main navigation
   #header {
     .site-title {
