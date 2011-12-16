@@ -3,15 +3,32 @@
 var rvb = {
   init: function() {
     console.log('rvb init');
+    
+    var mainNavigation = jQuery('#access');
+        metaSidebar = jQuery('#meta');
+        metaSidebarToggleLink = mainNavigation.find('li.menu-item-type-search');
+    
     if(Modernizr.touch) {
       // Scroll away iOS browser chrome
       rvb.scrollToTop();
+    }
+    
+    if(metaSidebar && metaSidebarToggleLink) {
+      // Bind click event to the search field toggle link in the main navigation
+      metaSidebarToggleLink.on('click', 'a', function() {
+        metaSidebar.toggleClass('js-visible');
+      });
     }
   },
   scrollToTop: function() {
     setTimeout(function(){
       window.scrollTo(0, 1);
     }, 0);
+  },
+  toggleMetaSidebar: function() {
+    $('#meta').toggle('slow', function() {
+      console.log('meta sidebar was toggled');
+    });
   }
 };
 

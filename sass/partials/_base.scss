@@ -9,7 +9,7 @@ $base-line-height:        1.231;
 /*
  * Colors
  */
-$body-bg-color:           #eee;
+$bg-tint:           #eee;
 $bg-color:                #fff;
 $text-color:              #444;
 $decor-color:             #c30;
@@ -33,5 +33,5 @@ $desktop-minwidth:        300px;
 $mobile-maxwidth:         480px;
 $mobile-minwidth:         320px;
 
-$content-safewidth:       $mobile-minwidth - 2 * $base-hmargin; // this is the smallest possible content width
+$content-minwidth:        $mobile-minwidth - 2 * $base-hmargin; // this is the smallest possible content width
 

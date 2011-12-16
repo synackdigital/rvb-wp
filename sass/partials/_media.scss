@@ -29,15 +29,52 @@
     min-width: $mobile-minwidth;
   }
 
+  // Forms
+  input, textarea {
+    margin: .5 * $base-vmargin auto;
+  }
+
+  // Header and main navigation
+  #header {
+    .site-title {
+      float: none;
+      margin-left: $base-vmargin;
+      html.cssgradients & {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  #meta {
+    // Hide the meta sidebar if js is enabled
+    html.js & {
+      display: none;
+      visibility: hidden;
+      &.js-visible {
+        display: inherit;
+        visibility: visible;
+      }
+    }
+  }
+  #access {
+    li {
+      // Show the static search menu if js is enabled
+      &.menu-item-type-search {
+        html.js & {
+          display: inherit;
+          visibility: visible;
+        }
+      }
+    }
+    a {
+      display: block;
+      padding: $base-vmargin $base-hmargin;
+    }
+  }
+
   // Main content
   #main {
-    input, textarea {
-      @include box-sizing( border-box );
-      display: block;
-      width: 100%;
-      padding-left: $base-hmargin;
-      padding-right: $base-hmargin;
-    }
   }
 
 } // max-width: 748px

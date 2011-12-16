@@ -7,7 +7,7 @@ body {
   padding: 0 $base-hmargin;
 }
 #container {
-  margin: $base-vmargin auto;
+  margin: 0 auto;
   max-width: 1378px;
   min-width: 978px;
   html.lt-ie7 & {
@@ -25,11 +25,17 @@ body {
     float: left;
     margin-bottom: $base-vmargin;
     margin-left: $base-hmargin;
+    html.cssgradients & {
+      margin-left: 0; // white area at the top of body bg gradient removes the need for a margin
+    }
   }
 }
 #meta {
   float: right;
   margin-right: $base-hmargin;
+  html.cssgradients & {
+    margin-right: 0; // white area at the top of body bg gradient removes the need for a margin
+  }
 }
 #access {
   clear: both;
@@ -39,6 +45,11 @@ body {
   li {
     @include inline-block;
     float: left;
+    // Hide the static search menu item by default
+    &.menu-item-type-search {
+      display: none;
+      visibility: hidden;
+    }
   }
   a {
     display: block;
@@ -63,9 +74,16 @@ body {
 /*
  * Colors
  */
-body {
-  background: $body-bg-color;
+html {
+  background-color: $bg-tint;
   color: $text-color;
+}
+body {
+  $bg-gradient-offset: image-height( 'rvblogo.png' ) + 2 * $base-vmargin;
+  html.cssgradients & {
+    @include background-image( linear-gradient( top, $bg-color $bg-gradient-offset, $bg-tint ) );
+    background-position: static;
+  }
 }
 a {
   @include hover-link;
