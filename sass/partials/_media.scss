@@ -58,7 +58,10 @@
     }
   }
   #access {
+    background-image: image-url( 'nav-bg.png' ); // Contains line that separates several rows of items
+    text-align: center;
     li {
+      width: 33.3333%; // Three menu items per row for mobile view
       // Show the static search menu if js is enabled
       &.menu-item-type-search {
         html.js & {

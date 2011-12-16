@@ -94,10 +94,8 @@ a {
   background: $bg-color;
 }
 #access {
-  .menu {
-    background: $text-color;
-    color: $bg-color;
-  }
+  background: $text-color;
+  color: $bg-color;
   .menu-item {
     a {
       @include unstyled-link;
