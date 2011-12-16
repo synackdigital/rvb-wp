@@ -1,1 +1,1 @@
-
+var rvb={init:function(){console.log("rvb init");Modernizr.touch&&rvb.scrollToTop()},scrollToTop:function(){setTimeout(function(){window.scrollTo(0,1)},0)}};jQuery(document).ready(function(){console.log("document ready");rvb.init()});
