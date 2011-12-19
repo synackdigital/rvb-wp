@@ -8,8 +8,8 @@ body {
 }
 #container {
   margin: 0 auto;
-  max-width: 1378px;
-  min-width: 978px;
+  max-width: $base-maxwidth;
+  min-width: $base-minwidth;
   html.lt-ie7 & {
     // Fixed size in IE<7
     width: 978px;
@@ -59,9 +59,44 @@ body {
 
 /*
  * Main content
-*/
+ */
 #main {
+  @include clearfix;
+  padding: 2 * $base-vmargin 0;
+}
+#primary {
+  @include box-sizing( border-box );
+  float: left;
   padding: $base-vmargin $base-hmargin;
+  width: 100% - $sidebar-width;
+}
+
+/*
+ * Asides and child navigation
+ */
+#main .sidebar {
+  float: right;
+  width: $sidebar-width;
+  .nav {
+    margin-bottom: $base-vmargin;
+    padding: $base-vmargin 0;
+    li {
+      padding: .5 * $base-vmargin $base-hmargin;
+      &.current-page-item {
+        background: image-url( 'childnav-indicator.png' ) center left no-repeat;
+      }
+    }
+  }
+  .widget-area {
+    .widget {
+      margin-bottom: $base-vmargin;
+      padding: $base-vmargin $base-hmargin;
+    }
+  }
+}
+// Main sidebar always clears previous sidebars
+#sidebar-main.sidebar {
+  clear: right;
 }
 
 /*
@@ -98,6 +133,7 @@ a {
   color: $bg-color;
   .menu-item {
     a {
+      @include hover-link;
       @include unstyled-link;
     }
     &.current-menu-item {
@@ -107,10 +143,22 @@ a {
     }
   }
 }
+#main {
+  .sidebar {
+    .nav {
+      background: $control-color;
+      a {
+        @include hover-link;
+        @include unstyled-link;
+      }
+    }
+  }
+}
 #footer {
   background: $decor-color;
   color: $decor-contrast-color;
   a {
+    @include hover-link;
     @include unstyled-link;
   }
 }

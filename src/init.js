@@ -5,6 +5,8 @@ var rvb = {
     console.log('rvb init');
     
     var mainNavigation = jQuery('#access');
+        mainContent = jQuery('#primary');
+        mainSidebars = jQuery('#main').find('.widget-area');
         metaSidebar = jQuery('#meta');
         metaSidebarToggleLink = mainNavigation.find('li.menu-item-type-search');
     

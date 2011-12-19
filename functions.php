@@ -22,7 +22,7 @@ function rvb_setup() {
       load_textdomain('rvb', $mofile);
   }
 
-  // Except for the main menu, this theme uses wp_nav_menu() in two other locations.
+  // Register menus
   register_nav_menu( 'footer', __( 'Footer Menu', 'rvb' ) );
 }
 add_action( 'after_setup_theme', 'rvb_setup' );

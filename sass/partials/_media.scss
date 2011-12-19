@@ -16,8 +16,8 @@
  * Size adjustments
  */
 
-/* Mobile devices less than 749px wide get the mobile layout */
-@media screen and ( max-width: 748px ) {
+/* Devices up to 740px get the mobile layout */
+@media screen and ( max-width: 740px ) {
 
   // Main layout boundaries
   body {
@@ -28,6 +28,43 @@
     max-width: $mobile-maxwidth;
     min-width: $mobile-minwidth;
   }
+
+  // Main content
+  #main {
+    padding: 0 0 2 * $base-vmargin 0;
+  }
+  #primary {
+    float: none;
+    width: auto;
+  }
+
+  // Asides and child navigation
+  #main .sidebar {
+    float: none;
+    width: auto;
+    .nav {
+      background-image: image-url( 'nav-bg.png' ); // Contains line that separates several rows of items
+      padding: 0;
+      text-align: center;
+      ul {
+        @include clearfix;
+      }
+      li {
+        @include inline-block;
+        float: left;
+        padding: 0;
+        width: 33.3333%; // Three menu items per row for mobile view
+      }
+      a {
+        display: block;
+        padding: $base-vmargin $base-hmargin;
+      }
+    }
+  }
+  #sidebar-main.sidebar {
+    clear: none;
+  }
+
 
   // Forms
   input, label {
@@ -84,8 +121,9 @@
     }
   }
 
-  // Main content
-  #main {
-  }
+} // max-width: 740px
 
-} // max-width: 748px
+/* Devices up to 1378px get the mobile layout */
+@media screen and ( min-width: 1378px ) {
+
+} // min-width: 1378px
