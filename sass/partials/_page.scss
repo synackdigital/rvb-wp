@@ -76,6 +76,7 @@ body {
  */
 #main .sidebar {
   float: right;
+  max-width: $sidebar-maxwidth;
   width: $sidebar-width;
   .nav {
     margin-bottom: $base-vmargin;
