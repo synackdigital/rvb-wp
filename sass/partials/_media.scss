@@ -30,9 +30,6 @@
   }
 
   // Main content
-  #main {
-    padding: 0 0 2 * $base-vmargin 0;
-  }
   #primary {
     float: none;
     width: auto;
@@ -122,8 +119,3 @@
   }
 
 } // max-width: 740px
-
-/* Devices up to 1378px get the mobile layout */
-@media screen and ( min-width: 1378px ) {
-
-} // min-width: 1378px

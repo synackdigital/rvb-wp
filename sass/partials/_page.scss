@@ -62,7 +62,6 @@ body {
  */
 #main {
   @include clearfix;
-  padding: 2 * $base-vmargin 0;
 }
 #primary {
   @include box-sizing( border-box );
