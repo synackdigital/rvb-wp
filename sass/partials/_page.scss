@@ -64,6 +64,7 @@ body {
   @include clearfix;
 }
 #primary {
+//  background: rgba(blue,.1);
   @include box-sizing( border-box );
   float: left;
   padding: $base-vmargin $base-hmargin;
@@ -74,10 +75,12 @@ body {
  * Asides and child navigation
  */
 #main .sidebar {
+//  background: rgba(blue,.1);
   float: right;
   max-width: $sidebar-maxwidth;
   width: $sidebar-width;
   .nav {
+//    background: rgba(red,.1);
     margin-bottom: $base-vmargin;
     padding: $base-vmargin 0;
     li {
@@ -88,7 +91,9 @@ body {
     }
   }
   .widget-area {
+//    background: rgba(green,.1);
     .widget {
+//      background: rgba(green,.1);
       margin-bottom: $base-vmargin;
       padding: $base-vmargin $base-hmargin;
     }
@@ -146,10 +151,12 @@ a {
 #main {
   .sidebar {
     .nav {
-      background: $control-color;
       a {
         @include hover-link;
         @include unstyled-link;
+      }
+      li {
+        border-bottom: 1px solid $control-color;
       }
     }
   }
