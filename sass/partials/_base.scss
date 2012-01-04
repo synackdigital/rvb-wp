@@ -35,7 +35,7 @@ $mobile-maxwidth:         480px;
 $mobile-minwidth:         320px;
 
 $sidebar-width:           percentage( $mobile-maxwidth / $base-maxwidth ); // ~480px @1218px total width
-$sidebar-maxwidth:       $mobile-maxwidth;
+$sidebar-maxwidth:        $mobile-maxwidth;
 
 $content-minwidth:        $mobile-minwidth - 2 * $base-hmargin; // this is the smallest possible content width
 

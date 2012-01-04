@@ -86,16 +86,7 @@ body {
     li {
       padding: .5 * $base-vmargin $base-hmargin;
       &.current-page-item {
-        background: image-url( 'childnav-indicator.png' ) center left no-repeat;
       }
-    }
-  }
-  .widget-area {
-//    background: rgba(green,.1);
-    .widget {
-//      background: rgba(green,.1);
-      margin-bottom: $base-vmargin;
-      padding: $base-vmargin $base-hmargin;
     }
   }
 }

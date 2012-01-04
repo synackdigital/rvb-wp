@@ -1,0 +1,29 @@
+
+/**
+ * Main widget styles
+ */
+#main .widget {
+  border: 1px solid $line-color;
+  margin-bottom: $base-vmargin;
+  margin-top: $base-vmargin;
+  .widget-title {
+    background: $control-color;
+    padding: $base-vmargin $base-hmargin;
+    position: relative;
+    &:after {
+      content: image-url('widget-title-indicator.png');
+      position: absolute;
+      right: $base-hmargin;
+      top: -4px; // this may need testing in various browsers
+    }
+  }
+}
+
+/**
+ * Text widgets
+ */
+.widget.widget_text {
+  .textwidget {
+    padding: 0 $base-hmargin;
+  }
+}
