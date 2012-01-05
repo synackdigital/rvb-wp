@@ -13,7 +13,7 @@
     return;
   // If we get this far, we have widgets. Let do this.
 ?>
-<div id="meta">
+<div id="sidebar-home" class="sidebar">
   <div class="widget-area" role="complementary">
     <?php dynamic_sidebar( 'sidebar-home' ); ?>
   </div><!-- .widget-area -->

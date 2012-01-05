@@ -13,10 +13,8 @@
     return;
   // If we get this far, we have widgets. Let do this.
 ?>
-<div id="meta">
-  <?php if ( is_active_sidebar( 'sidebar-header' ) ) : ?>
+<div id="sidebar-header" class="sidebar">
   <div class="widget-area" role="complementary">
     <?php dynamic_sidebar( 'sidebar-header' ); ?>
   </div><!-- .widget-area -->
-  <?php endif; ?>
 </div><!-- #meta -->
