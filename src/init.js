@@ -7,7 +7,7 @@ var rvb = {
     var mainNavigation = jQuery('#access');
         mainContent = jQuery('#primary');
         mainSidebars = jQuery('#main').find('.widget-area');
-        metaSidebar = jQuery('#meta');
+        metaSidebar = jQuery('#sidebar-header');
         metaSidebarToggleLink = mainNavigation.find('li.menu-item-type-search');
     
     if(Modernizr.touch) {
@@ -32,7 +32,7 @@ var rvb = {
     }, 0);
   },
   toggleMetaSidebar: function() {
-    $('#meta').toggle('slow', function() {
+    $('#sidebar-header').toggle('slow', function() {
       console.log('meta sidebar was toggled');
     });
   }
