@@ -57,13 +57,13 @@ add_action( 'widgets_init', 'rvb_widgets_init' );
 /**
  * Add link to toggle the search form in primary menu
  */
-function synack_search_menu_item( $nav, $args ) {
+function rvb_primary_menu_items( $nav, $args ) {
     if( $args->theme_location == 'primary' )
-        return $nav.'<li class="menu-item menu-item-type-search"><a href="#" title="'.__('Toggle search form', 'synack').'">'.__('Search', 'synack').'</a></li>';
+        return '<li class="menu-item menu-item-type-home"><a href="/" title="'.__('Return to home page', 'rvb').'">'.__('Home', 'rvb').'</a></li>'.$nav.'<li class="menu-item menu-item-type-search"><a href="#" title="'.__('Toggle search form', 'rvb').'">'.__('Search', 'rvb').'</a></li>';
 
     return $nav;
 }
-add_filter('wp_nav_menu_items','synack_search_menu_item', 10, 2);
+add_filter('wp_nav_menu_items','rvb_primary_menu_items', 10, 2);
 
 
 /**

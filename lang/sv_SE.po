@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: synack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-05 10:26+0100\n"
-"PO-Revision-Date: 2012-01-05 10:33+0100\n"
+"POT-Creation-Date: 2012-01-05 22:50+0100\n"
+"PO-Revision-Date: 2012-01-05 22:52+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -42,12 +42,28 @@ msgid "The home page sidebar is displayed next to the content on the home page"
 msgstr "Sidfältet visas bredvid innehållet på startsidan."
 
 #: ../functions.php:62
+msgid "Return to home page"
+msgstr "Återvänd till startsidan"
+
+#: ../functions.php:62
+msgid "Home"
+msgstr "Start"
+
+#: ../functions.php:62
 msgid "Toggle search form"
 msgstr "Visa eller dölj sökfältet"
 
 #: ../functions.php:62
 msgid "Search"
 msgstr "Sök"
+
+#: ../home.php:37
+msgid "Nothing Found"
+msgstr "Inget hittades"
+
+#: ../home.php:41
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Beklagar, men inget innehåll hittades i det angivna arkivet. Kanske kan en sökning hjälpa dig hitta ett relevant inlägg?"
 
 #~ msgid "Campaigns"
 #~ msgstr "Kampanjer"
