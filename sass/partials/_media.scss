@@ -41,7 +41,6 @@
     padding: 0;
     width: auto;
     .nav {
-      background-image: image-url( 'nav-bg.png' ); // Contains line that separates several rows of items
       padding: 0;
       text-align: center;
       ul {
@@ -100,7 +99,6 @@
     }
   }
   #access {
-    background-image: image-url( 'nav-bg.png' ); // Contains line that separates several rows of items
     text-align: center;
     li {
       width: 33.3333%; // Three menu items per row for mobile view

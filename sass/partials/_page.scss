@@ -1,5 +1,5 @@
 
-/*
+/**
  * Main layout boundaries
  * Sizes inpired by http://978.gs
  */
@@ -16,7 +16,7 @@ body {
   }
 }
 
-/*
+/**
  * Header and main navigation
  */
 #header {
@@ -57,7 +57,7 @@ body {
   }
 }
 
-/*
+/**
  * Main content
  */
 #main {
@@ -71,7 +71,7 @@ body {
   width: 100% - $sidebar-width;
 }
 
-/*
+/**
  * Asides and child navigation
  */
 #main .sidebar {
@@ -96,14 +96,14 @@ body {
   clear: right;
 }
 
-/*
+/**
  * Typography
  */
 body {
   font: #{$base-font-size}/#{$base-line-height} $base-font-family;
 }
 
-/*
+/**
  * Colors
  */
 html {
@@ -162,31 +162,7 @@ a {
   }
 }
 
-/*
- * Forms
- */
-input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='range'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], textarea {
-  @include border-radius( .25em );
-  @include box-sizing( border-box );
-  border: 1px solid $line-color;
-  margin: .25em auto;
-  padding: .5em;
-}
-input[type='button'], input[type='reset'], input[type='submit'] {
-  @include background-image( linear-gradient( top, lighten( $control-color, 10% ), $control-color ) );
-  @include border-radius( .25em );
-  @include box-sizing( border-box );
-  background-color: $control-color;
-  border: 1px solid $line-color;
-  color: $text-color;
-  margin: .25em auto;
-  padding: .5em;
-}
-label {
-  margin: .25em auto;
-}
-
-/*
+/**
  * Image replacements
  */
 #header {
