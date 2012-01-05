@@ -9,6 +9,22 @@
       background-image: image-url( 'rvblogo-2x.png' );
     }
   }
+  #access {
+    li {
+      &.menu-item-type-home {
+        a {
+          @include background-size( auto 50% );
+          @include replace-text-with-dimensions( 'primary-menu-home-icon-2x.png' );
+        }
+      }
+      &.menu-item-type-search {
+        a {
+          @include background-size( auto 50% );
+          @include replace-text-with-dimensions( 'primary-menu-search-icon-2x.png' );
+        }
+      }
+    }
+  }
 }
 
 
@@ -29,55 +45,12 @@
     min-width: $mobile-minwidth;
   }
 
-  // Main content
-  #primary {
-    float: none;
-    width: auto;
-  }
-
-  // Asides and child navigation
-  #main .sidebar {
-    float: none;
-    padding: 0;
-    width: auto;
-    .nav {
-      padding: 0;
-      text-align: center;
-      ul {
-        @include clearfix;
-      }
-      li {
-        @include inline-block;
-        float: left;
-        padding: 0;
-        width: 33.3333%; // Three menu items per row for mobile view
-      }
-      a {
-        display: block;
-        padding: $base-vmargin $base-hmargin;
-      }
-    }
-  }
-  #sidebar-main.sidebar {
-    clear: none;
-  }
-
-  // Forms
-  input, label {
-    display: block;
-    width: 100%;
-  }
-
   // Header and main navigation
   #header {
     .site-title {
       float: none;
-      margin-left: $base-vmargin;
-      html.cssgradients & {
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-      }
+      margin-left: auto !important; // use important to override html classes
+      margin-right: auto;
     }
   }
   #sidebar-header {
@@ -99,11 +72,18 @@
     }
   }
   #access {
-    text-align: center;
     li {
-      width: 33.3333%; // Three menu items per row for mobile view
+      // hide all but the home link and the active menu item
+      display: none;
+      visibility: hidden;
+      &.current-menu-item,
+      &.menu-item-type-home {
+        display: inherit;
+        visibility: visible;
+      }
       // Show the static search menu if js is enabled
       &.menu-item-type-search {
+        float: right;
         html.js & {
           display: inherit;
           visibility: visible;
@@ -114,6 +94,36 @@
       display: block;
       padding: $base-vmargin $base-hmargin;
     }
+  }
+
+  // Main content
+  #primary {
+    float: none;
+    width: auto;
+  }
+
+  // Asides and child navigation
+  #main .sidebar {
+    float: none;
+    padding: 0;
+    width: auto;
+    .nav {
+      padding: 0;
+      text-align: center;
+      a {
+        display: block;
+        padding: $base-vmargin $base-hmargin;
+      }
+    }
+  }
+  #sidebar-main.sidebar {
+    clear: none;
+  }
+
+  // Forms
+  input, label {
+    display: block;
+    width: 100%;
   }
 
 } // max-width: 740px
