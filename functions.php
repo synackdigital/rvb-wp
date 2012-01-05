@@ -41,6 +41,15 @@ function rvb_widgets_init() {
     'before_title' => '<h2 class="widget-title">',
     'after_title' => '</h2>',
   ) );
+  register_sidebar( array(
+    'name' => __( 'Home Page Sidebar', 'rvb' ),
+    'id' => 'sidebar-home',
+    'description' => __( 'The home page sidebar is displayed next to the content on the home page', 'rvb' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => "</aside>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
 }
 add_action( 'widgets_init', 'rvb_widgets_init' );
 
