@@ -55,7 +55,7 @@ add_action( 'widgets_init', 'rvb_widgets_init' );
 
 
 /**
- * Add link to toggle the search form in primary menu
+ * Update the primary menu with static menu items
  */
 function rvb_primary_menu_items( $nav, $args ) {
     if( $args->theme_location == 'primary' )
