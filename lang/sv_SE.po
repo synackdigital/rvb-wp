@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: synack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-31 11:59+0100\n"
-"PO-Revision-Date: 2011-10-31 11:59+0100\n"
+"POT-Creation-Date: 2012-01-05 10:21+0100\n"
+"PO-Revision-Date: 2012-01-05 10:24+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,21 +13,53 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:20
-msgid "Campaigns"
-msgstr "Kampanjer"
+#: ../content-header.php:15
+msgid "Main menu"
+msgstr "Huvudmeny"
 
-#: ../functions.php:21
-msgid "Campaign"
-msgstr "Kampanj"
+#: ../content-header.php:17
+msgid "Skip to primary content"
+msgstr "Hoppa till huvudinnehållet"
 
-#: ../functions.php:22
-msgid "Create new"
-msgstr "Skapa ny"
+#: ../functions.php:26
+msgid "Footer Menu"
+msgstr "Sidfotsmeny"
 
-#: ../functions.php:23
-msgid "Create new campaign"
-msgstr "Skapa ny kampanj"
+#: ../functions.php:36
+msgid "Header Sidebar"
+msgstr "Sidfält i sidhuvudet"
+
+#: ../functions.php:38
+msgid "The header sidebar is displayed above the navigation on all posts and pages"
+msgstr "Sidfältet visas ovanför navigeringen i sidhuvudet på alla inlägg och sidor."
+
+#: ../functions.php:45
+msgid "Home Page Sidebar"
+msgstr "Sidfält på startsidan"
+
+#: ../functions.php:47
+msgid "The home page sidebar is displayed next to the content on the home page"
+msgstr "Sidfältet visas bredvid innehållet på startsidan."
+
+#: ../functions.php:62
+msgid "Toggle search form"
+msgstr "Visa eller dölj sökfältet"
+
+#: ../functions.php:62
+msgid "Search"
+msgstr "Sök"
+
+#~ msgid "Campaigns"
+#~ msgstr "Kampanjer"
+
+#~ msgid "Campaign"
+#~ msgstr "Kampanj"
+
+#~ msgid "Create new"
+#~ msgstr "Skapa ny"
+
+#~ msgid "Create new campaign"
+#~ msgstr "Skapa ny kampanj"
 
 #~ msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
 #~ msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">säger:</span>"
