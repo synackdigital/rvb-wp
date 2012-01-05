@@ -76,8 +76,9 @@ body {
  */
 #main .sidebar {
 //  background: rgba(blue,.1);
+  @include box-sizing( border-box );
   float: right;
-  max-width: $sidebar-maxwidth;
+  padding: 0 $base-hmargin;
   width: $sidebar-width;
   .nav {
 //    background: rgba(red,.1);

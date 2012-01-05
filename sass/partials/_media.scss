@@ -38,6 +38,7 @@
   // Asides and child navigation
   #main .sidebar {
     float: none;
+    padding: 0;
     width: auto;
     .nav {
       background-image: image-url( 'nav-bg.png' ); // Contains line that separates several rows of items
@@ -62,11 +63,10 @@
     clear: none;
   }
 
-
   // Forms
   input, label {
     display: block;
-    width: $content-minwidth;
+    width: 100%;
   }
 
   // Header and main navigation
