@@ -139,8 +139,8 @@ a {
   background: $bg-color;
 }
 #access {
-  background: $text-color;
-  color: $bg-color;
+  background: $decor-color;
+  color: $decor-contrast-color;
   .menu-item {
     a {
       @include hover-link;
