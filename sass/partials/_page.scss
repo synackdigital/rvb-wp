@@ -126,7 +126,7 @@ html {
 body {
   $bg-gradient-offset: image-height( 'rvblogo.png' ) + 2 * $base-vmargin;
   html.cssgradients & {
-    @include background-image( linear-gradient( top, $bg-color $bg-gradient-offset, $bg-tint ) );
+    @include background-image( linear-gradient( top, $bg-color $bg-gradient-offset, $bg-tint ));
     background-position: static;
   }
 }
@@ -151,6 +151,9 @@ a {
         background: image-url( 'nav-indicator.png' ) top center no-repeat;
       }
     }
+  }
+  html.cssgradients & {
+    @include background-image( linear-gradient( top, lighten( $decor-color, 3% ), darken( $decor-color, 3% ) ));
   }
 }
 #main {
