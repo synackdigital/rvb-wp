@@ -124,9 +124,8 @@ html {
   color: $text-color;
 }
 body {
-  $bg-gradient-offset: image-height( 'rvblogo.png' ) + 2 * $base-vmargin;
   html.cssgradients & {
-    @include background-image( linear-gradient( top, $bg-color $bg-gradient-offset, $bg-tint ));
+    @include background-image( linear-gradient( top, $bg-color, $bg-tint ));
     background-position: static;
   }
 }
@@ -153,7 +152,7 @@ a {
     }
   }
   html.cssgradients & {
-    @include background-image( linear-gradient( top, lighten( $decor-color, 3% ), darken( $decor-color, 3% ) ));
+    @include background-image( linear-gradient( top, lighten( $decor-color, 2% ), darken( $decor-color, 2% ) ));
   }
 }
 #main {
@@ -164,7 +163,7 @@ a {
         @include unstyled-link;
       }
       li {
-        border-bottom: 1px solid $control-color;
+        border-bottom: 1px solid $widget-line-color;
       }
     }
   }

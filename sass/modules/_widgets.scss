@@ -1,32 +1,55 @@
 
-/**
- * Main widget styles
- */
-#main .widget {
-  border: 1px solid $line-color;
-  margin-bottom: $base-vmargin;
-  margin-top: $base-vmargin;
-  .widget-title {
-    background: $control-color;
-    padding: $base-vmargin $base-hmargin;
-    position: relative;
-    &:after {
-      content: image-url('widget-title-indicator.png');
-      height: image-height('widget-title-indicator.png');
-      line-height: image-height('widget-title-indicator.png');
-      position: absolute;
-      right: $base-hmargin;
-      top: -1px; // this may need testing in various browsers
-      width: image-width('widget-title-indicator.png');
+@mixin box-widget {
+  #main & {
+    border: 1px solid $widget-line-color;
+    border-top: none;
+    .widget-title {
+      background: $widget-title-bg-color;
+      color: $widget-contrast-color;
+      padding: $base-vmargin $base-hmargin;
+      position: relative;
+      &:after {
+        content: image-url('widget-title-indicator.png');
+        height: image-height('widget-title-indicator.png');
+        line-height: image-height('widget-title-indicator.png');
+        position: absolute;
+        right: $base-hmargin;
+        top: 0;
+        width: image-width('widget-title-indicator.png');
+      }
+      html.cssgradients & {
+        @include background-image( linear-gradient( top, lighten( $widget-title-bg-color, 2% ), darken( $widget-title-bg-color, 2% ) ));
+      }
     }
   }
 }
 
 /**
- * Text widgets
+ * Main widget styles
+ */
+.widget {
+  margin-bottom: $base-vmargin;
+  margin-top: $base-vmargin;
+}
+
+/**
+ * Text widget
  */
 .widget.widget_text {
-  .textwidget {
-    padding: 0 $base-hmargin;
+  @include box-widget;
+  #main & .textwidget {
+    background-color: $widget-bg-color;
+    margin: .5 * $base-hmargin;
+    padding: .5 * $base-hmargin;
+  }
+}
+
+/**
+ * Ultimate Tag Cloud Widget
+ */
+.widget.widget_utcw {
+  .widget-title {
+    display: none;
+    visibility: hidden;
   }
 }

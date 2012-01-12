@@ -9,18 +9,24 @@ $base-line-height:        1.231;
 /*
  * Colors
  */
-$bg-tint:                 #f4f1e7;
 $bg-color:                #fff;
-$text-color:              #333;
-$line-color:              #b7b09c;
-$control-color:           #e5e2d9;
+$bg-tint:                 #eaeaeb;
+$text-color:              #444;
+
+$widget-bg-color:         #f8f8f8;
+$widget-line-color:       #eaeaeb;
+$widget-title-bg-color:   #747476;
+$widget-contrast-color:   white;
+
 $decor-color:             #cc071e;
 $decor-contrast-color:    white;
+
 $link-color:              #fe5000;
 $link-hover-color:        $decor-color;
 $link-active-color:       $link-hover-color;
 $link-visited-color:      $link-color;
 $link-focus-color:        $link-active-color;
+$link-contrast-color:     white;
 
 /*
  * Measurements
