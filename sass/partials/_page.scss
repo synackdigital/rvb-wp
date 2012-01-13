@@ -104,6 +104,33 @@ a {
   padding: $base-vmargin $base-hmargin;
   width: 100% - $sidebar-width;
 }
+#content {
+  .entry-title {
+    font-weight: bold;
+    a {
+      @include hover-link;
+      @include unstyled-link;
+    }
+  }
+  // home page posts
+  body.home & {
+    .entry-title {
+      font-size: $subhead-font-size;
+    }
+  }
+  // single pages
+  body.page & {
+    .entry-title {
+      font-size: $head-font-size;
+    }
+  }
+  // single posts
+  body.single & {
+    .entry-title {
+      font-size: $head-font-size;
+    }
+  }
+}
 
 /**
  * Asides and child navigation
