@@ -41,7 +41,8 @@ a {
  * Header and main navigation
  */
 #header {
-  padding: $base-vmargin 0; // safest way to push content down
+  border: 1px solid blue;
+  padding: $base-vmargin 0;
   .site-title {
     @include replace-linked-text( 'rvblogo.png' );
     float: left;
