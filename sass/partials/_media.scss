@@ -10,17 +10,28 @@
     }
   }
   #access {
-    li {
-      &.menu-item-type-home {
-        a {
-          @include background-size( auto 50% );
-          @include replace-text-with-dimensions( 'primary-menu-home-icon-2x.png' );
+    .menu {
+      .menu-item {
+        &.current-menu-item {
+          a {
+            background-image: image-url( 'nav-indicator-2x.png' );
+          }
         }
-      }
-      &.menu-item-type-search {
-        a {
-          @include background-size( auto 50% );
-          @include replace-text-with-dimensions( 'primary-menu-search-icon-2x.png' );
+        // replace the home menu item with an icon
+        &.menu-item-type-home {
+          a {
+            @include background-size( auto 50% );
+            @include replace-text-with-dimensions( 'primary-menu-home-icon-2x.png' );
+          }
+        }
+        // hide the static search menu item by default and replace the text with an icon
+        &.menu-item-type-search {
+          display: none;
+          visibility: hidden;
+          a {
+            @include background-size( auto 50% );
+            @include replace-text-with-dimensions( 'primary-menu-search-icon-2x.png' );
+          }
         }
       }
     }
@@ -35,21 +46,37 @@
 /* Devices up to 740px get the mobile layout */
 @media screen and ( max-width: 740px ) {
 
-  // Main layout boundaries
+  /**
+   * Main styles
+   */
   body {
+    background-image: none;
+    font-size: $base-font-size * 1.2;
     padding: 0;
   }
+  input, label {
+    display: block;
+    width: 100%;
+  }
+
+  /**
+   * Main layout containers
+   * Sizes inpired by http://978.gs
+   */
   #container {
     margin: 0 auto;
     max-width: $mobile-maxwidth;
     min-width: $mobile-minwidth;
   }
 
-  // Header and main navigation
+  /**
+   * Header and main navigation
+   */
   #header {
+    padding-bottom: 0;
     .site-title {
       float: none;
-      margin-left: auto !important; // use important to override html classes
+      margin-left: auto;
       margin-right: auto;
     }
   }
@@ -72,58 +99,64 @@
     }
   }
   #access {
-    li {
-      // hide all but the home link and the active menu item
-      display: none;
-      visibility: hidden;
-      &.current-menu-item,
-      &.menu-item-type-home {
-        display: inherit;
-        visibility: visible;
-      }
-      // Show the static search menu if js is enabled
-      &.menu-item-type-search {
-        float: right;
-        html.js & {
+    .menu {
+      .menu-item {
+        display: none;
+        visibility: hidden;
+        &.current-menu-item {
           display: inherit;
           visibility: visible;
         }
+        // show the home menu item
+        &.menu-item-type-home {
+          border-left: 1px solid darken( $decor-color, 5% );
+          display: inherit;
+          float: right;
+          visibility: visible;
+        }
+        // show the static search menu item if js is enabled
+        &.menu-item-type-search {
+          html.js & {
+            border-left: 1px solid darken( $decor-color, 5% );
+            display: inherit;
+            float: right;
+            visibility: visible;
+          }
+        }
       }
-    }
-    a {
-      display: block;
-      padding: $base-vmargin $base-hmargin;
     }
   }
 
-  // Main content
+  /**
+   * Primary content
+   */
   #primary {
     float: none;
     width: auto;
   }
 
-  // Asides and child navigation
+  /**
+   * Asides and child navigation
+   */
   #main .sidebar {
     float: none;
     padding: 0;
     width: auto;
     .nav {
-      padding: 0;
-      text-align: center;
-      a {
-        display: block;
-        padding: $base-vmargin $base-hmargin;
+      .menu {
+        .page_item {
+          display: none;
+          visibility: hidden;
+          &:first-child {
+            display: inherit;
+            visibility: visible;
+          }
+        }
       }
     }
   }
-  #sidebar-main.sidebar {
-    clear: none;
-  }
 
-  // Forms
-  input, label {
-    display: block;
-    width: 100%;
-  }
-
+  /**
+   * Footer
+   */
 } // max-width: 740px

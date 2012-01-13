@@ -1,129 +1,14 @@
 
 /**
- * Main layout boundaries
- * Sizes inpired by http://978.gs
- */
-body {
-  padding: 0 $base-hmargin;
-}
-#container {
-  margin: 0 auto;
-  max-width: $base-maxwidth;
-  min-width: $base-minwidth;
-  html.lt-ie7 & {
-    // Fixed size in IE<7
-    width: 978px;
-  }
-}
-
-/**
- * Header and main navigation
- */
-#header {
-  padding-top: $base-vmargin; // safest way to push content down
-  .site-title {
-    float: left;
-    margin-bottom: $base-vmargin;
-    margin-left: $base-hmargin;
-    html.cssgradients & {
-      margin-left: 0; // white area at the top of body bg gradient removes the need for a margin
-    }
-  }
-}
-#sidebar-header {
-  float: right;
-  margin-right: $base-hmargin;
-  html.cssgradients & {
-    margin-right: 0; // white area at the top of body bg gradient removes the need for a margin
-  }
-}
-#access {
-  clear: both;
-  ul {
-    @include clearfix;
-  }
-  li {
-    @include inline-block;
-    float: left;
-    // home menu item icon controls menu height
-    a {
-      line-height: image-height( 'primary-menu-home-icon.png' );
-    }
-    // replace the home menu item with an icon
-    &.menu-item-type-home {
-      a {
-        @include replace-text-with-dimensions( 'primary-menu-home-icon.png' );
-      }
-    }
-    // hide the static search menu item by default
-    &.menu-item-type-search {
-      display: none;
-      visibility: hidden;
-      a {
-        @include replace-text-with-dimensions( 'primary-menu-search-icon.png' );
-      }
-    }
-  }
-  a {
-    display: block;
-    padding: $base-vmargin $base-hmargin;
-  }
-}
-
-/**
- * Main content
- */
-#main {
-  @include clearfix;
-}
-#primary {
-//  background: rgba(blue,.1);
-  @include box-sizing( border-box );
-  float: left;
-  padding: $base-vmargin $base-hmargin;
-  width: 100% - $sidebar-width;
-}
-
-/**
- * Asides and child navigation
- */
-#main .sidebar {
-//  background: rgba(blue,.1);
-  @include box-sizing( border-box );
-  float: right;
-  padding: 0 $base-hmargin;
-  width: $sidebar-width;
-  .nav {
-//    background: rgba(red,.1);
-    margin-bottom: $base-vmargin;
-    padding: $base-vmargin 0;
-    li {
-      padding: .5 * $base-vmargin $base-hmargin;
-      &.current-page-item {
-      }
-    }
-  }
-}
-// Main sidebar always clears previous sidebars
-#sidebar-main.sidebar {
-  clear: right;
-}
-
-/**
- * Typography
- */
-body {
-  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-}
-
-/**
- * Colors
+ * Main styles
  */
 html {
   background-color: $bg-tint;
   color: $text-color;
 }
 body {
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  padding: 0 $base-hmargin;
   html.cssgradients & {
     @include background-image( linear-gradient( top, $bg-color, $bg-tint ));
     background-position: static;
@@ -134,20 +19,74 @@ a {
   @include link-colors( $link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color );
   @include single-transition( color );
 }
+
+/**
+ * Main layout containers
+ * Sizes inpired by http://978.gs
+ */
+#main {
+  @include clearfix; // clear floated columns
+}
 #container {
   background: $bg-color;
+  margin: 0 auto;
+  max-width: $base-maxwidth;
+  min-width: $base-minwidth;
+  html.lt-ie7 & {
+    width: 978px; // fixed size in IE<7
+  }
+}
+
+/**
+ * Header and main navigation
+ */
+#header {
+  padding: $base-vmargin 0; // safest way to push content down
+  .site-title {
+    @include replace-linked-text( 'rvblogo.png' );
+    float: left;
+    margin-bottom: $base-vmargin;
+    margin-left: $base-hmargin;
+  }
+}
+#sidebar-header {
+  float: right;
+  margin-right: $base-hmargin;
 }
 #access {
   background: $decor-color;
   color: $decor-contrast-color;
-  .menu-item {
-    a {
-      @include hover-link;
-      @include unstyled-link;
-    }
-    &.current-menu-item {
+  clear: both;
+  .menu {
+    @include clearfix;
+    .menu-item {
+      @include inline-block;
+      float: left;
       a {
-        background: image-url( 'nav-indicator.png' ) top center no-repeat;
+        @include hover-link;
+        @include unstyled-link;
+        display: block;
+        line-height: image-height( 'primary-menu-home-icon.png' ); // home icon controls menu height
+        padding: $base-vmargin $base-hmargin;
+      }
+      &.current-menu-item {
+        a {
+          background: image-url( 'nav-indicator.png' ) top center no-repeat;
+        }
+      }
+      // replace the home menu item with an icon
+      &.menu-item-type-home {
+        a {
+          @include replace-text-with-dimensions( 'primary-menu-home-icon.png' );
+        }
+      }
+      // hide the static search menu item by default and replace the text with an icon
+      &.menu-item-type-search {
+        display: none;
+        visibility: hidden;
+        a {
+          @include replace-text-with-dimensions( 'primary-menu-search-icon.png' );
+        }
       }
     }
   }
@@ -155,33 +94,52 @@ a {
     @include background-image( linear-gradient( top, lighten( $decor-color, 2% ), darken( $decor-color, 2% ) ));
   }
 }
-#main {
-  .sidebar {
-    .nav {
-      a {
-        @include hover-link;
-        @include unstyled-link;
-      }
-      li {
+
+/**
+ * Primary content
+ */
+#primary {
+  @include box-sizing( border-box );
+  float: left;
+  padding: $base-vmargin $base-hmargin;
+  width: 100% - $sidebar-width;
+}
+
+/**
+ * Asides and child navigation
+ */
+#main .sidebar {
+  @include box-sizing( border-box );
+  float: right;
+  padding: 0 $base-hmargin;
+  width: $sidebar-width;
+  .nav {
+    margin-bottom: $base-vmargin;
+    padding: $base-vmargin 0;
+    .menu {
+      .page_item {
         border-bottom: 1px solid $widget-line-color;
+        padding: .5 * $base-vmargin $base-hmargin;
+        a {
+          @include hover-link;
+          @include unstyled-link;
+        }
       }
     }
   }
 }
+#sidebar-main.sidebar {
+  clear: right; // Main sidebar always clears previous sidebars
+}
+
+/**
+ * Footer
+ */
 #footer {
   background: $decor-color;
   color: $decor-contrast-color;
   a {
     @include hover-link;
     @include unstyled-link;
-  }
-}
-
-/**
- * Image replacements
- */
-#header {
-  .site-title {
-    @include replace-linked-text( 'rvblogo.png' );
   }
 }
