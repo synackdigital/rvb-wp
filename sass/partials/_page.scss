@@ -41,7 +41,6 @@ a {
  * Header and main navigation
  */
 #header {
-  border: 1px solid blue;
   padding: $base-vmargin 0;
   .site-title {
     @include replace-linked-text( 'rvblogo.png' );
