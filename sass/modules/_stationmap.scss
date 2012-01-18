@@ -1,0 +1,44 @@
+/**
+ * <ul class="stationmap">
+ *  <li class="station karlshamn"><a href="#">Karlshamn</a></li>
+ *  <li class="station kyrkhult"><a href="#">Kyrkhult</a></li>
+ *  <li class="station mjallby"><a href="#">Mjällby</a></li>
+ *  <li class="station olofstrom"><a href="#">Olofström</a></li>
+ *  <li class="station svangsta"><a href="#">Svängsta</a></li>
+ *  <li class="station solvesborg"><a href="#">Sölvesborg</a></li>
+ * </ul>
+ */
+
+.stationmap {
+  position: relative;
+  .station {
+    position: absolute;
+    &.karlshamn {
+      left: 0px;
+      top: 0px;
+    }
+    &.kyrkhult {
+      left: 10px;
+      top: 10px;
+    }
+    &.mjallby {
+      left: 20px;
+      top: 20px;
+    }
+    &.olofstrom {
+      left: 30px;
+      top: 30px;
+    }
+    &.svangsta {
+      left: 40px;
+      top: 40px;
+    }
+    &.solvesborg {
+      left: 50px;
+      top: 50px;
+    }
+    a {
+      @include replace-linked-text( 'stationmap-marker.png' );
+    }
+  }
+}
