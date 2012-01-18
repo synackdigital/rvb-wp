@@ -69,7 +69,9 @@ a {
         line-height: image-height( 'primary-menu-home-icon.png' ); // home icon controls menu height
         padding: $base-vmargin $base-hmargin;
       }
-      &.current-menu-item {
+      &.current-menu-item,
+      &.current-page-ancestor {
+        font-weight: bold;
         a {
           background: image-url( 'nav-indicator.png' ) top center no-repeat;
         }
@@ -150,6 +152,9 @@ a {
         a {
           @include hover-link;
           @include unstyled-link;
+        }
+        &.current_page_item {
+          font-weight: bold;
         }
       }
     }
