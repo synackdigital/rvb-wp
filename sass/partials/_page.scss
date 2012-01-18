@@ -57,17 +57,19 @@ a {
   background: $decor-color;
   color: $decor-contrast-color;
   clear: both;
+  font-size: $subhead-font-size;
   .menu {
     @include clearfix;
     .menu-item {
       @include inline-block;
       float: left;
       a {
-        @include hover-link;
         @include unstyled-link;
         display: block;
-        line-height: image-height( 'primary-menu-home-icon.png' ); // home icon controls menu height
         padding: $base-vmargin $base-hmargin;
+      }
+      &:hover {
+        background-color: darken( $decor-color, 10% );
       }
       &.current-menu-item,
       &.current-page-ancestor {
@@ -76,19 +78,9 @@ a {
           background: image-url( 'nav-indicator.png' ) top center no-repeat;
         }
       }
-      // replace the home menu item with an icon
-      &.menu-item-type-home {
-        a {
-          @include replace-text-with-dimensions( 'primary-menu-home-icon.png' );
-        }
-      }
-      // hide the static search menu item by default and replace the text with an icon
       &.menu-item-type-search {
         display: none;
         visibility: hidden;
-        a {
-          @include replace-text-with-dimensions( 'primary-menu-search-icon.png' );
-        }
       }
     }
   }
@@ -133,6 +125,18 @@ a {
     }
   }
 }
+// Media
+#content img {
+  max-width: 100%;
+  &.alignleft {
+    float: left;
+    margin-right: $base-hmargin;
+  }
+  &.alignright {
+    float: right;
+    margin-left: $base-hmargin;
+  }
+}
 
 /**
  * Asides and child navigation
@@ -150,8 +154,11 @@ a {
         border-bottom: 1px solid $widget-line-color;
         padding: .5 * $base-vmargin $base-hmargin;
         a {
-          @include hover-link;
           @include unstyled-link;
+          &:hover,
+          &:focus {
+            color: $link-color;
+          }
         }
         &.current_page_item {
           font-weight: bold;

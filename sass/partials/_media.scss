@@ -104,24 +104,34 @@
       .menu-item {
         display: none;
         visibility: hidden;
+        a {
+          line-height: image-height( 'primary-menu-home-icon.png' ); // home icon controls menu height
+        }
         &.current-menu-item {
           display: inherit;
           visibility: visible;
         }
-        // show the home menu item
+        // replace the home menu item with an icon
         &.menu-item-type-home {
           border-left: 1px solid darken( $decor-color, 5% );
           display: inherit;
           float: right;
           visibility: visible;
+          a {
+            @include replace-text-with-dimensions( 'primary-menu-home-icon.png' );
+          }
         }
-        // show the static search menu item if js is enabled
+        // hide the static search menu item by default and replace the text with an icon
         &.menu-item-type-search {
+          // onlye show the static search menu item if js is enabled
           html.js & {
             border-left: 1px solid darken( $decor-color, 5% );
             display: inherit;
             float: right;
             visibility: visible;
+            a {
+              @include replace-text-with-dimensions( 'primary-menu-search-icon.png' );
+            }
           }
         }
       }

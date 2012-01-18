@@ -1,5 +1,5 @@
 
-/*
+/**
  * Typography
  */
 $base-font-family:        unquote('Segoe UI, Segoe, Tahoma, Geneva, Liberation Sans, FreeSans, sans-serif');
@@ -9,7 +9,7 @@ $base-line-height:        1.231;
 $subhead-font-size:       1.1538em; // 15px @13px base
 $head-font-size:          1.5385em; // 20px @13px base
 
-/*
+/**
  * Colors
  */
 $bg-color:                #fff;
@@ -31,7 +31,7 @@ $link-visited-color:      $link-color;
 $link-focus-color:        $link-active-color;
 $link-contrast-color:     white;
 
-/*
+/**
  * Measurements
  */
 $base-hmargin:            20px;
@@ -44,4 +44,9 @@ $mobile-maxwidth:         480px;
 $mobile-minwidth:         320px;
 
 $sidebar-width:           percentage( $mobile-maxwidth / $base-maxwidth ); // Sidebars are relative in size by default, and 100% on mobile layouts
+
+/**
+ * Compass defaults
+ */
+$default-transition-duration:     .5s;
 
