@@ -15,9 +15,9 @@ body {
   }
 }
 a {
-  @include hover-link;
   @include link-colors( $link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color );
   @include single-transition( color );
+  text-decoration: none;
 }
 
 /**
@@ -64,18 +64,22 @@ a {
       @include inline-block;
       float: left;
       a {
+        @include single-transition( background-color );
         @include unstyled-link;
         display: block;
         padding: $base-vmargin $base-hmargin;
-      }
-      &:hover {
-        background-color: darken( $decor-color, 10% );
+        &:hover {
+          background-color: $link-color;
+        }
       }
       &.current-menu-item,
       &.current-page-ancestor {
         font-weight: bold;
         a {
           background: image-url( 'nav-indicator.png' ) top center no-repeat;
+          &:hover {
+            background-color: $link-color;
+          }
         }
       }
       &.menu-item-type-search {
@@ -147,14 +151,16 @@ a {
   padding: 0 $base-hmargin;
   width: $sidebar-width;
   .nav {
-    margin-bottom: $base-vmargin;
-    padding: $base-vmargin 0;
+    border-bottom: 3px solid $widget-line-color;
+    margin-bottom: 2 * $base-vmargin;
+    padding: 2 * $base-vmargin 0;
     .menu {
       .page_item {
-        border-bottom: 1px solid $widget-line-color;
-        padding: .5 * $base-vmargin $base-hmargin;
         a {
           @include unstyled-link;
+          border-bottom: 1px solid $widget-line-color;
+          display: block;
+          padding: .5 * $base-vmargin $base-hmargin;
           &:hover,
           &:focus {
             color: $link-color;
@@ -162,6 +168,9 @@ a {
         }
         &.current_page_item {
           font-weight: bold;
+        }
+        &:last-child {
+          border-bottom: none;
         }
       }
     }
