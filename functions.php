@@ -50,8 +50,8 @@ function rvb_widgets_init() {
     'after_title' => '</h2>',
   ) );
   register_sidebar( array(
-    'name' => __( 'Home Page Sidebar', 'rvb' ),
-    'id' => 'sidebar-home',
+    'name' => __( 'Primary Home Page Sidebar', 'rvb' ),
+    'id' => 'sidebar-home-primary',
     'description' => __( 'This sidebar is displayed next to the main content on the home page', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
@@ -59,8 +59,8 @@ function rvb_widgets_init() {
     'after_title' => '</h2>',
   ) );
   register_sidebar( array(
-    'name' => __( 'Newslist Sidebar', 'rvb' ),
-    'id' => 'sidebar-newslist',
+    'name' => __( 'Secondary Home Page Sidebar', 'rvb' ),
+    'id' => 'sidebar-home-secondary',
     'description' => __( 'This sidebar is displayed next to the newslist on the home page', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
@@ -89,7 +89,7 @@ if ( ! function_exists( 'synack_posted_on' ) ) :
  * Create your own synack_posted_on to override in a child theme
  */
 function synack_posted_on() {
-  printf( __( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time>', 'synack' ),
+  printf( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time>',
     esc_attr( get_the_date( 'c' ) ),
     esc_html( get_the_date() )
   );

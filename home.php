@@ -49,7 +49,7 @@ get_header(); ?>
         <?php $postIndex++; endwhile; ?>
           </div><!-- .tail -->
 
-          <?php get_sidebar( 'newslist' ); ?>
+          <?php get_sidebar( 'home-primary' ); ?>
 
       <?php else : ?>
 
@@ -69,6 +69,6 @@ get_header(); ?>
       </div><!-- #content -->
     </div><!-- #primary -->
 
-<?php get_sidebar( 'home' ); ?>
+<?php get_sidebar( 'home-secondary' ); ?>
 
 <?php get_footer(); ?>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: synack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-05 22:50+0100\n"
-"PO-Revision-Date: 2012-01-05 22:52+0100\n"
+"POT-Creation-Date: 2012-01-27 15:34+0100\n"
+"PO-Revision-Date: 2012-01-27 15:34+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,49 +21,60 @@ msgstr "Huvudmeny"
 msgid "Skip to primary content"
 msgstr "Hoppa till huvudinnehållet"
 
-#: ../functions.php:26
+#: ../functions.php:34
 msgid "Footer Menu"
 msgstr "Sidfotsmeny"
 
-#: ../functions.php:36
+#: ../functions.php:44
 msgid "Header Sidebar"
 msgstr "Sidfält i sidhuvudet"
 
-#: ../functions.php:38
-msgid "The header sidebar is displayed above the navigation on all posts and pages"
-msgstr "Sidfältet visas ovanför navigeringen i sidhuvudet på alla inlägg och sidor."
+#: ../functions.php:46
+msgid "This sidebar is displayed above the navigation on all posts and pages"
+msgstr "Sidfältet visas ovanför navigeringen på alla inlägg och sidor."
 
-#: ../functions.php:45
-msgid "Home Page Sidebar"
-msgstr "Sidfält på startsidan"
+#: ../functions.php:53
+msgid "Primary Home Page Sidebar"
+msgstr "Primärt sidfält på startsidan"
 
-#: ../functions.php:47
-msgid "The home page sidebar is displayed next to the content on the home page"
-msgstr "Sidfältet visas bredvid innehållet på startsidan."
+#: ../functions.php:55
+msgid "This sidebar is displayed next to the main content on the home page"
+msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan."
 
 #: ../functions.php:62
+msgid "Secondary Home Page Sidebar"
+msgstr "Sekundärt sidfält på startsidan"
+
+#: ../functions.php:64
+msgid "This sidebar is displayed next to the newslist on the home page"
+msgstr "Sidfältet visas bredvid nyhetslistan på startsidan."
+
+#: ../functions.php:79
 msgid "Return to home page"
 msgstr "Återvänd till startsidan"
 
-#: ../functions.php:62
+#: ../functions.php:79
 msgid "Home"
 msgstr "Start"
 
-#: ../functions.php:62
+#: ../functions.php:79
 msgid "Toggle search form"
 msgstr "Visa eller dölj sökfältet"
 
-#: ../functions.php:62
+#: ../functions.php:79
 msgid "Search"
 msgstr "Sök"
 
-#: ../home.php:37
+#: ../home.php:58
 msgid "Nothing Found"
 msgstr "Inget hittades"
 
-#: ../home.php:41
+#: ../home.php:62
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
 msgstr "Beklagar, men inget innehåll hittades i det angivna arkivet. Kanske kan en sökning hjälpa dig hitta ett relevant inlägg?"
+
+#~ msgid "Newslist Sidebar"
+#~ msgstr "Sidfält vid nyhetslistan"
 
 #~ msgid "Campaigns"
 #~ msgstr "Kampanjer"
