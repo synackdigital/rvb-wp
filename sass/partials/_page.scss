@@ -115,6 +115,12 @@ a {
   body.home & {
     // featured content
     .featured {
+      @include clearfix;
+      img {
+        float: left;
+        margin-right: $base-hmargin;
+        max-width: $mobile-minwidth;
+      }
     }
     // tail content
     .tail {
