@@ -20,13 +20,14 @@
 <?php
   // Get ID of top-level ancestor
   $rootID = ( count( get_post_ancestors( $id ) ) > 0  ) ? end( get_post_ancestors( $id ) ) : $id;
+  $rootNavTree = wp_list_pages('echo=0&title_li=&child_of='.$rootID);
 
   // Generate subnav
-  if ( count( get_post_ancestors( $id ) ) > 0 ) :
+  if ( $rootNavTree ) :
 ?>
   <nav class="nav">
     <ul id="menu-childpages" class="menu">
-      <?php wp_list_pages("title_li=&child_of=$rootID"); ?>
+      <?php echo $rootNavTree; ?>
     </ul>
   </nav>
 <?php
