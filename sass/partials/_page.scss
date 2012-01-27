@@ -151,9 +151,9 @@ a {
     padding: 2 * $base-vmargin 0;
     .menu {
       .page_item {
+        border-bottom: 1px solid $widget-line-color;
         a {
           @include unstyled-link;
-          border-bottom: 1px solid $widget-line-color;
           display: block;
           padding: .5 * $base-vmargin $base-hmargin;
           &:hover,
@@ -161,11 +161,27 @@ a {
             color: $link-color;
           }
         }
-        &.current_page_item {
-          font-weight: bold;
+        .children {
+          margin-bottom: .25 * $base-vmargin;
+          .page_item {
+            border-bottom: none;
+            font-weight: normal;
+            list-style: disc image-url( 'list-bullet.png' );
+            margin-left: 3em;
+            a {
+              padding: .25 * $base-vmargin 0;
+            }
+            &.current_page_ancestor,
+            &.current_page_item,
+            &.current_page_parent {
+              font-weight: bold;
+            }
+          }
         }
-        &:last-child {
-          border-bottom: none;
+        &.current_page_ancestor,
+        &.current_page_item,
+        &.current_page_parent {
+          font-weight: bold;
         }
       }
     }
