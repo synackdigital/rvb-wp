@@ -162,6 +162,7 @@ a {
           }
         }
         .children {
+          display: none;
           margin-bottom: .25 * $base-vmargin;
           .page_item {
             border-bottom: none;
@@ -182,6 +183,9 @@ a {
         &.current_page_item,
         &.current_page_parent {
           font-weight: bold;
+          .children {
+            display: block;
+          }
         }
       }
     }
