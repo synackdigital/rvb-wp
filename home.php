@@ -12,23 +12,44 @@
  * @subpackage RVB
  */
 
+$postIndex = 0;
+$featuredPostCount = 2;
+$maxPostCount = $featuredPostCount + 5;
+
 get_header(); ?>
 
     <div id="primary">
       <div id="content" role="main">
 
       <?php if ( have_posts() ) : ?>
+        <?php // Start the Loop
+          while ( have_posts() ) : the_post();
 
-        <?php synack_content_nav( 'nav-above' ); ?>
+            // Break out if max number of posts is reached (overrides setting in wp-admin)
+            if ( $postIndex >= $maxPostCount )
+              break;
+        ?>
 
-        <?php /* Start the Loop */ ?>
-        <?php while ( have_posts() ) : the_post(); ?>
+          <?php // Add sectioning elements
+            if ( $postIndex == 0 ) : ?>
+          <div class="featured">
+          <?php elseif ( $postIndex == $featuredPostCount ) : ?>
+          </div><!-- .featured -->
+          <div class="tail">
+          <?php endif; ?>
 
-          <?php get_template_part( 'content', get_post_format() ); ?>
+          <?php // Print content
+            if ( $postIndex < $featuredPostCount ) :
+              get_template_part( 'content', get_post_format() );
+            else :
+              get_template_part( 'content', 'excerpt' );
+            endif;
+          ?>
 
-        <?php endwhile; ?>
+        <?php $postIndex++; endwhile; ?>
+          </div><!-- .tail -->
 
-        <?php synack_content_nav( 'nav-below' ); ?>
+          <?php get_sidebar( 'newslist' ); ?>
 
       <?php else : ?>
 

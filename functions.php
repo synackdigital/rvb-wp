@@ -4,6 +4,8 @@
  * @subpackage RVB
  */
 
+global $post;
+
 
 // Import JW Custom Posts library
 require_once get_template_directory() . '/inc/jw_custom_posts.php';
@@ -41,7 +43,7 @@ function rvb_widgets_init() {
   register_sidebar( array(
     'name' => __( 'Header Sidebar', 'rvb' ),
     'id' => 'sidebar-header',
-    'description' => __( 'The header sidebar is displayed above the navigation on all posts and pages', 'rvb' ),
+    'description' => __( 'This sidebar is displayed above the navigation on all posts and pages', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',
@@ -50,7 +52,16 @@ function rvb_widgets_init() {
   register_sidebar( array(
     'name' => __( 'Home Page Sidebar', 'rvb' ),
     'id' => 'sidebar-home',
-    'description' => __( 'The home page sidebar is displayed next to the content on the home page', 'rvb' ),
+    'description' => __( 'This sidebar is displayed next to the main content on the home page', 'rvb' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => "</aside>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name' => __( 'Newslist Sidebar', 'rvb' ),
+    'id' => 'sidebar-newslist',
+    'description' => __( 'This sidebar is displayed next to the newslist on the home page', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',
@@ -70,6 +81,20 @@ function rvb_primary_menu_items( $nav, $args ) {
     return $nav;
 }
 add_filter('wp_nav_menu_items','rvb_primary_menu_items', 10, 2);
+
+
+if ( ! function_exists( 'synack_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ * Create your own synack_posted_on to override in a child theme
+ */
+function synack_posted_on() {
+  printf( __( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time>', 'synack' ),
+    esc_attr( get_the_date( 'c' ) ),
+    esc_html( get_the_date() )
+  );
+}
+endif;
 
 
 /**

@@ -104,6 +104,7 @@ a {
 }
 #content {
   .entry-title {
+    font-size: $head-font-size;
     font-weight: bold;
     a {
       @include hover-link;
@@ -112,16 +113,26 @@ a {
   }
   // home page posts
   body.home & {
-    .entry-title {
-      font-size: $subhead-font-size;
+    // featured content
+    .featured {
+    }
+    // tail content
+    .tail {
+      @include box-sizing( border-box );
+      float: left;
+      padding: $base-vmargin $base-hmargin $base-vmargin 0;
+      width: 100% - $sidebar-width;
+      .entry-title {
+        font-size: $subhead-font-size;
+      }
+    }
+    .sidebar {
+      padding: 0;
     }
   }
   // single post and pages
   body.page &,
   body.single & {
-    .entry-title {
-      font-size: $head-font-size;
-    }
   }
 }
 // Media
@@ -162,7 +173,7 @@ a {
           }
         }
         .children {
-          display: none;
+          display: none; // hide by default and override on current_page_item and current_page_parent
           margin-bottom: .25 * $base-vmargin;
           .page_item {
             border-bottom: none;
