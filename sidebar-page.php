@@ -21,7 +21,8 @@
   // Get ID of top-level ancestor
   $rootID = ( count( get_post_ancestors( $id ) ) > 0  ) ? end( get_post_ancestors( $id ) ) : $id;
 
-  // get_post_ancestors( $id )
+  // Generate subnav
+  if ( count( get_post_ancestors( $id ) ) > 0 ) :
 ?>
   <nav class="nav">
     <ul id="menu-childpages" class="menu">
@@ -29,6 +30,7 @@
     </ul>
   </nav>
 <?php
+  endif;
 
   // If the sidebar has widgets, show a widget area
   if ( is_active_sidebar( 'sidebar-page'  ) ) :
