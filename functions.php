@@ -58,20 +58,6 @@ function rvb_widgets_init() {
 add_action( 'widgets_init', 'rvb_widgets_init' );
 
 
-if ( ! function_exists( 'synack_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- * Create your own synack_posted_on to override in a child theme
- */
-function synack_posted_on() {
-  printf( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time>',
-    esc_attr( get_the_date( 'c' ) ),
-    esc_html( get_the_date() )
-  );
-}
-endif;
-
-
 /**
  * Add a custom logo to the admin header
  */
