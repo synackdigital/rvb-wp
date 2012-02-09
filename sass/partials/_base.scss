@@ -1,15 +1,17 @@
 
 /**
  * Typography
+ * Using a 4:7 Fibonacci scale
+ * http://lamb.cc/typograph/
  */
 $base-font-family:        unquote('Segoe UI, Segoe, Tahoma, Geneva, Liberation Sans, FreeSans, sans-serif');
-$base-font-size:          13px;
-$base-line-height:        1.231;
+$base-font-size:          14px;
+$base-line-height:        1.5; // 21px
 
-$decor-font-family:        unquote('Sketchetik-Bold, Helvetica, Arial, Liberation Sans, FreeSans, sans-serif');
+$decor-font-family:       unquote('Sketchetik-Bold, Helvetica, Arial, Liberation Sans, FreeSans, sans-serif');
 
-$subhead-font-size:       1.1538em; // 15px @13px base
-$head-font-size:          1.5385em; // 20px @13px base
+$large-font-size:         1.6428em; // 23px
+$xlarge-font-size:        2.6439em; // 37px
 
 /**
  * Colors

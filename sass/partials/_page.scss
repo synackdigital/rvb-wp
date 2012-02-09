@@ -24,14 +24,15 @@ a {
  * Main layout containers
  * Sizes inpired by http://978.gs
  */
-#main {
-  @include clearfix; // clear floated columns
-}
 #container {
+  @include box-sizing( border-box );
+  @include clearfix; // clear floated columns
   background: $bg-color;
-  margin: 0 auto;
+  border-bottom: 1px solid darken( $bg-tint, 5% );
+  margin: 0 auto 3 * $base-hmargin auto;
   max-width: $base-maxwidth;
   min-width: $base-minwidth;
+  padding: $base-vmargin $base-hmargin;
   html.lt-ie7 & {
     width: 978px; // fixed size in IE<7
   }
@@ -41,23 +42,22 @@ a {
  * Header and main navigation
  */
 #header {
-  padding: $base-vmargin 0;
   .site-title {
     @include replace-linked-text( 'rvblogo.png' );
     float: left;
-    margin-bottom: $base-vmargin;
-    margin-left: $base-hmargin;
+    margin-bottom: 2 * $base-vmargin;
+    margin-left: 1px; // visual adjustment
+    margin-top: $base-vmargin;
   }
-}
-#sidebar-header {
-  float: right;
-  margin-right: $base-hmargin;
+  #searchform {
+    float: right;
+    margin-top: 2 * $base-vmargin;
+  }
 }
 #access {
   background: $decor-color;
   color: $decor-contrast-color;
   clear: both;
-  font-size: $subhead-font-size;
   .menu {
     @include clearfix;
     .menu-item {
@@ -104,7 +104,7 @@ a {
 }
 #content {
   .entry-title {
-    font-size: $head-font-size;
+    font-size: $xlarge-font-size;
     font-weight: bold;
     a {
       @include hover-link;
@@ -129,7 +129,7 @@ a {
       padding: $base-vmargin $base-hmargin $base-vmargin 0;
       width: 100% - $sidebar-width;
       .entry-title {
-        font-size: $subhead-font-size;
+        font-size: $large-font-size;
       }
     }
     .sidebar {
