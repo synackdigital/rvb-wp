@@ -41,15 +41,6 @@ add_action( 'after_setup_theme', 'rvb_setup' );
  */
 function rvb_widgets_init() {
   register_sidebar( array(
-    'name' => __( 'Header Sidebar', 'rvb' ),
-    'id' => 'sidebar-header',
-    'description' => __( 'This sidebar is displayed above the navigation on all posts and pages', 'rvb' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => "</aside>",
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
-  ) );
-  register_sidebar( array(
     'name' => __( 'Primary Home Page Sidebar', 'rvb' ),
     'id' => 'sidebar-home-primary',
     'description' => __( 'This sidebar is displayed next to the main content on the home page', 'rvb' ),
