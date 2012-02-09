@@ -10,8 +10,8 @@ global $post;
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) )
-  $content_width = 697;
+if ( ! isset( $content_maxwidth ) )
+  $content_maxwidth = 669;
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.

@@ -104,6 +104,11 @@ a {
   width: 99.9% - $sidebar-width; // not 100% to avoid rounding errors
 }
 #main .hentry {
+  .entry-content,
+  .entry-meta,
+  .entry-title {
+    margin: 0 $base-hmargin;
+  }
   .entry-title {
     font-size: $large-font-size;
     line-height: 1.2;
