@@ -7,10 +7,6 @@
 global $post;
 
 
-// Import JW Custom Posts library
-require_once get_template_directory() . '/inc/jw_custom_posts.php';
-
-
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
