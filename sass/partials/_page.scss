@@ -46,13 +46,12 @@ a {
   .site-title {
     @include replace-linked-text( 'rvblogo.png' );
     float: left;
-    margin-bottom: 2 * $base-vmargin;
+    margin-bottom: $base-vmargin;
     margin-left: 1px; // visual adjustment
-    margin-top: $base-vmargin;
   }
   #searchform {
     float: right;
-    margin-top: 2 * $base-vmargin;
+    margin-top: $base-vmargin;
   }
 }
 #access {
@@ -69,7 +68,7 @@ a {
         @include single-transition( background-color );
         @include unstyled-link;
         display: block;
-        padding: $base-vmargin $base-hmargin;
+        padding: .5 * $base-vmargin $base-hmargin;
         &:hover {
           background-color: $link-color;
         }
@@ -96,122 +95,26 @@ a {
 }
 
 /**
- * Primary content
+ * Main content
  */
-#primary {
+#main {
   @include box-sizing( border-box );
   float: left;
-  padding: $base-vmargin $base-hmargin;
-  width: 100% - $sidebar-width;
-}
-#content {
-  .entry-title {
-    font-size: $xlarge-font-size;
-    font-weight: bold;
-    a {
-      @include hover-link;
-      @include unstyled-link;
-    }
-  }
-  // home page posts
-  body.home & {
-    // featured content
-    .featured {
-      @include clearfix;
-      img {
-        float: left;
-        margin-right: $base-hmargin;
-        max-width: $mobile-minwidth;
-      }
-    }
-    // tail content
-    .tail {
-      @include box-sizing( border-box );
-      float: left;
-      padding: $base-vmargin $base-hmargin $base-vmargin 0;
-      width: 100% - $sidebar-width;
-      .entry-title {
-        font-size: $large-font-size;
-      }
-    }
-    .sidebar {
-      padding: 0;
-    }
-  }
-  // single post and pages
-  body.page &,
-  body.single & {
-  }
-}
-// Media
-#content img {
-  max-width: 100%;
-  &.alignleft {
-    float: left;
-    margin-right: $base-hmargin;
-  }
-  &.alignright {
-    float: right;
-    margin-left: $base-hmargin;
-  }
+  padding: 2 * $base-vmargin 0;
+  width: 99.9% - $sidebar-width; // not 100% to avoid rounding errors
 }
 
 /**
- * Asides and child navigation
+ * Complementary content
  */
-#main .sidebar {
+#complementary {
   @include box-sizing( border-box );
   float: right;
-  padding: 0 $base-hmargin;
+  padding: 2 * $base-vmargin 0;
   width: $sidebar-width;
-  .nav {
-    border-bottom: 3px solid $widget-line-color;
-    margin-bottom: 2 * $base-vmargin;
-    padding: 2 * $base-vmargin 0;
-    .menu {
-      .page_item {
-        border-bottom: 1px solid $widget-line-color;
-        a {
-          @include unstyled-link;
-          display: block;
-          padding: .5 * $base-vmargin $base-hmargin;
-          &:hover,
-          &:focus {
-            color: $link-color;
-          }
-        }
-        .children {
-          display: none; // hide by default and override on current_page_item and current_page_parent
-          margin-bottom: .25 * $base-vmargin;
-          .page_item {
-            border-bottom: none;
-            font-weight: normal;
-            list-style: disc image-url( 'list-bullet.png' );
-            margin-left: 3em;
-            a {
-              padding: .25 * $base-vmargin 0;
-            }
-            &.current_page_ancestor,
-            &.current_page_item,
-            &.current_page_parent {
-              font-weight: bold;
-            }
-          }
-        }
-        &.current_page_ancestor,
-        &.current_page_item,
-        &.current_page_parent {
-          font-weight: bold;
-          .children {
-            display: block;
-          }
-        }
-      }
-    }
+  .sidebar {
+    margin-left: $base-hmargin;
   }
-}
-#sidebar-main.sidebar {
-  clear: right; // Main sidebar always clears previous sidebars
 }
 
 /**
@@ -220,6 +123,7 @@ a {
 #footer {
   background: $decor-color;
   color: $decor-contrast-color;
+  clear: both;
   a {
     @include hover-link;
     @include unstyled-link;

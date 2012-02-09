@@ -7,7 +7,7 @@
       background: $widget-title-bg-color;
       color: $widget-contrast-color;
       font-size: $large-font-size;
-      padding: $base-vmargin $base-hmargin;
+      padding: .5 * $base-vmargin $base-hmargin;
       position: relative;
       &:after {
         content: image-url('widget-title-indicator.png');
@@ -30,7 +30,6 @@
  */
 .widget {
   margin-bottom: $base-vmargin;
-  margin-top: $base-vmargin;
 }
 
 /**
@@ -40,7 +39,6 @@
   @include box-widget;
   #main & .textwidget {
     background-color: $widget-bg-color;
-    margin: .5 * $base-hmargin;
     padding: .5 * $base-hmargin;
   }
 }
