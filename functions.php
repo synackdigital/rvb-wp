@@ -62,18 +62,6 @@ function rvb_widgets_init() {
 add_action( 'widgets_init', 'rvb_widgets_init' );
 
 
-/**
- * Update the primary menu with static menu items
- */
-function rvb_primary_menu_items( $nav, $args ) {
-    if( $args->theme_location == 'primary' )
-        return '<li class="menu-item menu-item-type-home"><a href="/" title="'.__('Return to home page', 'rvb').'">'.__('Home', 'rvb').'</a></li>'.$nav.'<li class="menu-item menu-item-type-search"><a href="#" title="'.__('Toggle search form', 'rvb').'">'.__('Search', 'rvb').'</a></li>';
-
-    return $nav;
-}
-add_filter('wp_nav_menu_items','rvb_primary_menu_items', 10, 2);
-
-
 if ( ! function_exists( 'synack_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
