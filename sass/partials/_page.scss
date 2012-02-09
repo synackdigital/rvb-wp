@@ -103,6 +103,19 @@ a {
   padding: 2 * $base-vmargin 0;
   width: 99.9% - $sidebar-width; // not 100% to avoid rounding errors
 }
+#main .hentry {
+  .entry-title {
+    font-size: $large-font-size;
+    line-height: 1.2;
+    a {
+      @include unstyled-link;
+    }
+    body.singular & {
+      font-size: $xlarge-font-size;
+      line-height: 1.2;
+    }
+  }
+}
 
 /**
  * Complementary content
