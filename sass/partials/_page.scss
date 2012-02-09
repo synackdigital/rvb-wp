@@ -91,6 +91,10 @@ a {
   }
   html.cssgradients & {
     @include background-image( linear-gradient( top, lighten( $decor-color, 2% ), darken( $decor-color, 2% ) ));
+    border-bottom: 1px solid darken( $decor-color, 8% );
+  }
+  html.textshadow & {
+    @include single-text-shadow( darken( $decor-color, 8% ), 0, 1px, 1px );
   }
 }
 
