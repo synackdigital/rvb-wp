@@ -54,7 +54,6 @@
     color: $link-color !important;
   }
   .widget-title {
-    display: none;
-    visibility: hidden;
+    @include hidden;
   }
 }
