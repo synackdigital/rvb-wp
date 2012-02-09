@@ -25,6 +25,7 @@ a {
  * Sizes inpired by http://978.gs
  */
 #container {
+  @include border-radius;
   @include box-sizing( border-box );
   @include clearfix; // clear floated columns
   background: $bg-color;
@@ -55,6 +56,7 @@ a {
   }
 }
 #access {
+  @include border-radius;
   background: $decor-color;
   color: $decor-contrast-color;
   clear: both;
