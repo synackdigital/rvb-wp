@@ -41,8 +41,8 @@ add_action( 'after_setup_theme', 'rvb_setup' );
  */
 function rvb_widgets_init() {
   register_sidebar( array(
-    'name' => __( 'Primary Home Page Sidebar', 'rvb' ),
-    'id' => 'sidebar-home-primary',
+    'name' => __( 'Home Sidebar 1', 'rvb' ),
+    'id' => 'sidebar-home-1',
     'description' => __( 'This sidebar is displayed next to the main content on the home page', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
@@ -50,9 +50,9 @@ function rvb_widgets_init() {
     'after_title' => '</h2>',
   ) );
   register_sidebar( array(
-    'name' => __( 'Secondary Home Page Sidebar', 'rvb' ),
-    'id' => 'sidebar-home-secondary',
-    'description' => __( 'This sidebar is displayed next to the newslist on the home page', 'rvb' ),
+    'name' => __( 'Home Sidebar 2', 'rvb' ),
+    'id' => 'sidebar-home-2',
+    'description' => __( 'This sidebar is displayed below the masthead on the home page', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',

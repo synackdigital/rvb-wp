@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: synack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 15:34+0100\n"
-"PO-Revision-Date: 2012-01-27 15:34+0100\n"
+"POT-Creation-Date: 2012-02-09 16:14+0100\n"
+"PO-Revision-Date: 2012-02-09 16:14+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,65 +13,68 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../content-header.php:15
-msgid "Main menu"
-msgstr "Huvudmeny"
-
-#: ../content-header.php:17
-msgid "Skip to primary content"
-msgstr "Hoppa till huvudinnehållet"
-
 #: ../functions.php:34
 msgid "Footer Menu"
 msgstr "Sidfotsmeny"
 
 #: ../functions.php:44
-msgid "Header Sidebar"
-msgstr "Sidfält i sidhuvudet"
+msgid "Home Sidebar 1"
+msgstr "Sidfält 1 på startsidan"
 
 #: ../functions.php:46
-msgid "This sidebar is displayed above the navigation on all posts and pages"
-msgstr "Sidfältet visas ovanför navigeringen på alla inlägg och sidor."
-
-#: ../functions.php:53
-msgid "Primary Home Page Sidebar"
-msgstr "Primärt sidfält på startsidan"
-
-#: ../functions.php:55
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan."
 
-#: ../functions.php:62
-msgid "Secondary Home Page Sidebar"
-msgstr "Sekundärt sidfält på startsidan"
+#: ../functions.php:53
+msgid "Home Sidebar 2"
+msgstr "Sidfält 2 på startsidan"
 
-#: ../functions.php:64
-msgid "This sidebar is displayed next to the newslist on the home page"
-msgstr "Sidfältet visas bredvid nyhetslistan på startsidan."
+#: ../functions.php:55
+msgid "This sidebar is displayed below the masthead on the home page"
+msgstr "Sidfältet visas under masthuvudet på startsidan."
 
-#: ../functions.php:79
-msgid "Return to home page"
-msgstr "Återvänd till startsidan"
+#: ../header-content.php:15
+msgid "Main menu"
+msgstr "Huvudmeny"
 
-#: ../functions.php:79
-msgid "Home"
-msgstr "Start"
+#: ../header-content.php:17
+msgid "Skip to primary content"
+msgstr "Hoppa till huvudinnehållet"
 
-#: ../functions.php:79
-msgid "Toggle search form"
-msgstr "Visa eller dölj sökfältet"
+#~ msgid ""
+#~ "This sidebar is displayed above the navigation on all posts and pages"
+#~ msgstr "Sidfältet visas ovanför navigeringen på alla inlägg och sidor."
 
-#: ../functions.php:79
-msgid "Search"
-msgstr "Sök"
+#~ msgid "Primary Home Page Sidebar"
+#~ msgstr "Primärt sidfält på startsidan"
 
-#: ../home.php:58
-msgid "Nothing Found"
-msgstr "Inget hittades"
+#~ msgid "Secondary Home Page Sidebar"
+#~ msgstr "Sekundärt sidfält på startsidan"
 
-#: ../home.php:62
-msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
-msgstr "Beklagar, men inget innehåll hittades i det angivna arkivet. Kanske kan en sökning hjälpa dig hitta ett relevant inlägg?"
+#~ msgid "This sidebar is displayed next to the newslist on the home page"
+#~ msgstr "Sidfältet visas bredvid nyhetslistan på startsidan."
+
+#~ msgid "Return to home page"
+#~ msgstr "Återvänd till startsidan"
+
+#~ msgid "Home"
+#~ msgstr "Start"
+
+#~ msgid "Toggle search form"
+#~ msgstr "Visa eller dölj sökfältet"
+
+#~ msgid "Search"
+#~ msgstr "Sök"
+
+#~ msgid "Nothing Found"
+#~ msgstr "Inget hittades"
+
+#~ msgid ""
+#~ "Apologies, but no results were found for the requested archive. Perhaps "
+#~ "searching will help find a related post."
+#~ msgstr ""
+#~ "Beklagar, men inget innehåll hittades i det angivna arkivet. Kanske kan "
+#~ "en sökning hjälpa dig hitta ett relevant inlägg?"
 
 #~ msgid "Newslist Sidebar"
 #~ msgstr "Sidfält vid nyhetslistan"
