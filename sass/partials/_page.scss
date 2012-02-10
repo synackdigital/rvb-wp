@@ -177,35 +177,51 @@ a {
  * Comments
  */
 #comments {
-  .comment-meta {
-    font-size: $small-font-size;
-    a {
-      @include unstyled-link;
-    }
-    .avatar {
-      @include border-radius;
-      float: left;
-      margin-right: $base-hmargin;
-    }
-  }
-  .comment-edit-link,
-  .comment-reply-link {
-    @include button-link;
+  margin: $base-vmargin $base-hmargin;
+  .comments-title {
+    font-size: $large-font-size;
   }
   .commentlist {
     @include unstyled-list;
-    margin: $base-vmargin $base-hmargin;
+    border: 0;
+    @include border-image( linear-gradient( left, $bg-color,$mute-color, $bg-color ) );
+    border-bottom: 1px solid;
+    margin-bottom: $base-vmargin;
     .comment {
-      border: 0;
-      @include border-image( linear-gradient( left, $bg-color,$mute-color, $bg-color ) );
-      border-bottom: 1px solid;
       margin: $base-vmargin 0;
-      padding-bottom: $base-vmargin;
+      .comment-meta {
+        font-size: $small-font-size;
+        a {
+          @include unstyled-link;
+        }
+        .avatar {
+          @include border-radius;
+          float: left;
+          margin-right: $base-hmargin;
+        }
+      }
+      .comment-edit-link,
+      .comment-reply-link {
+        @include button-link;
+      }
     }
   }
 }
 #respond {
-  margin: $base-vmargin $base-hmargin;
+  input {
+    display: block;
+  }
+  .form-allowed-tags {
+    @include hidden;
+  }
+  .comment-form-comment {
+    label {
+      @include hidden;
+    }
+  }
+  #reply-title {
+    font-size: $large-font-size;
+  }
 }
 
 /**
