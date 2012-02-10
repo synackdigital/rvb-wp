@@ -108,10 +108,23 @@ a {
   width: 99.9% - $sidebar-width; // not 100% to avoid rounding errors
 }
 #main .hentry {
+  border: 0;
+  @include border-image( linear-gradient( left, $bg-color,$mute-color, $bg-color ) );
+  border-bottom: 1px solid;
   .entry-content,
   .entry-footer,
   .entry-header {
     margin: 0 $base-hmargin;
+  }
+  .entry-header {
+    .post-thumbnail {
+      margin-bottom: $base-vmargin;
+      img {
+        @include border-radius;
+        height: auto;
+        max-width: 100%;
+      }
+    }
   }
   .entry-title {
     font-size: $large-font-size;

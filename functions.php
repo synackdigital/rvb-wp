@@ -28,6 +28,11 @@ function rvb_setup() {
 
   // Register menus
   register_nav_menu( 'footer', __( 'Footer Menu', 'rvb' ) );
+
+  // This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
+  if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+  }
 }
 add_action( 'after_setup_theme', 'rvb_setup' );
 
