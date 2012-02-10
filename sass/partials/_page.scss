@@ -138,6 +138,16 @@ a {
     }
   }
   .entry-footer {
+    .pub-info {
+      color: $mute-color;
+      font-size: $small-font-size;
+      a {
+        @include unstyled-link;
+      }
+      .by-author {
+        @include hidden;
+      }
+    }
     .cat-link {
       @include button-link( invert );
     }
