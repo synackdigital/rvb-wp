@@ -18,4 +18,29 @@
     }
   }
 }
-.prop-list { @include prop-list( true ); }
+.prop-list { @include prop-list; }
+
+/*
+ * Button link
+ */
+@mixin button-link ( $invert: false ) {
+  @include border-radius;
+  @include inline-block;
+  @include unstyled-link;
+  padding: .25em .5 * $base-hmargin;
+  text-transform: capitalize;
+  @if $invert {
+    background-color: invert( mix( $bg-color, $mute-color, 75% ) );
+    color: invert( $text-color );
+  }
+  @else {
+    background-color: mix( $bg-color, $mute-color, 75% );
+    color: $text-color;
+  }
+  &:focus,
+  &:hover {
+    background-color: $link-color;
+    color: $link-contrast-color;
+  }
+}
+.button-link { @include button-link; }

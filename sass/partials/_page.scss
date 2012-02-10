@@ -124,6 +124,26 @@ a {
       line-height: 1.2;
     }
   }
+  .entry-footer {
+    .cat-link {
+      @include button-link( invert );
+    }
+    .cat-links {
+      @include inline-block;
+      a {
+        @extend .cat-link;
+      }
+    }
+    .tag-link {
+      @include button-link;
+    }
+    .tag-links {
+      @include inline-block;
+      a {
+        @extend .tag-link;
+      }
+    }
+  }
 }
 
 /**

@@ -7,6 +7,8 @@ Author URI: http://syn-ack.se/
 Description: Custom theme for Räddningstjänsten Västra Blekinge.
 */
 
+// Base params
+@import "partials/base";
 
 // Compass
 @import "compass/css3";
@@ -18,13 +20,12 @@ Description: Custom theme for Räddningstjänsten Västra Blekinge.
 @import "../../synack-wpbp/sass/partials/components";
 @import "../../synack-wpbp/sass/partials/wp";
 
-// Layout
-@import "partials/base";
-@import "partials/fonts";
-@import "partials/page";
-@import "partials/media";
-
 // Modules
 @import "modules/uicomponents";
 @import "modules/forms";
 @import "modules/widgets";
+
+// Layout
+@import "partials/fonts";
+@import "partials/page";
+@import "partials/media";

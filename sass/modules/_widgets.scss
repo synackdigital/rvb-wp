@@ -47,11 +47,13 @@
  * Ultimate Tag Cloud Widget
  */
 .widget.widget_utcw {
-  a:hover,
-  a:focus {
-    color: $link-color !important;
-  }
   .widget-title {
     @include hidden;
+  }
+  .widget_tag_cloud {
+    text-align: center;
+    a {
+      @include button-link;
+    }
   }
 }
