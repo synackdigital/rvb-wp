@@ -1,0 +1,21 @@
+
+/*
+ * Property list
+ * Apply to
+ */
+@mixin prop-list ( $sep: false ) {
+  padding: 0;
+  li {
+    @include inline-block;
+    margin-right: .5 * $base-vmargin;
+    @if $sep {
+      border-right: 1px solid $mute-color;
+      padding-right: .5 * $base-vmargin;
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+}
+.prop-list { @include prop-list( true ); }
