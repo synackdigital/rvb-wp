@@ -107,10 +107,12 @@ a {
   padding: 2 * $base-vmargin 0;
   width: 99.9% - $sidebar-width; // not 100% to avoid rounding errors
 }
+// Posts and pages
 #main .hentry {
   border: 0;
   @include border-image( linear-gradient( left, $bg-color,$mute-color, $bg-color ) );
   border-bottom: 1px solid;
+  margin-bottom: $base-vmargin;
   .entry-content,
   .entry-footer,
   .entry-header {
@@ -167,6 +169,41 @@ a {
       }
     }
   }
+}
+
+/**
+ * Comments
+ */
+#comments {
+  .comment-meta {
+    font-size: $small-font-size;
+    a {
+      @include unstyled-link;
+    }
+    .avatar {
+      @include border-radius;
+      float: left;
+      margin-right: $base-hmargin;
+    }
+  }
+  .comment-edit-link,
+  .comment-reply-link {
+    @include button-link;
+  }
+  .commentlist {
+    @include unstyled-list;
+    margin: $base-vmargin $base-hmargin;
+    .comment {
+      border: 0;
+      @include border-image( linear-gradient( left, $bg-color,$mute-color, $bg-color ) );
+      border-bottom: 1px solid;
+      margin: $base-vmargin 0;
+      padding-bottom: $base-vmargin;
+    }
+  }
+}
+#respond {
+  margin: $base-vmargin $base-hmargin;
 }
 
 /**
