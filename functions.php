@@ -6,6 +6,11 @@
 
 global $post;
 
+// Import custom walker class for generating smart submenus
+if( @file_exists( dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.php';
+}
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -21,9 +26,9 @@ function rvb_setup() {
   // Add translation support
   $locale = get_locale();
   if( !empty( $locale ) ) {
-    $mofile = dirname(__FILE__) . "/lang/" .  $locale . ".mo";
-    if(@file_exists($mofile) && is_readable($mofile))
-      load_textdomain('rvb', $mofile);
+    $mofile = dirname( __FILE__ ) . '/lang/' .  $locale . '.mo';
+    if( @file_exists( $mofile ) && is_readable( $mofile ) )
+      load_textdomain( 'rvb', $mofile );
   }
 
   // Register menus

@@ -236,6 +236,44 @@ a {
     margin-left: $base-hmargin;
   }
 }
+#secondary-nav {
+  border-bottom: 1px solid $mute-color;
+  margin-bottom: $base-hmargin;
+  margin-left: $base-hmargin;
+  li {
+    border-top: 1px solid $mute-color;
+    a {
+      @include unstyled-link;
+      display: block;
+      padding: .25 * $base-vmargin $base-hmargin;
+      &:focus,
+      &:hover {
+        color: $link-color;
+      }
+    }
+    ul {
+      border: none;
+    }
+    li {
+      border-color: mix( $bg-color, $mute-color );
+      margin-left: $base-vmargin;
+    }
+    &.current_page_parent,
+    &.current_page_item {
+      font-weight: bold;
+      li {
+        font-weight: normal;
+        &.current_page_parent,
+        &.current_page_item {
+          font-weight: bold;
+          li {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
 
 /**
  * Footer
