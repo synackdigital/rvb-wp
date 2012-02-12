@@ -258,16 +258,20 @@ a {
       border-color: mix( $bg-color, $mute-color );
       margin-left: $base-vmargin;
     }
-    &.current_page_parent,
+    // Recursive styling for selected items
+    &.current_page_ancestor,
     &.current_page_item {
       font-weight: bold;
       li {
         font-weight: normal;
-        &.current_page_parent,
+        &.current_page_ancestor,
         &.current_page_item {
           font-weight: bold;
           li {
             font-weight: normal;
+            &.current_page_item {
+              font-weight: bold;
+            }
           }
         }
       }
