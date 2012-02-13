@@ -9,36 +9,71 @@
  * </ul>
  */
 
-.stationmap {
+$debug-colors: false;
+
+#rvb-stationmap {
   position: relative;
+  img {
+    @include border-radius;
+    height: auto;
+    max-width: 100%;
+  }
   .station {
+    @include hide-text;
     position: absolute;
     &.karlshamn {
-      left: 0px;
-      top: 0px;
+      @if $debug-colors {
+        background: rgba( red, .2 );
+      }
+      left: 28%;
+      top: 55%;
+      width: 20%;
+      height: 12%;
     }
     &.kyrkhult {
-      left: 10px;
-      top: 10px;
+      @if $debug-colors {
+        background: rgba( teal, .2 );
+      }
+      left: 11%;
+      top: 10%;
+      width: 16%;
+      height: 11%;
     }
     &.mjallby {
-      left: 20px;
-      top: 20px;
+      @if $debug-colors {
+        background: rgba( blue, .2 );
+      }
+      left: 27%;
+      top: 83%;
+      width: 14%;
+      height: 12%;
     }
     &.olofstrom {
-      left: 30px;
-      top: 30px;
+      @if $debug-colors {
+        background: rgba( purple, .2 );
+      }
+      left: 10%;
+      top: 29%;
+      width: 20%;
+      height: 12%;
     }
     &.svangsta {
-      left: 40px;
-      top: 40px;
+      @if $debug-colors {
+        background: rgba( green, .2 );
+      }
+      left: 34%;
+      top: 40%;
+      width: 21%;
+      height: 8%;
     }
     &.solvesborg {
-      left: 50px;
-      top: 50px;
-    }
-    a {
-      @include replace-linked-text( 'stationmap-marker.png' );
+      @if $debug-colors {
+        background: rgba( navy, .2 );
+      }
+      left: 11%;
+      top: 76%;
+      width: 17%;
+      height: 12%;
     }
   }
 }

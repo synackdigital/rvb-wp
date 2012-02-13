@@ -11,6 +11,11 @@ if( @file_exists( dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.
   include_once dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.php';
 }
 
+// Import custom stationmap widget
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_stationmap_widget.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_stationmap_widget.php';
+}
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.
