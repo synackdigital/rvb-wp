@@ -48,3 +48,8 @@ $postIndex = 0;
     </article><!-- #post-0 -->
 
   <?php endif; ?>
+
+  <aside id="social" role="complementary">
+    <?php get_sidebar('social'); ?>
+  </aside><!-- #social -->
+
