@@ -178,6 +178,9 @@ a {
   }
   // Content slats
   &.slat {
+    clear: left;
+    float: left;
+    width: 99% - $sidebar-social-width;
     a {
       @include unstyled-hover-link;
     }
@@ -284,6 +287,10 @@ a {
       }
     }
   }
+}
+#social {
+  @include inline-block;
+  width: $sidebar-social-width;
 }
 
 /**

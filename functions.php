@@ -16,6 +16,11 @@ if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_stationmap_widget.php' ) ) {
   include_once dirname( __FILE__ ) . '/inc/rvb_stationmap_widget.php';
 }
 
+// Import custom facebook like box widget
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_fblikebox_widget.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_fblikebox_widget.php';
+}
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -52,9 +57,18 @@ add_action( 'after_setup_theme', 'rvb_setup' );
  */
 function rvb_widgets_init() {
   register_sidebar( array(
-    'name' => __( 'Home Sidebar', 'rvb' ),
+    'name' => __( 'Index Sidebar', 'rvb' ),
     'id' => 'sidebar-index',
-    'description' => __( 'This sidebar is displayed next to the main content on the home page', 'rvb' ),
+    'description' => __( 'This sidebar is displayed next to the main content on the index page', 'rvb' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => "</aside>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name' => __( 'Social Sidebar', 'rvb' ),
+    'id' => 'sidebar-social',
+    'description' => __( 'This sidebar is displayed on the home page and is sized to fit the Facebook Like Box', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',

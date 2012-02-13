@@ -50,6 +50,7 @@ $mobile-maxwidth:         480px;
 $mobile-minwidth:         320px;
 
 $sidebar-width:           percentage( $mobile-maxwidth / $base-maxwidth ); // Sidebars are relative in size by default, and 100% on mobile layouts
+$sidebar-social-width:    41%;
 
 /**
  * Compass defaults
