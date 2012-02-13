@@ -41,12 +41,12 @@ class RVB_FBLikeBox_Widget extends WP_Widget {
   */
   function RVB_FBLikeBox_Widget() {
     // widget actual processes
-    parent::WP_Widget( $id = 'RVB_FBLikeBox_Widget', $name = __('Facebook Like Box', 'rvb'), $options = array( 'description' => __('Displays a Like Box for Räddningstjänsten Västra Blekinges Facebook page', 'rvb') ) );
+    parent::WP_Widget( $id = 'RVB_FBLikeBox_Widget', $name = __('Facebook Like Box', 'rvb'), $options = array( 'description' => __('Displays a Like Box for RVB Facebook page', 'rvb') ) );
   }
 
   function form($instance) {
     // this widget is not configurable
-    echo '<em>'.__('Displays a Like Box for Räddningstjänsten Västra Blekinges Facebook page', 'rvb').'</em>';
+    echo '<em>'.__('Displays a Like Box for RVB Facebook page', 'rvb').'</em>';
   }
 
   function update($new_instance, $old_instance) {
