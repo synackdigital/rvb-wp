@@ -52,18 +52,9 @@ add_action( 'after_setup_theme', 'rvb_setup' );
  */
 function rvb_widgets_init() {
   register_sidebar( array(
-    'name' => __( 'Home Sidebar 1', 'rvb' ),
-    'id' => 'sidebar-home-1',
+    'name' => __( 'Home Sidebar', 'rvb' ),
+    'id' => 'sidebar-index',
     'description' => __( 'This sidebar is displayed next to the main content on the home page', 'rvb' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => "</aside>",
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
-  ) );
-  register_sidebar( array(
-    'name' => __( 'Home Sidebar 2', 'rvb' ),
-    'id' => 'sidebar-home-2',
-    'description' => __( 'This sidebar is displayed below the masthead on the home page', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',
