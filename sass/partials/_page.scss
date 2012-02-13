@@ -106,6 +106,10 @@ a {
   float: left;
   padding: 2 * $base-vmargin 0;
   width: 99.9% - $sidebar-width; // not 100% to avoid rounding errors
+  .page-title {
+    font-size: $xlarge-font-size;
+    margin: 0 $base-hmargin $base-vmargin $base-hmargin;
+  }
 }
 // Posts and pages
 #main .hentry {
@@ -178,11 +182,13 @@ a {
   }
   // Content slats
   &.slat {
-    clear: left;
-    float: left;
-    width: 99% - $sidebar-social-width;
     a {
       @include unstyled-hover-link;
+    }
+    body.home & {
+      clear: left;
+      float: left;
+      width: 99% - $sidebar-social-width;
     }
   }
 }

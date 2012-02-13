@@ -23,10 +23,16 @@ $postIndex = 0;
 
   <?php if ( have_posts() ) : ?>
 
+    <?php if ( is_tag() ) : ?>
+    <h1 class="page-title"><?php printf( __( 'Posts tagged with &#8220;%s&#8221;', 'rvb' ), '<span class="tag">' . single_tag_title( '', false ) . '</span>' ); ?></h1>
+    <?php elseif ( is_category() ) : ?>
+    <h1 class="page-title"><?php printf( __( 'Posts in the &#8220;%s&#8221; category', 'rvb' ), '<span class="cat">' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+    <?php endif; ?>
+
     <?php /* Start the Loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php if ( $postIndex <= 1 ) : ?>
+      <?php if ( $postIndex <= 1 && is_home() ) : ?>
         <?php get_template_part( 'content', get_post_format() ); ?>
       <?php else : ?>
         <?php get_template_part( 'content', 'slat' ); ?>
@@ -49,7 +55,9 @@ $postIndex = 0;
 
   <?php endif; ?>
 
+  <?php if ( is_home() ) : ?>
   <aside id="social" role="complementary">
     <?php get_sidebar('social'); ?>
   </aside><!-- #social -->
+<?php endif; ?>
 
