@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-13 23:18+0100\n"
-"PO-Revision-Date: 2012-02-13 23:21+0100\n"
+"PO-Revision-Date: 2012-02-13 23:22+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgstr "Hoppa till huvudinnehållet"
 #: ../loop-index.php:27
 #, php-format
 msgid "Posts tagged with &#8220;%s&#8221;"
-msgstr "Inlägg men etiketten &#8220;%s&#8221;"
+msgstr "Inlägg med etiketten &#8220;%s&#8221;"
 
 #: ../loop-index.php:29
 #, php-format
