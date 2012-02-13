@@ -109,8 +109,9 @@ a {
 }
 // Posts and pages
 #main .hentry {
+  @include clearfix;
+  @include border-image( linear-gradient( left, $bg-color, $mute-color, $bg-color ) );
   border: 0;
-  @include border-image( linear-gradient( left, $bg-color,$mute-color, $bg-color ) );
   border-bottom: 1px solid;
   margin-bottom: $base-vmargin;
   .entry-content,
@@ -119,8 +120,15 @@ a {
     margin: 0 $base-hmargin;
   }
   .entry-header {
+    a {
+      @include unstyled-hover-link;
+    }
     .post-thumbnail {
+      float: left;
       margin-bottom: $base-vmargin;
+      margin-right: $base-hmargin;
+      margin-top: .25em;
+      max-width: 50%;
       img {
         @include border-radius;
         height: auto;
@@ -131,9 +139,6 @@ a {
   .entry-title {
     font-size: $large-font-size;
     line-height: 1.2;
-    a {
-      @include unstyled-link;
-    }
     body.singular & {
       font-size: $xlarge-font-size;
       line-height: 1.2;
@@ -144,7 +149,7 @@ a {
       color: $mute-color;
       font-size: $small-font-size;
       a {
-        @include unstyled-link;
+        @include unstyled-hover-link;
       }
       .by-author {
         @include hidden;
@@ -171,6 +176,12 @@ a {
       }
     }
   }
+  // Content slats
+  &.slat {
+    a {
+      @include unstyled-hover-link;
+    }
+  }
 }
 
 /**
@@ -192,7 +203,7 @@ a {
       .comment-meta {
         font-size: $small-font-size;
         a {
-          @include unstyled-link;
+          @include unstyled-hover-link;
         }
         .avatar {
           @include border-radius;
@@ -243,13 +254,9 @@ a {
   li {
     border-top: 1px solid $mute-color;
     a {
-      @include unstyled-link;
+      @include unstyled-hover-link;
       display: block;
       padding: .25 * $base-vmargin $base-hmargin;
-      &:focus,
-      &:hover {
-        color: $link-color;
-      }
     }
     ul {
       border: none;

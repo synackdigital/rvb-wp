@@ -1,5 +1,17 @@
 
 /*
+ * Unstyled link with hover fx
+ */
+@mixin unstyled-hover-link {
+  @include unstyled-link;
+  &:focus,
+  &:hover {
+    color: $link-color;
+  }
+}
+
+
+/*
  * Button link
  */
 @mixin button-link ( $invert: false ) {
@@ -18,7 +30,6 @@
   }
   &:focus,
   &:hover {
-    background-color: $link-color;
     color: $link-contrast-color;
   }
 }
