@@ -30,6 +30,7 @@
   }
   &:focus,
   &:hover {
+    background-color: $link-color;
     color: $link-contrast-color;
   }
 }
