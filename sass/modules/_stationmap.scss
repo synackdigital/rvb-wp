@@ -1,5 +1,5 @@
 
-$debug-colors: false;
+$debug-colors: true;
 
 #rvb-stationmap {
   position: relative;
@@ -35,8 +35,8 @@ $debug-colors: false;
       }
       left: 27%;
       top: 83%;
-      width: 14%;
-      height: 12%;
+      width: 17%;
+      height: 9%;
     }
     &.olofstrom {
       @if $debug-colors {
