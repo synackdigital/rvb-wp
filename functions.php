@@ -45,6 +45,9 @@ function rvb_setup() {
   if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
   }
+
+  // Add support for post formats
+  add_theme_support( 'post-formats', array( 'status' ) );
 }
 add_action( 'after_setup_theme', 'rvb_setup' );
 

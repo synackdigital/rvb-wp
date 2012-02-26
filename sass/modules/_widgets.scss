@@ -54,6 +54,7 @@
     text-align: center;
     a {
       @include button-link;
+      background-color: $bg-color;
     }
   }
 }

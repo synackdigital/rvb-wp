@@ -180,6 +180,16 @@ a {
       }
     }
   }
+  // Status format style
+  &.format-status {
+    @include border-image(none);
+    @include border-radius;
+    background: #ffe;
+    border: 1px solid #ddc;
+    .entry-title {
+      @include hidden;
+    }
+  }
   // Content slats
   &.slat {
     a {
