@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-13 23:18+0100\n"
-"PO-Revision-Date: 2012-02-13 23:22+0100\n"
+"POT-Creation-Date: 2012-02-28 13:40+0100\n"
+"PO-Revision-Date: 2012-02-28 13:40+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:57
+#: ../functions.php:70
 msgid "Index Sidebar"
 msgstr "Sidfält på indexsidan"
 
-#: ../functions.php:59
+#: ../functions.php:72
 msgid "This sidebar is displayed next to the main content on the index page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på indexsidan"
 
-#: ../functions.php:66
+#: ../functions.php:79
 msgid "Social Sidebar"
 msgstr "Socialt sidfält"
 
-#: ../functions.php:68
+#: ../functions.php:81
 msgid "This sidebar is displayed on the home page and is sized to fit the Facebook Like Box"
 msgstr "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-rutan"
 
@@ -79,3 +79,62 @@ msgstr "Stationskarta"
 msgid "Displays an interactive map of stations"
 msgstr "Visar en interaktiv karta över stationer"
 
+#: ../inc/rvb_user_meta.php:17
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: ../inc/rvb_user_meta.php:32
+msgid "Organization"
+msgstr "Organisation"
+
+#: ../inc/rvb_user_meta.php:35
+msgid "Position"
+msgstr "Befattning"
+
+#: ../inc/rvb_user_meta.php:41
+msgid "Party"
+msgstr "Parti"
+
+#: ../inc/rvb_user_meta.php:47
+msgid "Municipality"
+msgstr "Kommun"
+
+#: ../inc/rvb_user_meta.php:53
+msgid "Station"
+msgstr "Station"
+
+#: ../inc/rvb_user_meta.php:59
+msgid "Group"
+msgstr "Grupp"
+
+#: ../inc/rvb_user_meta.php:65
+msgid "Public E-mail"
+msgstr "Publik e-post"
+
+#: ../inc/rvb_user_meta.php:66
+msgid "Make the e-mail address public on the web site"
+msgstr "Gör e-postadressen publik på webbplatsen"
+
+#: ../inc/rvb_user_roles.php:14
+msgid "Board Member"
+msgstr "Ledamot"
+
+#: ../inc/rvb_user_roles.php:20
+msgid "Staff"
+msgstr "Personal"
+
+#: ../inc/rvb_user_roles.php:26
+msgid "Operational Staff"
+msgstr "Brandman"
+
+#~ msgid "Board"
+#~ msgstr "Nämnd"
+
+#~ msgid "More profile information"
+#~ msgstr "Mer profilinformation"
+
+#~ msgid "Rescue Worker"
+#~ msgstr "Räddningsarbetare"
+
+#~ msgid "Management"
+#~ msgstr "Ledning"
