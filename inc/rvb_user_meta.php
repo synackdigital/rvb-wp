@@ -41,7 +41,7 @@ function rvb_show_user_org_meta( $user ) {
     </td>
   </tr>
 
-<?php if ( $current_user->caps['board_member'] ) : // fields for board members ?>
+<?php if ( $current_user->caps['board_member'] || $current_user->caps['administrator'] ) : // fields for board members ?>
   <tr>
     <th><label for="party"><?php _e('Party', 'rvb'); ?></label></th>
     <td>
@@ -56,7 +56,7 @@ function rvb_show_user_org_meta( $user ) {
   </tr>
 <?php endif ; ?>
 
-<?php if ( $current_user->caps['staff'] ) : // fields for staff ?>
+<?php if ( $current_user->caps['staff'] || $current_user->caps['administrator'] ) : // fields for staff ?>
   <tr>
     <th><label for="department"><?php _e('Department', 'rvb'); ?></label></th>
     <td>
@@ -65,7 +65,7 @@ function rvb_show_user_org_meta( $user ) {
   </tr>
 <?php endif ; ?>
 
-<?php if ( $current_user->caps['operational_staff'] ) : // fields for operational staff ?>
+<?php if ( $current_user->caps['operational_staff'] || $current_user->caps['administrator'] ) : // fields for operational staff ?>
   <tr>
     <th><label for="station"><?php _e('Station', 'rvb'); ?></label></th>
     <td>
