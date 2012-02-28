@@ -6,6 +6,16 @@
 
 global $post;
 
+// Import custom user roles
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_user_roles.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_user_roles.php';
+}
+
+// Import custom user meta
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_user_meta.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_user_meta.php';
+}
+
 // Import custom walker class for generating smart submenus
 if( @file_exists( dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.php' ) ) {
   include_once dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.php';
