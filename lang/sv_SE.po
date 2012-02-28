@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-28 13:40+0100\n"
-"PO-Revision-Date: 2012-02-28 13:40+0100\n"
+"POT-Creation-Date: 2012-02-28 15:06+0100\n"
+"PO-Revision-Date: 2012-02-28 15:06+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -79,51 +79,55 @@ msgstr "Stationskarta"
 msgid "Displays an interactive map of stations"
 msgstr "Visar en interaktiv karta över stationer"
 
-#: ../inc/rvb_user_meta.php:17
+#: ../inc/rvb_user_meta.php:16
 msgid "Phone Number"
 msgstr "Telefonnummer"
 
-#: ../inc/rvb_user_meta.php:32
+#: ../inc/rvb_user_meta.php:35
 msgid "Organization"
 msgstr "Organisation"
 
-#: ../inc/rvb_user_meta.php:35
+#: ../inc/rvb_user_meta.php:38
 msgid "Position"
 msgstr "Befattning"
 
-#: ../inc/rvb_user_meta.php:41
+#: ../inc/rvb_user_meta.php:46
 msgid "Party"
 msgstr "Parti"
 
-#: ../inc/rvb_user_meta.php:47
+#: ../inc/rvb_user_meta.php:52
 msgid "Municipality"
 msgstr "Kommun"
 
-#: ../inc/rvb_user_meta.php:53
+#: ../inc/rvb_user_meta.php:61
+msgid "Department"
+msgstr "Avdelning"
+
+#: ../inc/rvb_user_meta.php:70
 msgid "Station"
 msgstr "Station"
 
-#: ../inc/rvb_user_meta.php:59
+#: ../inc/rvb_user_meta.php:76
 msgid "Group"
 msgstr "Grupp"
 
-#: ../inc/rvb_user_meta.php:65
+#: ../inc/rvb_user_meta.php:84
 msgid "Public E-mail"
 msgstr "Publik e-post"
 
-#: ../inc/rvb_user_meta.php:66
+#: ../inc/rvb_user_meta.php:85
 msgid "Make the e-mail address public on the web site"
 msgstr "Gör e-postadressen publik på webbplatsen"
 
-#: ../inc/rvb_user_roles.php:14
+#: ../inc/rvb_user_roles.php:10
 msgid "Board Member"
 msgstr "Ledamot"
 
-#: ../inc/rvb_user_roles.php:20
+#: ../inc/rvb_user_roles.php:16
 msgid "Staff"
 msgstr "Personal"
 
-#: ../inc/rvb_user_roles.php:26
+#: ../inc/rvb_user_roles.php:22
 msgid "Operational Staff"
 msgstr "Brandman"
 

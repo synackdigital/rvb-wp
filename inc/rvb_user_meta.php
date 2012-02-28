@@ -6,7 +6,6 @@
  * Some fields are only displayed for certain user roles.
  */
 
-
 function rvb_user_contactmethods( $contactmethods ) {
 
   unset($contactmethods['aim']);
@@ -22,7 +21,11 @@ add_filter('user_contactmethods', 'rvb_user_contactmethods', 10, 1);
 
 
 function rvb_show_user_org_meta( $user ) {
+  global $current_user;
+  get_currentuserinfo();
+
   $position = ( get_the_author_meta( 'position', $user->ID ) ) ? get_the_author_meta( 'position', $user->ID ) : '';
+  $department = ( get_the_author_meta( 'department', $user->ID ) ) ? get_the_author_meta( 'department', $user->ID ) : '';
   $party = ( get_the_author_meta( 'party', $user->ID ) ) ? get_the_author_meta( 'party', $user->ID ) : '';
   $municipality = ( get_the_author_meta( 'municipality', $user->ID ) ) ? get_the_author_meta( 'municipality', $user->ID ) : '';
   $station = ( get_the_author_meta( 'station', $user->ID ) ) ? get_the_author_meta( 'station', $user->ID ) : '';
@@ -37,6 +40,8 @@ function rvb_show_user_org_meta( $user ) {
       <input type="text" name="position" id="position" value="<?php echo $position; ?>" class="regular-text">
     </td>
   </tr>
+
+<?php if ( $current_user->caps['board_member'] ) : // fields for board members ?>
   <tr>
     <th><label for="party"><?php _e('Party', 'rvb'); ?></label></th>
     <td>
@@ -49,6 +54,18 @@ function rvb_show_user_org_meta( $user ) {
       <input type="text" name="municipality" id="municipality" value="<?php echo $municipality; ?>" class="regular-text">
     </td>
   </tr>
+<?php endif ; ?>
+
+<?php if ( $current_user->caps['staff'] ) : // fields for staff ?>
+  <tr>
+    <th><label for="department"><?php _e('Department', 'rvb'); ?></label></th>
+    <td>
+      <input type="text" name="department" id="department" value="<?php echo $department; ?>" class="regular-text">
+    </td>
+  </tr>
+<?php endif ; ?>
+
+<?php if ( $current_user->caps['operational_staff'] ) : // fields for operational staff ?>
   <tr>
     <th><label for="station"><?php _e('Station', 'rvb'); ?></label></th>
     <td>
@@ -61,9 +78,11 @@ function rvb_show_user_org_meta( $user ) {
       <input type="text" name="group" id="group" value="<?php echo $group; ?>" class="regular-text">
     </td>
   </tr>
+<?php endif ; ?>
+
   <tr>
     <th scope="row"><?php _e('Public E-mail', 'rvb'); ?></th>
-      <td><label for="email_is_public"><input type="checkbox" name="email_is_public" id="email_is_public" value="false"> <?php _e('Make the e-mail address public on the web site', 'rvb'); ?></label></td>
+      <td><label for="email_is_public"><input type="checkbox" name="email_is_public" id="email_is_public"> <?php _e('Make the e-mail address public on the web site', 'rvb'); ?></label></td>
     </tr>
   </table>
 <?php
