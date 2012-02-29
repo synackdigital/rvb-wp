@@ -118,6 +118,7 @@ function rvb_save_user_org_meta( $user_id ) {
   $email_is_public = isset( $_POST['email_is_public'] ) ? 'true' : 'false';
 
   update_user_meta( $user_id, 'position', $_POST['position'] );
+  update_user_meta( $user_id, 'department', $_POST['department'] );
   update_user_meta( $user_id, 'party', $_POST['party'] );
   update_user_meta( $user_id, 'municipality', $_POST['municipality'] );
   update_user_meta( $user_id, 'station', $_POST['station'] );
