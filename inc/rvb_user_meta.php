@@ -11,7 +11,6 @@ function rvb_user_contactmethods( $contactmethods ) {
   unset($contactmethods['aim']);
   unset($contactmethods['yim']);
   unset($contactmethods['jabber']);
-  unset($contactmethods['url']);
 
   $contactmethods['phone'] = __('Phone Number', 'rvb');
 
@@ -30,7 +29,7 @@ function rvb_show_user_org_meta( $user ) {
   $municipality = ( get_the_author_meta( 'municipality', $user->ID ) ) ? get_the_author_meta( 'municipality', $user->ID ) : '';
   $station = ( get_the_author_meta( 'station', $user->ID ) ) ? get_the_author_meta( 'station', $user->ID ) : '';
   $group = ( get_the_author_meta( 'group', $user->ID ) ) ? get_the_author_meta( 'group', $user->ID ) : '';
-  $email_is_public = ( get_the_author_meta( 'group', $user->ID ) ) ? get_the_author_meta( 'group', $user->ID ) : false;
+  $email_is_public = ( get_the_author_meta( 'email_is_public', $user->ID ) ) ? get_the_author_meta( 'email_is_public', $user->ID ) : '';
 ?>
 <h3><?php _e('Organization', 'rvb'); ?></h3>
 <table class="form-table">
@@ -82,7 +81,8 @@ function rvb_show_user_org_meta( $user ) {
 
   <tr>
     <th scope="row"><?php _e('Public E-mail', 'rvb'); ?></th>
-      <td><label for="email_is_public"><input type="checkbox" name="email_is_public" id="email_is_public"> <?php _e('Make the e-mail address public on the web site', 'rvb'); ?></label></td>
+      <?php $checked = ( $email_is_public == 'true' ) ? 'checked' : ''; ?>
+      <td><label for="email_is_public"><input type="checkbox" name="email_is_public" id="email_is_public" <?php echo $checked; ?>> <?php _e('Make the e-mail address public on the web site', 'rvb'); ?></label></td>
     </tr>
   </table>
 <?php
@@ -94,12 +94,14 @@ function rvb_save_user_org_meta( $user_id ) {
   if ( !current_user_can( 'edit_user', $user_id ) )
     return false;
 
+  $email_is_public = isset( $_POST['email_is_public'] ) ? 'true' : 'false';
+
   update_user_meta( $user_id, 'position', $_POST['position'] );
   update_user_meta( $user_id, 'party', $_POST['party'] );
   update_user_meta( $user_id, 'municipality', $_POST['municipality'] );
   update_user_meta( $user_id, 'station', $_POST['station'] );
   update_user_meta( $user_id, 'group', $_POST['group'] );
-  update_user_meta( $user_id, 'email_is_public', $_POST['email_is_public'] );
+  update_user_meta( $user_id, 'email_is_public', $email_is_public );
 }
 add_action('personal_options_update', 'rvb_save_user_org_meta');
 add_action('edit_user_profile_update', 'rvb_save_user_org_meta');
