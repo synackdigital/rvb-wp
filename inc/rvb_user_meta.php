@@ -2,7 +2,7 @@
 /**
  * Register custom user meta
  *
- * Extra fields are position, party, municipality, division, phone, station, group, email_is_public
+ * Extra fields are position, department, party, municipality, phone, station, group, email_is_public, admin_extra_roles
  * Some fields are only displayed for certain user roles.
  */
 
