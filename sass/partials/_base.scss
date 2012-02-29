@@ -20,7 +20,8 @@ $xlarge-font-size:        2.1428em; // ~30px
 $bg-color:                #fff;
 $bg-tint:                 #eaeaeb;
 $text-color:              #444;
-$mute-color:              mix( $bg-color, $text-color );
+$mute-color:              lighten( $text-color, 20% );
+$line-color:              #eaeaeb;
 
 $widget-bg-color:         #f8f8f8;
 $widget-line-color:       #eaeaeb;
