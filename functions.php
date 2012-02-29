@@ -89,6 +89,20 @@ add_action( 'widgets_init', 'rvb_widgets_init' );
 
 
 /**
+ * Customize excerpts
+ */
+function rvb_excerpt_length( $length ) {
+  return 24; // number of allowed words in excerpts
+}
+add_filter( 'excerpt_length', 'rvb_excerpt_length', 999 );
+
+function rvb_excerpt_more( $more ) {
+  return '&hellip;'; // the entire excerpt is already wrapped in a link
+}
+add_filter('excerpt_more', 'rvb_excerpt_more');
+
+
+/**
  * Add a custom logo to the admin header
  */
 function rvb_admin_logo() {
