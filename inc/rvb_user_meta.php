@@ -30,6 +30,7 @@ function rvb_show_user_org_meta( $user ) {
   $station = ( get_the_author_meta( 'station', $user->ID ) ) ? get_the_author_meta( 'station', $user->ID ) : '';
   $group = ( get_the_author_meta( 'group', $user->ID ) ) ? get_the_author_meta( 'group', $user->ID ) : '';
   $email_is_public = ( get_the_author_meta( 'email_is_public', $user->ID ) ) ? get_the_author_meta( 'email_is_public', $user->ID ) : '';
+  $admin_extra_role =  ( get_the_author_meta( 'admin_extra_role', $user->ID ) ) ? get_the_author_meta( 'admin_extra_role', $user->ID ) : '';
 ?>
 <h3><?php _e('Organization', 'rvb'); ?></h3>
 <table class="form-table">
@@ -79,13 +80,33 @@ function rvb_show_user_org_meta( $user ) {
   </tr>
 <?php endif ; ?>
 
-  <tr>
-    <th scope="row"><?php _e('Public E-mail', 'rvb'); ?></th>
+    <tr>
+      <th scope="row"><?php _e('Public E-mail', 'rvb'); ?></th>
       <?php $checked = ( $email_is_public == 'true' ) ? 'checked' : ''; ?>
       <td><label for="email_is_public"><input type="checkbox" name="email_is_public" id="email_is_public" <?php echo $checked; ?>> <?php _e('Make the e-mail address public on the web site', 'rvb'); ?></label></td>
     </tr>
   </table>
+
+<?php if ( $current_user->caps['administrator'] ) : // separate section for admins ?>
+  <h3><?php _e('Administrator', 'rvb'); ?></h3>
+  <table class="form-table">
+    <tr>
+    <th scope="row"><?php _e('Assign additional role', 'rvb'); ?> </th>
+    <td>
+      <fieldset>
+        <legend class="screen-reader-text"><span><?php _e('Additional role', 'rvb'); ?></span></legend>
+        <p>
+          <label><input name="admin_extra_role" type="radio" value="0" <?php checked( 0, $admin_extra_role ); ?> /> <?php _e('None', 'rvb'); ?></label><br />
+          <label><input name="admin_extra_role" type="radio" value="1" <?php checked( 1, $admin_extra_role ); ?> /> <?php _e('Board Member', 'rvb'); ?></label><br />
+          <label><input name="admin_extra_role" type="radio" value="2" <?php checked( 2, $admin_extra_role ); ?> /> <?php _e('Staff', 'rvb'); ?></label><br />
+          <label><input name="admin_extra_role" type="radio" value="3" <?php checked( 3, $admin_extra_role ); ?> /> <?php _e('Operational Staff', 'rvb'); ?></label>
+        </p>
+      </fieldset>
+    </td>
+    </tr>
+  </table>
 <?php
+  endif;
 }
 add_action('show_user_profile', 'rvb_show_user_org_meta');
 add_action('edit_user_profile', 'rvb_show_user_org_meta');
@@ -102,6 +123,7 @@ function rvb_save_user_org_meta( $user_id ) {
   update_user_meta( $user_id, 'station', $_POST['station'] );
   update_user_meta( $user_id, 'group', $_POST['group'] );
   update_user_meta( $user_id, 'email_is_public', $email_is_public );
+  update_user_meta( $user_id, 'admin_extra_role', $_POST['admin_extra_role'] );
 }
 add_action('personal_options_update', 'rvb_save_user_org_meta');
 add_action('edit_user_profile_update', 'rvb_save_user_org_meta');

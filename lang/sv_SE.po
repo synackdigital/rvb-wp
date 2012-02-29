@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-28 15:06+0100\n"
-"PO-Revision-Date: 2012-02-28 15:06+0100\n"
+"POT-Creation-Date: 2012-02-29 13:31+0100\n"
+"PO-Revision-Date: 2012-02-29 13:31+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -79,7 +79,7 @@ msgstr "Stationskarta"
 msgid "Displays an interactive map of stations"
 msgstr "Visar en interaktiv karta över stationer"
 
-#: ../inc/rvb_user_meta.php:16
+#: ../inc/rvb_user_meta.php:15
 msgid "Phone Number"
 msgstr "Telefonnummer"
 
@@ -115,21 +115,43 @@ msgstr "Grupp"
 msgid "Public E-mail"
 msgstr "Publik e-post"
 
-#: ../inc/rvb_user_meta.php:85
+#: ../inc/rvb_user_meta.php:86
 msgid "Make the e-mail address public on the web site"
 msgstr "Gör e-postadressen publik på webbplatsen"
 
+#: ../inc/rvb_user_meta.php:91
+msgid "Administrator"
+msgstr "Administratör"
+
+#: ../inc/rvb_user_meta.php:94
+msgid "Assign additional role"
+msgstr "Tilldela ytterligare roll"
+
+#: ../inc/rvb_user_meta.php:97
+msgid "Additional role"
+msgstr "Ytterligare roll"
+
+#: ../inc/rvb_user_meta.php:99
+msgid "None"
+msgstr "Ingen"
+
+#: ../inc/rvb_user_meta.php:100
 #: ../inc/rvb_user_roles.php:10
 msgid "Board Member"
 msgstr "Ledamot"
 
+#: ../inc/rvb_user_meta.php:101
 #: ../inc/rvb_user_roles.php:16
 msgid "Staff"
 msgstr "Personal"
 
+#: ../inc/rvb_user_meta.php:102
 #: ../inc/rvb_user_roles.php:22
 msgid "Operational Staff"
 msgstr "Brandman"
+
+#~ msgid "Extra role"
+#~ msgstr "Extra roll"
 
 #~ msgid "Board"
 #~ msgstr "Nämnd"
