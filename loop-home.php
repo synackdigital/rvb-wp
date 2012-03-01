@@ -17,7 +17,7 @@
  * @subpackage RVB
  */
 
-$postIndex = 0;
+$post_index = 0;
 
 ?>
 
@@ -32,7 +32,7 @@ $postIndex = 0;
     <?php /* Start the Loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php if ( $postIndex <= 1 && is_home() ) : ?>
+      <?php if ( $post_index <= 1 && is_home() ) : ?>
         <?php get_template_part( 'content', get_post_format() ); ?>
       <?php else : ?>
         <?php get_template_part( 'content', 'slat' ); ?>
@@ -40,7 +40,7 @@ $postIndex = 0;
 
     <?php
       if ( ! is_sticky() ) // sticky posts do not count
-        $postIndex++;
+        $post_index++;
 
       endwhile;
     ?>
