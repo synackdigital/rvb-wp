@@ -199,9 +199,22 @@ a {
   }
   // Status format style
   &.format-status {
+    @include border-radius;
+    background: $message-color;
+    border: 1px solid mix( $line-color, $message-color, 80% );
+    color: mix( $text-color, $message-color, 80% );
     .entry-title {
       font-size: $base-font-size;
       font-weight: bold;
+      margin-top: .5 * $base-hmargin;
+    }
+    .entry-content {
+      margin-bottom: 0;
+      margin-top: 0;
+      p {
+        margin-bottom: .25 * $base-hmargin;
+        margin-top: .25 * $base-hmargin;
+      }
     }
   }
   // Content slats
