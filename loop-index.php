@@ -38,7 +38,12 @@ $postIndex = 0;
         <?php get_template_part( 'content', 'slat' ); ?>
       <?php endif; ?>
 
-    <?php $postIndex++; endwhile; ?>
+    <?php
+      if ( ! is_sticky() ) // sticky posts do not count
+        $postIndex++;
+
+      endwhile;
+    ?>
 
   <?php else : ?>
 

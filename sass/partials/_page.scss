@@ -114,6 +114,7 @@ a {
 // Posts and pages
 #main .hentry {
   @include clearfix;
+  border-bottom: 1px solid $line-color;
   margin-bottom: $base-vmargin;
   .entry-header,
   .entry-footer {
@@ -128,6 +129,7 @@ a {
     @include border-radius;
     background: mix( $bg-color, $line-color );
     border: 1px solid $line-color;
+    margin: $base-vmargin 0;
     padding: .5 * $base-vmargin $base-hmargin 0 $base-hmargin;
   }
   .entry-title {
@@ -178,6 +180,7 @@ a {
       max-width: 100%;
     }
     .post-thumbnail-caption {
+      background: mix( $bg-color, $line-color );
       border: 1px solid $line-color;
       border-top: none;
       color: $mute-color;
@@ -196,12 +199,9 @@ a {
   }
   // Status format style
   &.format-status {
-    @include border-image(none);
-    @include border-radius;
-    background: #ffe;
-    border: 1px solid #ddc;
     .entry-title {
-      @include hidden;
+      font-size: $base-font-size;
+      font-weight: bold;
     }
   }
   // Content slats
@@ -227,9 +227,7 @@ a {
   }
   .commentlist {
     @include unstyled-list;
-    border: 0;
-    @include border-image( linear-gradient( left, $bg-color,$mute-color, $bg-color ) );
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $line-color;
     margin-bottom: $base-vmargin;
     .comment {
       margin: $base-vmargin 0;
@@ -274,7 +272,8 @@ a {
 #complementary {
   @include box-sizing( border-box );
   float: right;
-  padding: 2 * $base-vmargin 0;
+  padding-left: $base-hmargin;
+  padding-top: 2 * $base-vmargin;
   width: $sidebar-width;
   .sidebar {
     margin-left: $base-hmargin;
@@ -335,3 +334,22 @@ a {
     @include unstyled-link;
   }
 }
+
+
+/**
+ * Debug styles
+ */
+$debug: false;
+
+@if ( $debug ) {
+  #container {
+    background: rgba( gray, .1 );
+  }
+  #main {
+    background: rgba( green, .1 );
+  }
+  #complementary {
+    background: rgba( red, .1 );
+  }
+}
+
