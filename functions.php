@@ -67,9 +67,9 @@ add_action( 'after_setup_theme', 'rvb_setup' );
  */
 function rvb_widgets_init() {
   register_sidebar( array(
-    'name' => __( 'Index Sidebar', 'rvb' ),
-    'id' => 'sidebar-index',
-    'description' => __( 'This sidebar is displayed next to the main content on the index page', 'rvb' ),
+    'name' => __( 'Home Sidebar', 'rvb' ),
+    'id' => 'sidebar-home',
+    'description' => __( 'This sidebar is displayed next to the main content on the home page', 'rvb' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',
