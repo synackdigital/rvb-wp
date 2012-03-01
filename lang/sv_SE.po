@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-29 13:31+0100\n"
-"PO-Revision-Date: 2012-02-29 13:31+0100\n"
+"POT-Creation-Date: 2012-03-01 14:22+0100\n"
+"PO-Revision-Date: 2012-03-01 14:22+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,12 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../functions.php:70
-msgid "Index Sidebar"
-msgstr "Sidfält på indexsidan"
+msgid "Home Sidebar"
+msgstr "Sidfält på hemsidan"
 
 #: ../functions.php:72
-msgid "This sidebar is displayed next to the main content on the index page"
-msgstr "Sidfältet visas bredvid huvudinnehållet på indexsidan"
+msgid "This sidebar is displayed next to the main content on the home page"
+msgstr "Sidfältet visas bredvid huvudinnehållet på hemsidan"
 
 #: ../functions.php:79
 msgid "Social Sidebar"
@@ -39,21 +39,21 @@ msgstr "Huvudmeny"
 msgid "Skip to primary content"
 msgstr "Hoppa till huvudinnehållet"
 
-#: ../loop-index.php:27
+#: ../loop-home.php:27
 #, php-format
 msgid "Posts tagged with &#8220;%s&#8221;"
 msgstr "Inlägg med etiketten &#8220;%s&#8221;"
 
-#: ../loop-index.php:29
+#: ../loop-home.php:29
 #, php-format
 msgid "Posts in the &#8220;%s&#8221; category"
 msgstr "Inlägg i kategorin &#8220;%s&#8221;"
 
-#: ../loop-index.php:47
+#: ../loop-home.php:52
 msgid "Uh oh!"
 msgstr "Ojsan!"
 
-#: ../loop-index.php:51
+#: ../loop-home.php:56
 msgid "We could not find what you were looking for. Try performing a search."
 msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
 
@@ -136,17 +136,17 @@ msgid "None"
 msgstr "Ingen"
 
 #: ../inc/rvb_user_meta.php:100
-#: ../inc/rvb_user_roles.php:10
+#: ../inc/rvb_user_roles.php:11
 msgid "Board Member"
 msgstr "Ledamot"
 
 #: ../inc/rvb_user_meta.php:101
-#: ../inc/rvb_user_roles.php:16
+#: ../inc/rvb_user_roles.php:17
 msgid "Staff"
 msgstr "Personal"
 
 #: ../inc/rvb_user_meta.php:102
-#: ../inc/rvb_user_roles.php:22
+#: ../inc/rvb_user_roles.php:23
 msgid "Operational Staff"
 msgstr "Brandman"
 
