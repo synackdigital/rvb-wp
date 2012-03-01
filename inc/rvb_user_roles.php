@@ -6,6 +6,7 @@
 function rvb__user_roles() {
   remove_role('editor');
   remove_role('author');
+  remove_role('contributor');
 
   add_role( 'board_member', __('Board Member', 'rvb'), array(
     'read' => true,
