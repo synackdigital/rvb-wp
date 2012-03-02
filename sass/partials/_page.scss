@@ -111,13 +111,16 @@ a {
     @include unstyled-link;
   }
   .entry-thumbnail {
+    background: $bg-color;
+    bottom: 0;
     left: 0;
     position: absolute;
+    right: 0;
     top: 0;
     img {
       @include border-bottom-radius;
       height: auto;
-      max-width: 100%;
+      width: 100%;
     }
   }
   .entry-header {
