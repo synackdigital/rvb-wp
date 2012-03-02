@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-01 15:39+0100\n"
-"PO-Revision-Date: 2012-03-01 15:39+0100\n"
+"POT-Creation-Date: 2012-03-02 18:07+0100\n"
+"PO-Revision-Date: 2012-03-02 18:24+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -74,12 +74,20 @@ msgid "Campaigns are collections of posts and content around a common theme."
 msgstr "Kampanjer är samlingar av inlägg och innehåll kring ett gemensamt tema."
 
 #: ../inc/rvb_campaign_post_type.php:33
+msgid "Options"
+msgstr "Alternativ"
+
+#: ../inc/rvb_campaign_post_type.php:34
 msgid "Connections"
 msgstr "Kopplingar"
 
-#: ../inc/rvb_campaign_post_type.php:38
-msgid "Associate this campaign with the following post categories:"
-msgstr "Associera kampanjen med följande inläggskategorier:"
+#: ../inc/rvb_campaign_post_type.php:49
+msgid "Related categories"
+msgstr "Relaterade kategorier"
+
+#: ../inc/rvb_campaign_post_type.php:55
+msgid "Most Used"
+msgstr "Mest använda"
 
 #: ../inc/rvb_fblikebox_widget.php:44
 msgid "Facebook Like Box"
@@ -170,8 +178,8 @@ msgstr "Personal"
 msgid "Operational Staff"
 msgstr "Brandman"
 
-#~ msgid "Categories"
-#~ msgstr "Kategorier"
+#~ msgid "Associate this campaign with the following post categories:"
+#~ msgstr "Associera kampanjen med följande inläggskategorier:"
 
 #~ msgid "Extra role"
 #~ msgstr "Extra roll"
