@@ -25,7 +25,7 @@ var rvb = {
       console.log('rvb:campaign:init');
       
       // start toggle timer if more than one item
-      if ( rvb.campaign.domObj.children('.campaign').length > 0 ) {
+      if ( rvb.campaign.domObj.children('.campaign').length > 1 ) {
         rvb.campaign.start();
       }
     },
