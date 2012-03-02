@@ -9,10 +9,14 @@
 
 $loop = new WP_Query( array( 'post_type' => 'campaign', 'posts_per_page' => 3 ) );
 
-while ( $loop->have_posts() ) : $loop->the_post();
+if ( $loop->have_posts() ) :
   echo '<aside id="campaign" role="banner">';
-  get_template_part( 'content', 'campaign' );
+
+  while ( $loop->have_posts() ) : $loop->the_post();
+    get_template_part( 'content', 'campaign' );
+  endwhile;
+
   echo '</aside><!-- #campaign -->';
-endwhile;
+endif; // $loop->have_posts()
 
 ?>
