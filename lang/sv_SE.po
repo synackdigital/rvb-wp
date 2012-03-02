@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-01 14:22+0100\n"
-"PO-Revision-Date: 2012-03-01 14:22+0100\n"
+"POT-Creation-Date: 2012-03-01 15:39+0100\n"
+"PO-Revision-Date: 2012-03-01 15:39+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:70
+#: ../functions.php:75
 msgid "Home Sidebar"
 msgstr "Sidfält på hemsidan"
 
-#: ../functions.php:72
+#: ../functions.php:77
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på hemsidan"
 
-#: ../functions.php:79
+#: ../functions.php:84
 msgid "Social Sidebar"
 msgstr "Socialt sidfält"
 
-#: ../functions.php:81
+#: ../functions.php:86
 msgid "This sidebar is displayed on the home page and is sized to fit the Facebook Like Box"
 msgstr "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-rutan"
 
@@ -60,6 +60,26 @@ msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
 #: ../sidebar-page.php:21
 msgid "Secondary menu"
 msgstr "Sekundär meny"
+
+#: ../inc/rvb_campaign_post_type.php:9
+msgid "Campaigns"
+msgstr "Kampanjer"
+
+#: ../inc/rvb_campaign_post_type.php:10
+msgid "Campaign"
+msgstr "Kampanj"
+
+#: ../inc/rvb_campaign_post_type.php:14
+msgid "Campaigns are collections of posts and content around a common theme."
+msgstr "Kampanjer är samlingar av inlägg och innehåll kring ett gemensamt tema."
+
+#: ../inc/rvb_campaign_post_type.php:33
+msgid "Connections"
+msgstr "Kopplingar"
+
+#: ../inc/rvb_campaign_post_type.php:38
+msgid "Associate this campaign with the following post categories:"
+msgstr "Associera kampanjen med följande inläggskategorier:"
 
 #: ../inc/rvb_fblikebox_widget.php:44
 msgid "Facebook Like Box"
@@ -149,6 +169,9 @@ msgstr "Personal"
 #: ../inc/rvb_user_roles.php:23
 msgid "Operational Staff"
 msgstr "Brandman"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorier"
 
 #~ msgid "Extra role"
 #~ msgstr "Extra roll"

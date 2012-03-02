@@ -1,45 +1,82 @@
 
-/* RVB main functions */
+/* rvb functions */
 var rvb = {
   init: function() {
-    console.log('rvb init');
-    
-    var mainNavigation = jQuery('#access');
-        mainContent = jQuery('#primary');
-        mainSidebars = jQuery('#main').find('.widget-area');
-        metaSidebar = jQuery('#sidebar-header');
-        metaSidebarToggleLink = mainNavigation.find('li.menu-item-type-search');
+    console.log('rvb:init');
     
     if(Modernizr.touch) {
-      // Scroll away iOS browser chrome
-      rvb.scrollToTop();
+      rvb.scrollToTop(); // Scroll away iOS browser chrome
     }
     
-    if(metaSidebar && metaSidebarToggleLink) {
-      // Bind click event to the search field toggle link in the main navigation
-      metaSidebarToggleLink.on('click', 'a', function() {
-        metaSidebar.toggleClass('js-visible');
-        // Auto-focus on search field
-        if (metaSidebar.hasClass('js-visible')) {
-          metaSidebar.find('input.field.search').focus();
-        }
-      });
+    if (rvb.campaign.domObj.length) {
+      rvb.campaign.init();
     }
   },
   scrollToTop: function() {
+    console.log('rvb:scrollToTop');
     setTimeout(function(){
       window.scrollTo(0, 1);
     }, 0);
   },
-  toggleMetaSidebar: function() {
-    $('#sidebar-header').toggle('slow', function() {
-      console.log('meta sidebar was toggled');
-    });
+  
+  // campaign module
+  campaign: {
+    init: function() {
+      console.log('rvb:campaign:init');
+      
+      // start toggle timer if more than one item
+      if ( rvb.campaign.domObj.children('.campaign').length > 0 ) {
+        rvb.campaign.start();
+      }
+    },
+    start: function() {
+      console.log('rvb:campaign:start');
+      rvb.campaign.interval = setInterval(rvb.campaign.showNext, 6000);
+    },
+    stop: function() {
+      console.log('rvb:campaign:stop');
+      clearInterval(rvb.campaign.interval);
+    },
+    reset: function() {
+      console.log('rvb:campaign:reset');
+    },
+    resize: function() {
+      rvb.campaign.domObj.css('height', rvb.campaign.domObj.children('.campaign').last().find('img').first().outerHeight() );
+    },
+    showNext: function() {
+      console.log('rvb:campaign:showNext');
+      
+      var items = rvb.campaign.domObj.children('.campaign');
+      
+      if (Modernizr.csstransitions && Modernizr.opacity) {
+        // animate item switching
+        items.last().fadeOut('slow', function() {
+          items.first().before(items.last());
+          items.first().show();
+        });
+      }
+      else {
+        // no animation; just item switching
+        items.first().before(items.last());
+      }
+    },
+    showPrev: function() {
+      console.log('rvb:campaign:showPrev');
+    }
   }
 };
 
-/* Listen to document load and run init */
+/* document load listener */
 jQuery(document).ready(function($) {
-  console.log('document ready');
+  console.log('rvb:document:ready');
+  
+  // store references to dom objects
+  rvb.campaign.domObj = $('#campaign');
+  
   rvb.init();
 });
+
+jQuery(window).resize(function() {
+  rvb.campaign.resize();
+});
+    

@@ -18,3 +18,9 @@
   <?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => '1' ) ); ?>
 </nav><!-- #access -->
+
+<?php if ( post_type_exists('campaign') && is_home() ) : ?>
+<aside id="campaign" role="banner">
+<?php get_template_part( 'loop', 'campaign' ); ?>
+</aside>
+<?php endif; ?>

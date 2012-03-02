@@ -99,6 +99,37 @@ a {
 }
 
 /**
+ * Campaign banner
+ */
+#campaign {
+  color: white;
+  font-weight: bold;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  a {
+    @include unstyled-link;
+  }
+  .entry-thumbnail {
+    left: 0;
+    position: absolute;
+    top: 0;
+    img {
+      @include border-bottom-radius;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  .entry-header {
+    font-family: $decor-font-family;
+    font-size: $xxxlarge-font-size;
+    left: $base-vmargin;
+    position: absolute;
+    top: 2 * $base-hmargin;
+  }
+}
+
+/**
  * Main content
  */
 #main {
@@ -358,8 +389,14 @@ $debug: false;
   #container {
     background: rgba( gray, .1 );
   }
-  #main {
+  #header {
+    background: rgba( red, .1 );
+  }
+  #campaign {
     background: rgba( green, .1 );
+  }
+  #main {
+    background: rgba( blue, .1 );
   }
   #complementary {
     background: rgba( red, .1 );

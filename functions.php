@@ -16,6 +16,11 @@ if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_user_meta.php' ) ) {
   include_once dirname( __FILE__ ) . '/inc/rvb_user_meta.php';
 }
 
+// Import custom campaign post type
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_campaign_post_type.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_campaign_post_type.php';
+}
+
 // Import custom walker class for generating smart submenus
 if( @file_exists( dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.php' ) ) {
   include_once dirname( __FILE__ ) . '/inc/rb_walker_page_selective_children.php';
