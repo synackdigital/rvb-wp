@@ -19,8 +19,7 @@
   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => '1' ) ); ?>
 </nav><!-- #access -->
 
-<?php if ( post_type_exists('campaign') && is_home() ) : ?>
-<aside id="campaign" role="banner">
-<?php get_template_part( 'loop', 'campaign' ); ?>
-</aside>
-<?php endif; ?>
+<?php
+if ( post_type_exists('campaign') && is_home() )
+  get_template_part( 'loop', 'campaign' );
+?>
