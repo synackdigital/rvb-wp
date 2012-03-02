@@ -52,8 +52,8 @@ var rvb = {
         // animate item switching
         items.last().fadeOut('slow', function() {
           items.first().before(items.last());
-          items.first().show();
         });
+        items.first().show();
       }
       else {
         // no animation; just item switching
