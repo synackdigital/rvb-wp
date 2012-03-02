@@ -327,11 +327,11 @@ a {
   }
 }
 #secondary-nav {
-  border-bottom: 1px solid $mute-color;
+  border-bottom: 1px solid $line-color;
   margin-bottom: $base-hmargin;
   margin-left: $base-hmargin;
   li {
-    border-top: 1px solid $mute-color;
+    border-top: 1px solid $line-color;
     a {
       @include unstyled-hover-link;
       display: block;
@@ -341,7 +341,7 @@ a {
       border: none;
     }
     li {
-      border-color: mix( $bg-color, $mute-color );
+      border-color: mix( $bg-color, $line-color );
       margin-left: $base-vmargin;
     }
     // Recursive styling for selected items
