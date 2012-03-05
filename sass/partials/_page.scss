@@ -54,7 +54,11 @@ a {
     margin-top: $base-vmargin;
   }
 }
-#access {
+
+/**
+ * Navigation
+ */
+#nav-primary {
   @include border-radius;
   background: $decor-color;
   color: $decor-contrast-color;
@@ -97,6 +101,46 @@ a {
     @include single-text-shadow( darken( $decor-color, 8% ), 0, 1px, 1px );
   }
 }
+
+#nav-secondary {
+  border-bottom: 1px solid $line-color;
+  margin-bottom: $base-hmargin;
+  margin-left: $base-hmargin;
+  li {
+    border-top: 1px solid $line-color;
+    a {
+      @include unstyled-hover-link;
+      display: block;
+      padding: .25 * $base-vmargin $base-hmargin;
+    }
+    ul {
+      border: none;
+    }
+    li {
+      border-color: mix( $bg-color, $line-color );
+      margin-left: $base-vmargin;
+    }
+    // Recursive styling for selected items
+    &.current_page_ancestor,
+    &.current_page_item {
+      font-weight: bold;
+      li {
+        font-weight: normal;
+        &.current_page_ancestor,
+        &.current_page_item {
+          font-weight: bold;
+          li {
+            font-weight: normal;
+            &.current_page_item {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /**
  * Campaign banner
@@ -314,7 +358,7 @@ a {
 }
 
 /**
- * Complementary content
+ * Asides
  */
 #complementary {
   @include box-sizing( border-box );
@@ -324,44 +368,6 @@ a {
   width: $sidebar-width;
   .sidebar {
     margin-left: $base-hmargin;
-  }
-}
-#secondary-nav {
-  border-bottom: 1px solid $line-color;
-  margin-bottom: $base-hmargin;
-  margin-left: $base-hmargin;
-  li {
-    border-top: 1px solid $line-color;
-    a {
-      @include unstyled-hover-link;
-      display: block;
-      padding: .25 * $base-vmargin $base-hmargin;
-    }
-    ul {
-      border: none;
-    }
-    li {
-      border-color: mix( $bg-color, $line-color );
-      margin-left: $base-vmargin;
-    }
-    // Recursive styling for selected items
-    &.current_page_ancestor,
-    &.current_page_item {
-      font-weight: bold;
-      li {
-        font-weight: normal;
-        &.current_page_ancestor,
-        &.current_page_item {
-          font-weight: bold;
-          li {
-            font-weight: normal;
-            &.current_page_item {
-              font-weight: bold;
-            }
-          }
-        }
-      }
-    }
   }
 }
 #social {
