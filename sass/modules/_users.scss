@@ -1,0 +1,30 @@
+
+/**
+ * User listing
+ */
+.users {
+  background: rgba(red,.1);
+  @include unstyled-list;
+  .user {
+    @include background-image( linear-gradient( top, $bg-color, mix( $bg-color, $line-color ) ) );
+    @include border-radius;
+    @include box-sizing( border-box );
+    background-color: mix( $bg-color, $line-color );
+    border: 1px solid $line-color;
+    float: left;
+    margin: .5 * $base-vmargin 2% .5 * $base-vmargin 0;
+    padding: .5 * $base-vmargin .5 * $base-hmargin;
+    width: 30%;
+    .avatar {
+      @include border-radius;
+      border: 1px solid $bg-color;
+      height: auto;
+      width: 100%;
+    }
+    .name {
+      display: block;
+      font-weight: bold;
+      margin-top: .25 * $base-vmargin;
+    }
+  }
+}

@@ -3,7 +3,7 @@
  * Register custom user roles
  */
 
-function rvb__user_roles() {
+function rvb_user_roles() {
   remove_role('editor');
   remove_role('author');
   remove_role('contributor');
@@ -26,4 +26,4 @@ function rvb__user_roles() {
     'read_private_pages' => true
   ) );
 }
-add_action('init','rvb__user_roles');
+add_action('init','rvb_user_roles');
