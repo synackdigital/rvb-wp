@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
   rvb.init();
 });
 
+/* window resize listener */
 jQuery(window).resize(function() {
   rvb.campaign.resize();
 });
-    

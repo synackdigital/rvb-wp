@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-02 18:07+0100\n"
-"PO-Revision-Date: 2012-03-02 18:24+0100\n"
+"POT-Creation-Date: 2012-03-05 16:49+0100\n"
+"PO-Revision-Date: 2012-03-05 16:49+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,14 +31,6 @@ msgstr "Socialt sidfält"
 msgid "This sidebar is displayed on the home page and is sized to fit the Facebook Like Box"
 msgstr "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-rutan"
 
-#: ../header-content.php:15
-msgid "Main menu"
-msgstr "Huvudmeny"
-
-#: ../header-content.php:17
-msgid "Skip to primary content"
-msgstr "Hoppa till huvudinnehållet"
-
 #: ../loop-home.php:27
 #, php-format
 msgid "Posts tagged with &#8220;%s&#8221;"
@@ -57,9 +49,13 @@ msgstr "Ojsan!"
 msgid "We could not find what you were looking for. Try performing a search."
 msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
 
-#: ../sidebar-page.php:21
+#: ../nav-secondary.php:19
 msgid "Secondary menu"
 msgstr "Sekundär meny"
+
+#: ../people.php:97
+msgid "E-mail"
+msgstr "E-post"
 
 #: ../inc/rvb_campaign_post_type.php:9
 msgid "Campaigns"
@@ -177,6 +173,12 @@ msgstr "Personal"
 #: ../inc/rvb_user_roles.php:23
 msgid "Operational Staff"
 msgstr "Brandman"
+
+#~ msgid "Main menu"
+#~ msgstr "Huvudmeny"
+
+#~ msgid "Skip to primary content"
+#~ msgstr "Hoppa till huvudinnehållet"
 
 #~ msgid "Associate this campaign with the following post categories:"
 #~ msgstr "Associera kampanjen med följande inläggskategorier:"
