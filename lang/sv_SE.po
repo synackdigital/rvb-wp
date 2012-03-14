@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 13:08+0100\n"
-"PO-Revision-Date: 2012-03-12 13:09+0100\n"
+"POT-Creation-Date: 2012-03-14 15:55+0100\n"
+"PO-Revision-Date: 2012-03-14 15:55+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:80
+#: ../functions.php:90
 msgid "Home Sidebar"
 msgstr "Sidfält på hemsidan"
 
-#: ../functions.php:82
+#: ../functions.php:92
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på hemsidan"
 
-#: ../functions.php:89
+#: ../functions.php:99
 msgid "Social Sidebar"
 msgstr "Socialt sidfält"
 
-#: ../functions.php:91
+#: ../functions.php:101
 msgid "This sidebar is displayed on the home page and is sized to fit the Facebook Like Box"
 msgstr "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-rutan"
 
@@ -53,15 +53,12 @@ msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
 msgid "Secondary menu"
 msgstr "Sekundär meny"
 
-#: ../people.php:96
-msgid "E-mail"
-msgstr "E-post"
-
 #: ../inc/rvb_alarm_post_type.php:9
 msgid "Alarms"
 msgstr "Larm"
 
 #: ../inc/rvb_alarm_post_type.php:10
+#: ../inc/rvb_alarm_post_type.php:29
 msgid "Alarm"
 msgstr "Larm"
 
@@ -69,9 +66,49 @@ msgstr "Larm"
 msgid "SOS alarms from Alarmos."
 msgstr "SOS-larm från Alarmos."
 
-#: ../inc/rvb_alarm_post_type.php:33
-msgid "Options"
-msgstr "Alternativ"
+#: ../inc/rvb_alarm_post_type.php:43
+msgid "Rescue type"
+msgstr "Insatstyp"
+
+#: ../inc/rvb_alarm_post_type.php:44
+msgid "Automatic alarm"
+msgstr "Automatlarm"
+
+#: ../inc/rvb_alarm_post_type.php:47
+msgid "Object"
+msgstr "Objekt"
+
+#: ../inc/rvb_alarm_post_type.php:48
+msgid "Rescue Services West Blekinge"
+msgstr "Räddningstjänsten Västra Blekinge"
+
+#: ../inc/rvb_alarm_post_type.php:51
+msgid "Date and time"
+msgstr "Datum och tid"
+
+#: ../inc/rvb_alarm_post_type.php:55
+msgid "Address"
+msgstr "Adress"
+
+#: ../inc/rvb_alarm_post_type.php:56
+msgid "Pipe road"
+msgstr "Rörvägen"
+
+#: ../inc/rvb_alarm_post_type.php:59
+msgid "Municipality"
+msgstr "Kommun"
+
+#: ../inc/rvb_alarm_post_type.php:60
+msgid "Karlshamn"
+msgstr "Karlshamn"
+
+#: ../inc/rvb_alarm_post_type.php:63
+msgid "Information"
+msgstr "Information"
+
+#: ../inc/rvb_alarm_post_type.php:83
+msgid "Alarm number"
+msgstr "Larmnummer"
 
 #: ../inc/rvb_campaign_post_type.php:9
 msgid "Campaigns"
@@ -84,6 +121,10 @@ msgstr "Kampanj"
 #: ../inc/rvb_campaign_post_type.php:14
 msgid "Campaigns are collections of posts and content around a common theme."
 msgstr "Kampanjer är samlingar av inlägg och innehåll kring ett gemensamt tema."
+
+#: ../inc/rvb_campaign_post_type.php:33
+msgid "Options"
+msgstr "Alternativ"
 
 #: ../inc/rvb_campaign_post_type.php:34
 msgid "Connections"
@@ -130,10 +171,6 @@ msgstr "Befattning"
 #: ../inc/rvb_user_meta.php:46
 msgid "Party"
 msgstr "Parti"
-
-#: ../inc/rvb_user_meta.php:52
-msgid "Municipality"
-msgstr "Kommun"
 
 #: ../inc/rvb_user_meta.php:61
 msgid "Department"
@@ -186,6 +223,12 @@ msgstr "Personal"
 msgid "Operational Staff"
 msgstr "Brandman"
 
+#~ msgid "Kommun"
+#~ msgstr "Kommun"
+
+#~ msgid "E-mail"
+#~ msgstr "E-post"
+
 #~ msgid "Main menu"
 #~ msgstr "Huvudmeny"
 
@@ -203,9 +246,6 @@ msgstr "Brandman"
 
 #~ msgid "More profile information"
 #~ msgstr "Mer profilinformation"
-
-#~ msgid "Rescue Worker"
-#~ msgstr "Räddningsarbetare"
 
 #~ msgid "Management"
 #~ msgstr "Ledning"
