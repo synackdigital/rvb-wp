@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-05 16:49+0100\n"
-"PO-Revision-Date: 2012-03-05 16:49+0100\n"
+"POT-Creation-Date: 2012-03-12 13:08+0100\n"
+"PO-Revision-Date: 2012-03-12 13:09+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:75
+#: ../functions.php:80
 msgid "Home Sidebar"
 msgstr "Sidfält på hemsidan"
 
-#: ../functions.php:77
+#: ../functions.php:82
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på hemsidan"
 
-#: ../functions.php:84
+#: ../functions.php:89
 msgid "Social Sidebar"
 msgstr "Socialt sidfält"
 
-#: ../functions.php:86
+#: ../functions.php:91
 msgid "This sidebar is displayed on the home page and is sized to fit the Facebook Like Box"
 msgstr "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-rutan"
 
@@ -53,9 +53,25 @@ msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
 msgid "Secondary menu"
 msgstr "Sekundär meny"
 
-#: ../people.php:97
+#: ../people.php:96
 msgid "E-mail"
 msgstr "E-post"
+
+#: ../inc/rvb_alarm_post_type.php:9
+msgid "Alarms"
+msgstr "Larm"
+
+#: ../inc/rvb_alarm_post_type.php:10
+msgid "Alarm"
+msgstr "Larm"
+
+#: ../inc/rvb_alarm_post_type.php:14
+msgid "SOS alarms from Alarmos."
+msgstr "SOS-larm från Alarmos."
+
+#: ../inc/rvb_alarm_post_type.php:33
+msgid "Options"
+msgstr "Alternativ"
 
 #: ../inc/rvb_campaign_post_type.php:9
 msgid "Campaigns"
@@ -68,10 +84,6 @@ msgstr "Kampanj"
 #: ../inc/rvb_campaign_post_type.php:14
 msgid "Campaigns are collections of posts and content around a common theme."
 msgstr "Kampanjer är samlingar av inlägg och innehåll kring ett gemensamt tema."
-
-#: ../inc/rvb_campaign_post_type.php:33
-msgid "Options"
-msgstr "Alternativ"
 
 #: ../inc/rvb_campaign_post_type.php:34
 msgid "Connections"

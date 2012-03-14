@@ -16,9 +16,24 @@ if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_user_meta.php' ) ) {
   include_once dirname( __FILE__ ) . '/inc/rvb_user_meta.php';
 }
 
+// Import user shortcode
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_user_shortcode.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_user_shortcode.php';
+}
+
+// Import user list shortcode
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_userlist_shortcode.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_userlist_shortcode.php';
+}
+
 // Import custom campaign post type
 if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_campaign_post_type.php' ) ) {
   include_once dirname( __FILE__ ) . '/inc/rvb_campaign_post_type.php';
+}
+
+// Import custom alarm post type
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_alarm_post_type.php' ) ) {
+  include_once dirname( __FILE__ ) . '/inc/rvb_alarm_post_type.php';
 }
 
 // Import custom walker class for generating smart submenus
