@@ -20,10 +20,10 @@ Description: Custom theme for Räddningstjänsten Västra Blekinge.
 @import "../../synack-wpbp/sass/partials/components";
 
 // Modules
-@import "modules/uicomponents";
+@import "modules/ui";
 @import "modules/forms";
-@import "modules/people";
 @import "modules/widgets";
+@import "modules/userlist";
 @import "modules/stationmap";
 
 // Layout

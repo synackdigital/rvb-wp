@@ -194,6 +194,11 @@ a {
   @include clearfix;
   border-bottom: 1px solid $line-color;
   margin-bottom: $base-vmargin;
+  a {
+    &.permalink {
+      @include unstyled-hover-link;
+    }
+  }
   .entry-header,
   .entry-footer {
     a {
@@ -205,8 +210,8 @@ a {
   }
   .entry-footer {
     @include border-radius;
-    background: mix( $bg-color, $line-color );
-    border: 1px solid $line-color;
+//    background: mix( $bg-color, $line-color );
+//    border: 1px solid $line-color;
     margin: $base-vmargin 0;
     padding: .5 * $base-vmargin $base-hmargin 0 $base-hmargin;
   }
@@ -226,9 +231,6 @@ a {
     a {
       @include unstyled-hover-link;
     }
-    /*.by-author {
-      @include hidden;
-    }*/
   }
   .cat-links {
     @include inline-block;
@@ -271,7 +273,7 @@ a {
     body.home & {
       float: left;
       margin-right: $base-hmargin;
-      margin-top: .25em;
+      margin-top: .25em; // align with headline
       max-width: 50%;
     }
   }
@@ -281,6 +283,9 @@ a {
     background: $message-color;
     border: 1px solid mix( $line-color, $message-color, 80% );
     color: mix( $text-color, $message-color, 80% );
+    a {
+      @include unstyled-link;
+    }
     .entry-title {
       font-size: $base-font-size;
       font-weight: bold;
@@ -295,16 +300,14 @@ a {
       }
     }
   }
-  // Content slats
-  &.slat {
-    a {
-      @include unstyled-hover-link;
-    }
-    body.home & {
-      clear: left;
-      float: left;
-      width: 99% - $sidebar-social-width;
-    }
+  // Summary of post
+  &.post-summary {
+    clear: left;
+    float: left;
+    width: 50%;
+  }
+  // Featured post
+  &.post-featured {
   }
 }
 
@@ -371,7 +374,9 @@ a {
   }
 }
 #social {
+  @include box-sizing( border-box );
   @include inline-block;
+  padding-left: $base-hmargin;
   width: $sidebar-social-width;
 }
 

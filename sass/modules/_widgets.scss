@@ -53,8 +53,7 @@
   .widget_tag_cloud {
     text-align: center;
     a {
-      @include button-link;
-      background-color: $bg-color;
+      @include unstyled-hover-link;
     }
   }
 }

@@ -29,23 +29,26 @@ $post_index = 0;
     <h1 class="page-title"><?php printf( __( 'Posts in the &#8220;%s&#8221; category', 'rvb' ), '<span class="cat">' . single_cat_title( '', false ) . '</span>' ); ?></h1>
     <?php endif; ?>
 
-    <?php /* Start the Loop */ ?>
-    <?php while ( have_posts() ) : the_post(); ?>
-
-      <?php if ( $post_index <= 1 && is_home() ) : ?>
-        <?php get_template_part( 'content', get_post_format() ); ?>
-      <?php else : ?>
-        <?php get_template_part( 'content', 'slat' ); ?>
-      <?php endif; ?>
-
     <?php
+      /* Start the Loop */
+      while ( have_posts() ) : the_post();
+
+        if ( $post_index <= 1 && is_home() ) :
+          if ( has_post_format( 'status', get_the_ID() ) ) :
+            get_template_part( 'content', 'status' );
+          else :
+            get_template_part( 'content', 'featured' );
+          endif;
+        else :
+          get_template_part( 'content', 'summary' );
+        endif;
+
       if ( ! is_sticky() ) // sticky posts do not count
         $post_index++;
 
       endwhile;
-    ?>
 
-  <?php else : ?>
+    else : ?>
 
     <article id="post-0" class="post no-results not-found">
       <header class="entry-header">

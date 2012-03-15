@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-14 15:55+0100\n"
-"PO-Revision-Date: 2012-03-14 15:55+0100\n"
+"POT-Creation-Date: 2012-03-15 14:48+0100\n"
+"PO-Revision-Date: 2012-03-15 14:49+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,19 +15,25 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:90
+#: ../content-featured.php:41
+#: ../content-summary.php:15
+#, php-format
+msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
+msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
+
+#: ../functions.php:98
 msgid "Home Sidebar"
 msgstr "Sidfält på hemsidan"
 
-#: ../functions.php:92
+#: ../functions.php:100
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på hemsidan"
 
-#: ../functions.php:99
+#: ../functions.php:107
 msgid "Social Sidebar"
 msgstr "Socialt sidfält"
 
-#: ../functions.php:101
+#: ../functions.php:109
 msgid "This sidebar is displayed on the home page and is sized to fit the Facebook Like Box"
 msgstr "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-rutan"
 
@@ -41,11 +47,11 @@ msgstr "Inlägg med etiketten &#8220;%s&#8221;"
 msgid "Posts in the &#8220;%s&#8221; category"
 msgstr "Inlägg i kategorin &#8220;%s&#8221;"
 
-#: ../loop-home.php:52
+#: ../loop-home.php:55
 msgid "Uh oh!"
 msgstr "Ojsan!"
 
-#: ../loop-home.php:56
+#: ../loop-home.php:59
 msgid "We could not find what you were looking for. Try performing a search."
 msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
 
@@ -95,6 +101,7 @@ msgid "Pipe road"
 msgstr "Rörvägen"
 
 #: ../inc/rvb_alarm_post_type.php:59
+#: ../inc/rvb_user_meta.php:52
 msgid "Municipality"
 msgstr "Kommun"
 
@@ -222,6 +229,9 @@ msgstr "Personal"
 #: ../inc/rvb_user_roles.php:23
 msgid "Operational Staff"
 msgstr "Brandman"
+
+#~ msgid "Continue reading"
+#~ msgstr "Fortsätt läsa"
 
 #~ msgid "Kommun"
 #~ msgstr "Kommun"

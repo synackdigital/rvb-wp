@@ -1,9 +1,4 @@
 
-.userlist {
-  @include clearfix;
-  @include unstyled-list;
-}
-
 .user {
   float: left;
   margin-bottom: $base-vmargin;
@@ -29,3 +24,9 @@
     overflow: hidden;
   }
 }
+
+.userlist {
+  @include clearfix;
+  @include unstyled-list;
+}
+

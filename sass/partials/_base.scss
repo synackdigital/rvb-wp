@@ -51,11 +51,11 @@ $base-vmargin:            21px;
 $base-maxwidth:           1218px;
 $base-minwidth:           728px;
 
-$mobile-maxwidth:         480px;
-$mobile-minwidth:         320px;
+$mobile-maxwidth:         460px;
+$mobile-minwidth:         300px;
 
 $sidebar-width:           percentage( $mobile-maxwidth / $base-maxwidth ); // Sidebars are relative in size by default, and 100% on mobile layouts
-$sidebar-social-width:    41%;
+$sidebar-social-width:    50%;
 
 /**
  * Compass defaults
