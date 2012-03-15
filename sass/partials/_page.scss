@@ -379,23 +379,59 @@ a {
     margin-left: $base-hmargin;
   }
 }
-#secondary {
+#sidebar-home2 {
   @include box-sizing( border-box );
   @include inline-block;
   padding-left: $base-hmargin;
-  width: $sidebar-social-width;
+  width: $sidebar-home2-width;
 }
 
 /**
  * Footer
  */
 #footer {
+  @include border-radius;
+  @include clearfix;
   background: $decor-color;
   color: $decor-contrast-color;
   clear: both;
   a {
     @include hover-link;
     @include unstyled-link;
+    &.bigmail {
+      background: image-url('bigmail.png') center left no-repeat;
+      display: block;
+      font-weight: bold;
+      height: image-height('bigmail.png');
+      line-height: image-height('bigmail.png');
+      margin-bottom: .5 * $base-vmargin;
+      padding-left: image-width('bigmail.png') + .5 * $base-hmargin;
+    }
+    &.bignews {
+      background: image-url('bignews.png') center left no-repeat;
+      display: block;
+      font-weight: bold;
+      height: image-height('bignews.png');
+      line-height: image-height('bignews.png');
+      margin-bottom: .5 * $base-vmargin;
+      padding-left: image-width('bignews.png') + .5 * $base-hmargin;
+    }
+  }
+  h1 {
+    font-weight: bold;
+  }
+  section {
+    @include box-sizing( border-box );
+    float: left;
+    padding: $base-vmargin $base-hmargin;
+    width: 20%;
+  }
+  html.cssgradients & {
+    @include background-image( linear-gradient( top, lighten( $decor-color, 2% ), darken( $decor-color, 2% ) ));
+    border-bottom: 1px solid darken( $decor-color, 8% );
+  }
+  html.textshadow & {
+    @include single-text-shadow( darken( $decor-color, 8% ), 0, 1px, 1px );
   }
 }
 
@@ -420,6 +456,15 @@ $debug: false;
   }
   #complementary {
     background: rgba( red, .1 );
+  }
+  #sidebar-home2 {
+    background: rgba( red, .1 );
+  }
+  #footer {
+    background: rgba( blue, .1 );
+    section {
+      background: rgba( blue, .1 );
+    }
   }
 }
 

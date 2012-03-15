@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-15 15:55+0100\n"
-"PO-Revision-Date: 2012-03-15 15:55+0100\n"
+"POT-Creation-Date: 2012-03-15 16:44+0100\n"
+"PO-Revision-Date: 2012-03-15 16:44+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,35 +21,51 @@ msgstr ""
 msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 
-#: ../functions.php:98
+#: ../functions.php:88
+msgid "Footer Menu 1"
+msgstr "Sidfotsmeny 1"
+
+#: ../functions.php:89
+msgid "Footer Menu 2"
+msgstr "Sidfotsmeny 2"
+
+#: ../functions.php:90
+msgid "Footer Menu 3"
+msgstr "Sidfotsmeny 3"
+
+#: ../functions.php:91
+msgid "Footer Menu 4"
+msgstr "Sidfotsmeny 4"
+
+#: ../functions.php:104
 msgid "Primary Home Sidebar"
 msgstr "Primärt sidfält på startsidan"
 
-#: ../functions.php:100
+#: ../functions.php:106
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan"
 
-#: ../functions.php:107
+#: ../functions.php:113
 msgid "Secondary Home Sidebar"
 msgstr "Sekundärt sidfält på startsidan"
 
-#: ../functions.php:109
+#: ../functions.php:115
 msgid "This sidebar is displayed next to the news summary on the home page"
 msgstr "Sidfältet visas bredvid nyhetssammanfattingen på startsidan"
 
-#: ../functions.php:116
+#: ../functions.php:122
 msgid "Page Sidebar"
 msgstr "Sidfält på sidor"
 
-#: ../functions.php:118
+#: ../functions.php:124
 msgid "The page sidebar is displayed on all pages, above the main sidebar"
 msgstr "Sidfältet visas på alla sidor ovanför det generella sidfältet"
 
-#: ../functions.php:125
+#: ../functions.php:131
 msgid "Post Sidebar"
 msgstr "Sidfält i inlägg"
 
-#: ../functions.php:127
+#: ../functions.php:133
 msgid "The post sidebar is displayed on all posts, above the main sidebar"
 msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
