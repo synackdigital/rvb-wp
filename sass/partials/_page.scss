@@ -254,18 +254,24 @@ a {
   }
   .post-thumbnail {
     margin-bottom: $base-vmargin;
+    position: relative;
     img {
       @include border-radius;
       height: auto;
       max-width: 100%;
     }
     .post-thumbnail-caption {
-      background: mix( $bg-color, $line-color );
-      border: 1px solid $line-color;
-      border-top: none;
-      color: $mute-color;
+      background: rgba( black, .6 );
+      bottom: 0;
+      color: white;
       font-size: $small-font-size;
+      left: 0;
       padding: .5 * $base-vmargin $base-hmargin;
+      position: absolute;
+      right: 0;
+      html.no-rgba & {
+        background: black;
+      }
       .sep {
         margin: 0 .5 * $base-hmargin;
       }
