@@ -51,6 +51,14 @@ if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_fblikebox_widget.php' ) ) {
   include_once dirname( __FILE__ ) . '/inc/rvb_fblikebox_widget.php';
 }
 
+// Set up custom template for the image widget (if present)
+if( @file_exists( dirname( __FILE__ ) . '/inc/rvb_sp_template_image_widget.php' ) ) {
+  function rvb_sp_template_image_widget($template) {
+      return get_stylesheet_directory() . '/inc/rvb_sp_template_image_widget.php';
+  }
+  add_filter('sp_template_image-widget_widget.php', 'rvb_sp_template_image_widget');
+}
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.

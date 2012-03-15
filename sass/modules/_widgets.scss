@@ -58,3 +58,20 @@
     }
   }
 }
+
+// Image Widget
+.widget_sp_image {
+  a {
+    @include unstyled-link;
+    &:focus,
+    &:hover {
+      font-color: $link-color;
+    }
+  }
+  img {
+    @include border-radius;
+    border: 1px solid $widget-line-color;
+    height: auto;
+    width: 100%;
+  }
+}
