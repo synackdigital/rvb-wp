@@ -65,7 +65,7 @@ $post_index = 0;
 
   <?php if ( is_home() ) : ?>
   <aside id="social" role="complementary">
-    <?php get_sidebar('social'); ?>
+    <?php get_sidebar('home2'); ?>
   </aside><!-- #social -->
 <?php endif; ?>
 

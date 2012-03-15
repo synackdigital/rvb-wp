@@ -7,7 +7,7 @@
  */
 ?>
 
-<div id="sidebar-page" class="sidebar">
+<div id="sidebar-page" class="sidebar" role="complementary">
   <?php
     // Get the secondary nav
     get_template_part( 'nav', 'secondary' );
@@ -17,7 +17,7 @@
       return;
     // If we get this far, we have widgets. Let do this.
   ?>
-  <div class="widget-area" role="complementary">
+  <div class="widget-area">
     <?php dynamic_sidebar( 'sidebar-page' ); ?>
   </div>
 </div><!-- #sidebar-page -->

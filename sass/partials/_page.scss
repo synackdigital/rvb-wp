@@ -373,7 +373,7 @@ a {
     margin-left: $base-hmargin;
   }
 }
-#social {
+#secondary {
   @include box-sizing( border-box );
   @include inline-block;
   padding-left: $base-hmargin;

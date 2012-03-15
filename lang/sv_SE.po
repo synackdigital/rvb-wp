@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-15 14:48+0100\n"
-"PO-Revision-Date: 2012-03-15 14:49+0100\n"
+"POT-Creation-Date: 2012-03-15 15:37+0100\n"
+"PO-Revision-Date: 2012-03-15 15:39+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,20 +22,36 @@ msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=
 msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 
 #: ../functions.php:98
-msgid "Home Sidebar"
-msgstr "Sidfält på hemsidan"
+msgid "Primary Home Sidebar"
+msgstr "Primärt sidfält på startsidan"
 
 #: ../functions.php:100
 msgid "This sidebar is displayed next to the main content on the home page"
-msgstr "Sidfältet visas bredvid huvudinnehållet på hemsidan"
+msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan"
 
 #: ../functions.php:107
-msgid "Social Sidebar"
-msgstr "Socialt sidfält"
+msgid "Secondary Home Sidebar"
+msgstr "Sekundärt sidfält på startsidan"
 
 #: ../functions.php:109
-msgid "This sidebar is displayed on the home page and is sized to fit the Facebook Like Box"
-msgstr "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-rutan"
+msgid "This sidebar is displayed next to the news summary on the home page"
+msgstr "Sidfältet visas bredvid nyhetssammanfattingen på startsidan"
+
+#: ../functions.php:116
+msgid "Page Sidebar"
+msgstr "Sidfält på sidor"
+
+#: ../functions.php:118
+msgid "The page sidebar is displayed on all pages, above the main sidebar"
+msgstr "Sidfältet visas på alla sidor ovanför det generella sidfältet"
+
+#: ../functions.php:125
+msgid "Post Sidebar"
+msgstr "Sidfält i inlägg"
+
+#: ../functions.php:127
+msgid "The post sidebar is displayed on all posts, above the main sidebar"
+msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
 #: ../loop-home.php:27
 #, php-format
@@ -229,6 +245,16 @@ msgstr "Personal"
 #: ../inc/rvb_user_roles.php:23
 msgid "Operational Staff"
 msgstr "Brandman"
+
+#~ msgid "Social Sidebar"
+#~ msgstr "Socialt sidfält"
+
+#~ msgid ""
+#~ "This sidebar is displayed on the home page and is sized to fit the "
+#~ "Facebook Like Box"
+#~ msgstr ""
+#~ "Sidfältet visas på hemsidan och storleksanpassas efter Facebook Gilla-"
+#~ "rutan"
 
 #~ msgid "Continue reading"
 #~ msgstr "Fortsätt läsa"

@@ -95,23 +95,41 @@ add_action('after_setup_theme', 'rvb_setup');
  */
 function rvb_widgets_init() {
   register_sidebar(array(
-    'name' => __('Home Sidebar', 'rvb'),
+    'name' => __('Primary Home Sidebar', 'rvb'),
     'id' => 'sidebar-home',
     'description' => __('This sidebar is displayed next to the main content on the home page', 'rvb'),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',
     'after_title' => '</h2>',
- ));
+  ));
   register_sidebar(array(
-    'name' => __('Social Sidebar', 'rvb'),
-    'id' => 'sidebar-social',
-    'description' => __('This sidebar is displayed on the home page and is sized to fit the Facebook Like Box', 'rvb'),
+    'name' => __('Secondary Home Sidebar', 'rvb'),
+    'id' => 'sidebar-home2',
+    'description' => __('This sidebar is displayed next to the news summary on the home page', 'rvb'),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => "</aside>",
     'before_title' => '<h2 class="widget-title">',
     'after_title' => '</h2>',
- ));
+  ));
+  register_sidebar( array(
+    'name' => __( 'Page Sidebar', 'rvb' ),
+    'id' => 'sidebar-page',
+    'description' => __( 'The page sidebar is displayed on all pages, above the main sidebar', 'rvb' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => "</aside>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ));
+  register_sidebar( array(
+    'name' => __( 'Post Sidebar', 'rvb' ),
+    'id' => 'sidebar-post',
+    'description' => __( 'The post sidebar is displayed on all posts, above the main sidebar', 'rvb' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => "</aside>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ));
 }
 add_action('widgets_init', 'rvb_widgets_init');
 
