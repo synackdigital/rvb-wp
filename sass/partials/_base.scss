@@ -23,12 +23,7 @@ $bg-color:                #fff;
 $bg-tint:                 #eaeaeb;
 $text-color:              #444;
 $mute-color:              lighten( $text-color, 20% );
-$line-color:              #eaeaeb;
-
-$widget-bg-color:         #f8f8f8;
-$widget-line-color:       #eaeaeb;
-$widget-title-bg-color:   #747476;
-$widget-contrast-color:   white;
+$line-color:              darken( $bg-tint, 5% );
 
 $decor-color:             #cc071e;
 $decor-contrast-color:    white;
