@@ -2,8 +2,8 @@
 .user {
   float: left;
   margin-bottom: $base-vmargin;
-  margin-right: $base-hmargin;
-  width: 200px;
+  margin-right: 3%;
+  width: 30%;
   .avatar {
     @include box-sizing( border-box );
     @include border-radius;

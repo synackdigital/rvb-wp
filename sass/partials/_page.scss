@@ -199,6 +199,19 @@ a {
       @include unstyled-hover-link;
     }
   }
+  h2, h3, h4, h5, h6 {
+    clear: left;
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-top: 1em;
+  }
+  h2 {
+    clear: both;
+    font-size: $large-font-size;
+  }
+  h3, h4, h5, h6 {
+    font-weight: bold;
+  }
   .entry-header,
   .entry-footer {
     a {
@@ -207,6 +220,10 @@ a {
   }
   .entry-content {
     margin: $base-vmargin $base-hmargin;
+    img {
+      height: auto;
+      max-width: 100%;
+    }
   }
   .entry-footer {
     @include border-radius;
@@ -254,24 +271,14 @@ a {
   }
   .post-thumbnail {
     margin-bottom: $base-vmargin;
-    position: relative;
     img {
       @include border-radius;
       height: auto;
       max-width: 100%;
     }
     .post-thumbnail-caption {
-      background: rgba( black, .6 );
-      bottom: 0;
-      color: white;
       font-size: $small-font-size;
-      left: 0;
-      padding: .5 * $base-vmargin $base-hmargin;
-      position: absolute;
-      right: 0;
-      html.no-rgba & {
-        background: black;
-      }
+      font-style: italic;
       .sep {
         margin: 0 .5 * $base-hmargin;
       }
