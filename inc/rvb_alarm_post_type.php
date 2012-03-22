@@ -13,7 +13,12 @@ function rvb_alarm_post_type () {
     'labels' => $alarm_labels,
     'description' => __('SOS alarms from Alarmos.', 'rvb'),
     'public' => true,
+    'rewrite' => array(
+      'slug' => 'larm',
+      'with_front' => false
+    ),
     'hierarchical' => false,
+    'exclude_from_search' => true,
     'supports' => array(
       'title',
       'comments'
