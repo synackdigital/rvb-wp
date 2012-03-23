@@ -83,15 +83,63 @@ class RVB_RecentAlarms_Widget extends WP_Widget {
       echo '<ul class="alarms-list">';
 
       while ( $loop->have_posts() ) : $loop->the_post();
-        echo '<li id="alarm-'.get_the_ID().'" class="alarm">';
-        echo '<div class="alarm-title"><a class="alarm-link" href="'.get_permalink().'">';
-        echo '<span class="alarm-number">'.get_the_title().'</span><span class="sep">&rsaquo;</span>';
-        echo '<span class="alarm-type">'.get_post_meta(get_the_ID(), 'type', TRUE).'</span></a></div>';
-        echo '<div class="alarm-meta"><span class="alarm-datetime">'.get_post_meta(get_the_ID(), 'datetime', TRUE).'</span> ';
-        echo '<a class="alarm-maplink" href="http://maps.google.com/maps?q='.urlencode(get_post_meta(get_the_ID(), 'object', TRUE).' '.get_post_meta(get_the_ID(), 'municipality', TRUE)).'" target="_blank"><span class="alarm-object">'.get_post_meta(get_the_ID(), 'object', TRUE).'</span> ';
-        echo '<span class="alarm-municipality">'.get_post_meta(get_the_ID(), 'municipality', TRUE).'</span></a></div>';
-        echo '<div class="alarm-information">'.get_post_meta(get_the_ID(), 'information', TRUE).'</div>';
-        echo '</li><!-- #alarm-'.get_the_ID().' -->';
+        $id = get_the_ID();
+        $link = get_permalink();
+        $title = get_the_title();
+        $type = get_post_meta(get_the_ID(), 'type', TRUE);
+        $datetime = get_post_meta(get_the_ID(), 'datetime', TRUE);
+        $object = get_post_meta(get_the_ID(), 'object', TRUE);
+        $municipality = get_post_meta(get_the_ID(), 'municipality', TRUE);
+        $address = get_post_meta(get_the_ID(), 'address', TRUE);
+        $information = get_post_meta(get_the_ID(), 'information', TRUE);
+
+        $return = '<li id="alarm-'.$id.'" class="alarm"><div class="alarm-title"><a class="alarm-link" href="'.$link.'">';
+
+        if ( !empty($title) )
+          $return .= '<span class="alarm-number">'.$title.'</span>';
+
+        if ( !empty($title) && !empty($type) )
+          $return .= '<span class="sep">&rsaquo;</span>';
+
+        if ( !empty($type) )
+          $return .= '<span class="alarm-type">'.$type.'</span>';
+
+        $return .= '</a></div><div class="alarm-meta">';
+
+        if ( !empty($datetime) )
+          $return .= '<span class="alarm-datetime">'.$datetime.'</span> ';
+
+        if ( !empty($object) || !empty($address) || !empty($municipality) )
+          $return .= '<a class="alarm-maplink" href="http://maps.google.com/maps?q='.urlencode($object.' '.$address.' '.$municipality).'" target="_blank">';
+
+        if ( !empty($object) ) :
+          $return .= '<span class="alarm-object">'.$object.'</span>';
+
+          if ( !empty($address) || !empty($municipality) )
+            $return .= ', ';
+        endif;
+
+
+        if ( !empty($address) )
+          $return .= '<span class="alarm-address">'.$address.'</span>';
+
+        if ( !empty($address) && !empty($municipality) )
+          $return .= ' ';
+
+        if ( !empty($municipality) )
+          $return .= '<span class="alarm-municipality">'.$municipality.'</span>';
+
+        if ( !empty($object) && !empty($address) && !empty($municipality) )
+          $return .= '</a>';
+
+        $return .= '</div>';
+
+        if ( !empty($information) )
+          $return .= '<div class="alarm-information">'.$information.'</div>';
+
+        $return .= '</li><!-- #alarm-'.$id.' -->';
+
+        echo $return;
       endwhile;
 
       echo '</ul>';

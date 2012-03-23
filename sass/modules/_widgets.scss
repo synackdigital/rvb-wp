@@ -122,22 +122,12 @@
         color: $text-color;
       }
     }
-    .alarm-datetime {
-      &:after {
-        content: ': ';
-      }
-    }
     .alarm-information {
       color: $mute-color;
       font-size: $small-font-size;
     }
     .alarm-maplink {
       color: $text-color;
-    }
-    .alarm-object {
-      &:after {
-        content: ', ';
-      }
     }
     .sep {
       color: $mute-color;
