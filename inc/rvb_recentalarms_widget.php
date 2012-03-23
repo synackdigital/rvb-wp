@@ -129,7 +129,7 @@ class RVB_RecentAlarms_Widget extends WP_Widget {
         if ( !empty($municipality) )
           $return .= '<span class="alarm-municipality">'.$municipality.'</span>';
 
-        if ( !empty($object) && !empty($address) && !empty($municipality) )
+        if ( !empty($object) || !empty($address) || !empty($municipality) )
           $return .= '</a>';
 
         $return .= '</div>';
