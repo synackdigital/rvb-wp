@@ -19,6 +19,10 @@ a {
   @include single-transition( color );
   text-decoration: none;
 }
+p {
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
 
 /**
  * Main layout containers

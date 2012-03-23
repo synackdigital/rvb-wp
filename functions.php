@@ -46,6 +46,11 @@ if(@file_exists(dirname(__FILE__) . '/inc/rvb_stationmap_widget.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_stationmap_widget.php';
 }
 
+// Import custom stationmap widget
+if(@file_exists(dirname(__FILE__) . '/inc/rvb_recentalarms_widget.php')) {
+  include_once dirname(__FILE__) . '/inc/rvb_recentalarms_widget.php';
+}
+
 // Import custom facebook like box widget
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_fblikebox_widget.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_fblikebox_widget.php';
