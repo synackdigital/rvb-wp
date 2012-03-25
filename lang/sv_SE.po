@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-15 16:44+0100\n"
-"PO-Revision-Date: 2012-03-15 16:44+0100\n"
+"POT-Creation-Date: 2012-03-25 12:30+0100\n"
+"PO-Revision-Date: 2012-03-25 12:36+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,51 +21,51 @@ msgstr ""
 msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 
-#: ../functions.php:88
+#: ../functions.php:93
 msgid "Footer Menu 1"
 msgstr "Sidfotsmeny 1"
 
-#: ../functions.php:89
+#: ../functions.php:94
 msgid "Footer Menu 2"
 msgstr "Sidfotsmeny 2"
 
-#: ../functions.php:90
+#: ../functions.php:95
 msgid "Footer Menu 3"
 msgstr "Sidfotsmeny 3"
 
-#: ../functions.php:91
+#: ../functions.php:96
 msgid "Footer Menu 4"
 msgstr "Sidfotsmeny 4"
 
-#: ../functions.php:104
+#: ../functions.php:109
 msgid "Primary Home Sidebar"
 msgstr "Primärt sidfält på startsidan"
 
-#: ../functions.php:106
+#: ../functions.php:111
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan"
 
-#: ../functions.php:113
+#: ../functions.php:118
 msgid "Secondary Home Sidebar"
 msgstr "Sekundärt sidfält på startsidan"
 
-#: ../functions.php:115
+#: ../functions.php:120
 msgid "This sidebar is displayed next to the news summary on the home page"
 msgstr "Sidfältet visas bredvid nyhetssammanfattingen på startsidan"
 
-#: ../functions.php:122
+#: ../functions.php:127
 msgid "Page Sidebar"
 msgstr "Sidfält på sidor"
 
-#: ../functions.php:124
+#: ../functions.php:129
 msgid "The page sidebar is displayed on all pages, above the main sidebar"
 msgstr "Sidfältet visas på alla sidor ovanför det generella sidfältet"
 
-#: ../functions.php:131
+#: ../functions.php:136
 msgid "Post Sidebar"
 msgstr "Sidfält i inlägg"
 
-#: ../functions.php:133
+#: ../functions.php:138
 msgid "The post sidebar is displayed on all posts, above the main sidebar"
 msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
@@ -96,7 +96,7 @@ msgid "Alarms"
 msgstr "Larm"
 
 #: ../inc/rvb_alarm_post_type.php:10
-#: ../inc/rvb_alarm_post_type.php:29
+#: ../inc/rvb_alarm_post_type.php:34
 msgid "Alarm"
 msgstr "Larm"
 
@@ -104,48 +104,48 @@ msgstr "Larm"
 msgid "SOS alarms from Alarmos."
 msgstr "SOS-larm från Alarmos."
 
-#: ../inc/rvb_alarm_post_type.php:43
+#: ../inc/rvb_alarm_post_type.php:59
 msgid "Rescue type"
 msgstr "Insatstyp"
 
-#: ../inc/rvb_alarm_post_type.php:44
+#: ../inc/rvb_alarm_post_type.php:60
 msgid "Automatic alarm"
 msgstr "Automatlarm"
 
-#: ../inc/rvb_alarm_post_type.php:47
+#: ../inc/rvb_alarm_post_type.php:63
 msgid "Object"
 msgstr "Objekt"
 
-#: ../inc/rvb_alarm_post_type.php:48
+#: ../inc/rvb_alarm_post_type.php:64
 msgid "Rescue Services West Blekinge"
 msgstr "Räddningstjänsten Västra Blekinge"
 
-#: ../inc/rvb_alarm_post_type.php:51
+#: ../inc/rvb_alarm_post_type.php:67
 msgid "Date and time"
 msgstr "Datum och tid"
 
-#: ../inc/rvb_alarm_post_type.php:55
+#: ../inc/rvb_alarm_post_type.php:71
 msgid "Address"
 msgstr "Adress"
 
-#: ../inc/rvb_alarm_post_type.php:56
+#: ../inc/rvb_alarm_post_type.php:72
 msgid "Pipe road"
 msgstr "Rörvägen"
 
-#: ../inc/rvb_alarm_post_type.php:59
+#: ../inc/rvb_alarm_post_type.php:75
 #: ../inc/rvb_user_meta.php:52
 msgid "Municipality"
 msgstr "Kommun"
 
-#: ../inc/rvb_alarm_post_type.php:60
+#: ../inc/rvb_alarm_post_type.php:76
 msgid "Karlshamn"
 msgstr "Karlshamn"
 
-#: ../inc/rvb_alarm_post_type.php:63
+#: ../inc/rvb_alarm_post_type.php:79
 msgid "Information"
 msgstr "Information"
 
-#: ../inc/rvb_alarm_post_type.php:83
+#: ../inc/rvb_alarm_post_type.php:116
 msgid "Alarm number"
 msgstr "Larmnummer"
 
@@ -185,6 +185,38 @@ msgstr "Facebook Gilla-ruta"
 #: ../inc/rvb_fblikebox_widget.php:49
 msgid "Displays a Like Box for RVB Facebook page"
 msgstr "Visar en Gilla-ruta för RVBs sida på Facebook"
+
+#: ../inc/rvb_recentalarms_widget.php:44
+msgid "Recent Alarms"
+msgstr "Aktuella larm"
+
+#: ../inc/rvb_recentalarms_widget.php:44
+msgid "Creates a list of the most recent alarms"
+msgstr "Visar en lista över de senaste larmen"
+
+#: ../inc/rvb_recentalarms_widget.php:53
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../inc/rvb_recentalarms_widget.php:55
+msgid "Post count:"
+msgstr "Antal poster"
+
+#: ../inc/rvb_recentalarms_widget.php:57
+msgid "Archive link:"
+msgstr "Arkivlänk:"
+
+#: ../inc/rvb_recentalarms_widget.php:148
+msgid "Click to see more alarms"
+msgstr "Klicka för att se fler larm"
+
+#: ../inc/rvb_recentalarms_widget.php:148
+msgid "More alarms"
+msgstr "Fler larm"
+
+#: ../inc/rvb_recentalarms_widget.php:153
+msgid "There are no recent alarms"
+msgstr "De finns inga aktuella larm"
 
 #: ../inc/rvb_stationmap_widget.php:44
 msgid "Station Map"

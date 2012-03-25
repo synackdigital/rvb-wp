@@ -45,39 +45,41 @@ class RVB_RecentAlarms_Widget extends WP_Widget {
   }
 
   function form($instance) {
-    // this widget is not configurable
-    if ( isset( $instance[ 'title' ] ) ) {
-      $title = $instance[ 'title' ];
-    }
-    else {
-      $title = '';
-    }
+    $instance = wp_parse_args( (array) $instance, array( 'title' => '', 'post_count' => '', 'more_url' => '' ) );
+    $title = strip_tags($instance['title']);
+    $post_count = strip_tags($instance['post_count']);
+    $archive_link = strip_tags($instance['archive_link']);
     ?>
-    <p>
-    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-    </p>
+    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'rvb'); ?>
+      <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo attribute_escape($title); ?>" /></label></p>
+    <p><label for="<?php echo $this->get_field_id('post_count'); ?>"><?php _e('Post count:', 'rvb'); ?>
+      <input class="widefat" id="<?php echo $this->get_field_id('post_count'); ?>" name="<?php echo $this->get_field_name('post_count'); ?>" type="text" value="<?php echo attribute_escape($post_count); ?>" /></label></p>
+    <p><label for="<?php echo $this->get_field_id('archive_link'); ?>"><?php _e('Archive link:', 'rvb'); ?>
+      <input class="widefat" id="<?php echo $this->get_field_id('archive_link'); ?>" name="<?php echo $this->get_field_name('archive_link'); ?>" type="text" value="<?php echo attribute_escape($archive_link); ?>" /></label></p>
     <?php
   }
 
   function update($new_instance, $old_instance) {
-    // processes widget options to be saved
-    $instance = wp_parse_args($old_instance, $new_instance);
-    $instance['title'] = strip_tags( $new_instance['title'] );
+    $instance = $old_instance;
+    $instance['title'] = strip_tags($new_instance['title']);
+    $instance['post_count'] = strip_tags($new_instance['post_count']);
+    $instance['archive_link'] = strip_tags($new_instance['archive_link']);
     return $instance;
   }
 
   function widget($args, $instance) {
     // outputs the content of the widget
     extract( $args );
-    $title = apply_filters( 'widget_title', $instance['title'] );
+    $title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
+    $post_count = empty($instance['post_count']) ? '5' : apply_filters('widget_post_count', $instance['post_count']);
+    $archive_link = empty($instance['archive_link']) ? '' : apply_filters('widget_archive_link', $instance['archive_link']);
 
     echo $before_widget;
 
     if ( ! empty( $title ) )
       echo $before_title . $title . $after_title;
 
-    $loop = new WP_Query( array( 'post_type' => 'alarm' ) );
+    $loop = new WP_Query( array( 'post_type' => 'alarm', 'posts_per_page' => $post_count ) );
 
     if ( $loop->have_posts() ) :
       echo '<ul class="alarms-list">';
@@ -141,6 +143,9 @@ class RVB_RecentAlarms_Widget extends WP_Widget {
 
         echo $return;
       endwhile;
+
+      if ( !empty($archive_link) )
+        echo '<a href="'.$archive_link.'" title="'.__('Click to see more alarms', 'rvb').'">'.__('More alarms', 'rvb').' &rsaquo;</a>';
 
       echo '</ul>';
 
