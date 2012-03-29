@@ -4,7 +4,6 @@
  */
 
 function rvb_user_roles() {
-  remove_role('editor');
   remove_role('author');
   remove_role('contributor');
 
