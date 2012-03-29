@@ -9,16 +9,15 @@
     font-weight: bold;
   }
 }
-
-/**
- * Text widget
- */
-.widget.widget_text {
+@mixin box-widget( $_theme-color: $line-color, $_text-color: false ) {
   @include border-radius;
-  border: 1px solid $line-color;
+  border: 1px solid $_theme-color;
   border-top: none;
   .widget-title {
-    background: $line-color;
+    @if ( $_text-color ) {
+      color: $_text-color;
+    }
+    background: $_theme-color;
     padding: .25 * $base-vmargin $base-hmargin;
     position: relative;
     &:after {
@@ -31,6 +30,13 @@
       width: image-width('widget-title-indicator.png');
     }
   }
+}
+
+/**
+ * Text widget
+ */
+.widget.widget_text {
+  @include box-widget;
   .textwidget {
     padding: .5 * $base-vmargin $base-hmargin;
   }
@@ -55,26 +61,7 @@
  * Image Widget
  */
 .widget_sp_image {
-  @include border-radius;
-  border: 1px solid $line-color;
-  border-top: none;
-  .widget-title {
-    background: $line-color;
-    padding: .25 * $base-vmargin $base-hmargin;
-    position: relative;
-    &:after {
-      content: image-url('widget-title-indicator.png');
-      height: image-height('widget-title-indicator.png');
-      line-height: image-height('widget-title-indicator.png');
-      position: absolute;
-      right: $base-hmargin;
-      top: 0;
-      width: image-width('widget-title-indicator.png');
-    }
-  }
-  .widget_sp_image-description {
-    padding: .5 * $base-vmargin $base-hmargin;
-  }
+  @include box-widget;
   a {
     @include unstyled-link;
     &:focus,
@@ -89,30 +76,16 @@
     height: auto;
     width: 100%;
   }
+  .widget_sp_image-description {
+    padding: .5 * $base-vmargin $base-hmargin;
+  }
 }
 
 /**
  * RVB Recent Alarms Widget
  */
-.widget_rvb_recentalarms_widget {
-  @include border-radius;
-  border: 2px solid $decor-color;
-  border-top: none;
-  .widget-title {
-    background: $decor-color;
-    color: $decor-contrast-color;
-    padding: .25 * $base-vmargin $base-hmargin;
-    position: relative;
-    &:after {
-      content: image-url('widget-title-indicator.png');
-      height: image-height('widget-title-indicator.png');
-      line-height: image-height('widget-title-indicator.png');
-      position: absolute;
-      right: $base-hmargin;
-      top: 0;
-      width: image-width('widget-title-indicator.png');
-    }
-  }
+.widget.widget_rvb_recentalarms_widget {
+  @include box-widget( $decor-color, white );
   .alarms-list {
     @include unstyled-list;
     margin: $base-vmargin $base-hmargin;
@@ -140,24 +113,8 @@
 /**
  * RVB EO Agenda Widget
  */
-.widget_rvb_eoagenda_widget {
-  @include border-radius;
-  border: 1px solid $line-color;
-  border-top: none;
-  .widget-title {
-    background: $line-color;
-    padding: .25 * $base-vmargin $base-hmargin;
-    position: relative;
-    &:after {
-      content: image-url('widget-title-indicator.png');
-      height: image-height('widget-title-indicator.png');
-      line-height: image-height('widget-title-indicator.png');
-      position: absolute;
-      right: $base-hmargin;
-      top: 0;
-      width: image-width('widget-title-indicator.png');
-    }
-  }
+.widget.widget_rvb_eoagenda_widget {
+  @include box-widget;
   .events-list {
     @include unstyled-list;
     margin: $base-vmargin $base-hmargin;
@@ -178,3 +135,23 @@
     padding: 0 $base-hmargin $base-vmargin $base-hmargin;
   }
 }
+
+/**
+ * SYNACK TinyLetter Widget
+ */
+.widget.widget_tinyletter {
+  @include box-widget;
+  .widget-content {
+    padding: .5 * $base-vmargin $base-hmargin;
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type='email'],
+    input[type='text'] {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
