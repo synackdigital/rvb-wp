@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-27 15:45+0100\n"
-"PO-Revision-Date: 2012-03-27 15:47+0100\n"
+"POT-Creation-Date: 2012-03-29 09:47+0100\n"
+"PO-Revision-Date: 2012-03-29 09:48+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,51 +21,51 @@ msgstr ""
 msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 
-#: ../functions.php:98
+#: ../functions.php:103
 msgid "Footer Menu 1"
 msgstr "Sidfotsmeny 1"
 
-#: ../functions.php:99
+#: ../functions.php:104
 msgid "Footer Menu 2"
 msgstr "Sidfotsmeny 2"
 
-#: ../functions.php:100
+#: ../functions.php:105
 msgid "Footer Menu 3"
 msgstr "Sidfotsmeny 3"
 
-#: ../functions.php:101
+#: ../functions.php:106
 msgid "Footer Menu 4"
 msgstr "Sidfotsmeny 4"
 
-#: ../functions.php:114
+#: ../functions.php:119
 msgid "Primary Home Sidebar"
 msgstr "Primärt sidfält på startsidan"
 
-#: ../functions.php:116
+#: ../functions.php:121
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan"
 
-#: ../functions.php:123
+#: ../functions.php:128
 msgid "Secondary Home Sidebar"
 msgstr "Sekundärt sidfält på startsidan"
 
-#: ../functions.php:125
+#: ../functions.php:130
 msgid "This sidebar is displayed next to the news summary on the home page"
 msgstr "Sidfältet visas bredvid nyhetssammanfattingen på startsidan"
 
-#: ../functions.php:132
+#: ../functions.php:137
 msgid "Page Sidebar"
 msgstr "Sidfält på sidor"
 
-#: ../functions.php:134
+#: ../functions.php:139
 msgid "The page sidebar is displayed on all pages, above the main sidebar"
 msgstr "Sidfältet visas på alla sidor ovanför det generella sidfältet"
 
-#: ../functions.php:141
+#: ../functions.php:146
 msgid "Post Sidebar"
 msgstr "Sidfält i inlägg"
 
-#: ../functions.php:143
+#: ../functions.php:148
 msgid "The post sidebar is displayed on all posts, above the main sidebar"
 msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
@@ -178,6 +178,37 @@ msgstr "Relaterade kategorier"
 msgid "Most Used"
 msgstr "Mest använda"
 
+#: ../inc/rvb_eoagenda_widget.php:44
+msgid "Event Organizer Agenda"
+msgstr "Event Organizer Agenda"
+
+#: ../inc/rvb_eoagenda_widget.php:44
+msgid "Fetches events from the Event Organizer plugin and displays them in an agenda view."
+msgstr "Hämtar händelser från Event Organizer plugin och visar dom i en agenda."
+
+#: ../inc/rvb_eoagenda_widget.php:53
+#: ../inc/rvb_recentalarms_widget.php:53
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../inc/rvb_eoagenda_widget.php:55
+#: ../inc/rvb_recentalarms_widget.php:55
+msgid "Post count:"
+msgstr "Antal poster"
+
+#: ../inc/rvb_eoagenda_widget.php:57
+#: ../inc/rvb_recentalarms_widget.php:57
+msgid "Archive link:"
+msgstr "Arkivlänk:"
+
+#: ../inc/rvb_eoagenda_widget.php:103
+msgid "Click to see more events"
+msgstr "Klicka för att se fler händelser"
+
+#: ../inc/rvb_eoagenda_widget.php:103
+msgid "More events"
+msgstr "Fler händelser"
+
 #: ../inc/rvb_fblikebox_widget.php:44
 msgid "Facebook Like Box"
 msgstr "Facebook Gilla-ruta"
@@ -194,18 +225,6 @@ msgstr "Aktuella larm"
 #: ../inc/rvb_recentalarms_widget.php:44
 msgid "Creates a list of the most recent alarms"
 msgstr "Visar en lista över de senaste larmen"
-
-#: ../inc/rvb_recentalarms_widget.php:53
-msgid "Title:"
-msgstr "Titel:"
-
-#: ../inc/rvb_recentalarms_widget.php:55
-msgid "Post count:"
-msgstr "Antal poster"
-
-#: ../inc/rvb_recentalarms_widget.php:57
-msgid "Archive link:"
-msgstr "Arkivlänk:"
 
 #: ../inc/rvb_recentalarms_widget.php:148
 msgid "Click to see more alarms"
