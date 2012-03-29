@@ -56,6 +56,11 @@ if(@file_exists(dirname(__FILE__) . '/inc/rvb_recentalarms_widget.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_recentalarms_widget.php';
 }
 
+// EO Agenda widget
+if(@file_exists(dirname(__FILE__) . '/inc/rvb_eoagenda_widget.php')) {
+  include_once dirname(__FILE__) . '/inc/rvb_eoagenda_widget.php';
+}
+
 // Facebook LikeBox widget
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_fblikebox_widget.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_fblikebox_widget.php';
