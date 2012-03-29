@@ -6,52 +6,57 @@
 
 global $post;
 
-// Import custom user roles
+// Theme options
+if(@file_exists(dirname(__FILE__) . '/inc/rvb_theme_options.php')) {
+  include_once dirname(__FILE__) . '/inc/rvb_theme_options.php';
+}
+
+// Custom user roles
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_user_roles.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_user_roles.php';
 }
 
-// Import custom user meta
+// Custom user meta
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_user_meta.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_user_meta.php';
 }
 
-// Import user shortcode
+// [user] shortcode
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_user_shortcode.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_user_shortcode.php';
 }
 
-// Import user list shortcode
+// [userlist] shortcode
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_userlist_shortcode.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_userlist_shortcode.php';
 }
 
-// Import custom campaign post type
+// Custom campaign post type
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_campaign_post_type.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_campaign_post_type.php';
 }
 
-// Import custom alarm post type
+// Custom alarm post type
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_alarm_post_type.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_alarm_post_type.php';
 }
 
-// Import custom walker class for generating smart submenus
+// Walker class for generating smart submenus
 if(@file_exists(dirname(__FILE__) . '/inc/rb_walker_page_selective_children.php')) {
   include_once dirname(__FILE__) . '/inc/rb_walker_page_selective_children.php';
 }
 
-// Import custom stationmap widget
+// StationMap widget
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_stationmap_widget.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_stationmap_widget.php';
 }
 
-// Import custom stationmap widget
+// RecentAlarms widget
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_recentalarms_widget.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_recentalarms_widget.php';
 }
 
-// Import custom facebook like box widget
+// Facebook LikeBox widget
 if(@file_exists(dirname(__FILE__) . '/inc/rvb_fblikebox_widget.php')) {
   include_once dirname(__FILE__) . '/inc/rvb_fblikebox_widget.php';
 }

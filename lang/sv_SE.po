@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-25 12:30+0100\n"
-"PO-Revision-Date: 2012-03-25 12:36+0100\n"
+"POT-Creation-Date: 2012-03-27 15:45+0100\n"
+"PO-Revision-Date: 2012-03-27 15:47+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,51 +21,51 @@ msgstr ""
 msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 
-#: ../functions.php:93
+#: ../functions.php:98
 msgid "Footer Menu 1"
 msgstr "Sidfotsmeny 1"
 
-#: ../functions.php:94
+#: ../functions.php:99
 msgid "Footer Menu 2"
 msgstr "Sidfotsmeny 2"
 
-#: ../functions.php:95
+#: ../functions.php:100
 msgid "Footer Menu 3"
 msgstr "Sidfotsmeny 3"
 
-#: ../functions.php:96
+#: ../functions.php:101
 msgid "Footer Menu 4"
 msgstr "Sidfotsmeny 4"
 
-#: ../functions.php:109
+#: ../functions.php:114
 msgid "Primary Home Sidebar"
 msgstr "Primärt sidfält på startsidan"
 
-#: ../functions.php:111
+#: ../functions.php:116
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan"
 
-#: ../functions.php:118
+#: ../functions.php:123
 msgid "Secondary Home Sidebar"
 msgstr "Sekundärt sidfält på startsidan"
 
-#: ../functions.php:120
+#: ../functions.php:125
 msgid "This sidebar is displayed next to the news summary on the home page"
 msgstr "Sidfältet visas bredvid nyhetssammanfattingen på startsidan"
 
-#: ../functions.php:127
+#: ../functions.php:132
 msgid "Page Sidebar"
 msgstr "Sidfält på sidor"
 
-#: ../functions.php:129
+#: ../functions.php:134
 msgid "The page sidebar is displayed on all pages, above the main sidebar"
 msgstr "Sidfältet visas på alla sidor ovanför det generella sidfältet"
 
-#: ../functions.php:136
+#: ../functions.php:141
 msgid "Post Sidebar"
 msgstr "Sidfält i inlägg"
 
-#: ../functions.php:138
+#: ../functions.php:143
 msgid "The post sidebar is displayed on all posts, above the main sidebar"
 msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
@@ -125,6 +125,7 @@ msgid "Date and time"
 msgstr "Datum och tid"
 
 #: ../inc/rvb_alarm_post_type.php:71
+#: ../inc/rvb_theme_options.php:18
 msgid "Address"
 msgstr "Adress"
 
@@ -226,6 +227,55 @@ msgstr "Stationskarta"
 #: ../inc/rvb_stationmap_widget.php:49
 msgid "Displays an interactive map of stations"
 msgstr "Visar en interaktiv karta över stationer"
+
+#: ../inc/rvb_theme_options.php:8
+#: ../inc/rvb_theme_options.php:36
+msgid "Site Options"
+msgstr "Alternativ för webbplats"
+
+#: ../inc/rvb_theme_options.php:17
+msgid "Contact information"
+msgstr "Kontaktinformation"
+
+#: ../inc/rvb_theme_options.php:19
+msgid "Email address"
+msgstr "Epostadress"
+
+#: ../inc/rvb_theme_options.php:20
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: ../inc/rvb_theme_options.php:23
+msgid "Footer"
+msgstr "Sidfot"
+
+#: ../inc/rvb_theme_options.php:24
+msgid "Headlines"
+msgstr "Rubriker"
+
+#: ../inc/rvb_theme_options.php:25
+msgid "Newsletter link"
+msgstr "Länk till nyhetsbrev"
+
+#: ../inc/rvb_theme_options.php:39
+msgid "Options saved"
+msgstr "Alternativ sparades"
+
+#: ../inc/rvb_theme_options.php:91
+msgid "Headline 1"
+msgstr "Rubrik 1"
+
+#: ../inc/rvb_theme_options.php:92
+msgid "Headline 2"
+msgstr "Rubrik 2"
+
+#: ../inc/rvb_theme_options.php:93
+msgid "Headline 3"
+msgstr "Rubrik 3"
+
+#: ../inc/rvb_theme_options.php:94
+msgid "Headline 4"
+msgstr "Rubrik 4"
 
 #: ../inc/rvb_user_meta.php:15
 msgid "Phone Number"
