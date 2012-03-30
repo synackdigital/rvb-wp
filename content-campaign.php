@@ -21,6 +21,7 @@
 
       <header class="entry-header">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+        <h2 class="entry-excerpt"><?php the_excerpt(); ?></h2>
       </header><!-- .entry-header -->
 
       <?php if ( ! is_singular() ) : // close title and thumbnail link ?>

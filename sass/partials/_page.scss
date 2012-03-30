@@ -167,16 +167,32 @@ p {
     top: 0;
     img {
       @include border-bottom-radius;
-      height: auto;
-      width: 100%;
     }
   }
   .entry-header {
-    font-family: $decor-font-family;
-    font-size: $xxxlarge-font-size;
-    left: $base-vmargin;
+    @include box-sizing( border-box );
+    padding-left: $base-vmargin;
+    padding-right: $base-vmargin;
+    left: 0;
     position: absolute;
     top: 2 * $base-hmargin;
+    width: 99.9% - $sidebar-width; // not 100% to avoid rounding errors
+  }
+  .entry-title {
+    font-family: $decor-font-family;
+    font-size: $xxxlarge-font-size;
+    line-height: $small-line-height;
+  }
+  .entry-excerpt {
+    background: image-url('bigrarr.png') center left no-repeat;
+    font-family: $decor-font-family;
+    font-size: $xlarge-font-size;
+    line-height: $small-line-height;
+    min-height: image-height('bigrarr.png');
+    padding-left: image-width('bigrarr.png') + $base-hmargin;
+    .meta-nav {
+      @include hidden;
+    }
   }
 }
 
