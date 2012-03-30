@@ -1,6 +1,6 @@
 
 /**
- * Pixel ratio adjustments
+ * Retina display graphics
  */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   #header {
@@ -9,42 +9,4 @@
       background-image: image-url( 'rvblogo-2x.png' );
     }
   }
-  #access {
-    .menu {
-      .menu-item {
-        &.current-menu-item {
-          a {
-            @include background-size( image-width( 'nav-indicator.png' ) auto );
-            background-image: image-url( 'nav-indicator-2x.png' );
-          }
-        }
-        // replace the home menu item with an icon
-        &.menu-item-type-home {
-          a {
-            @include background-size( image-width( 'primary-menu-home-icon.png' ) auto );
-            background-image: image-url('primary-menu-home-icon-2x.png' );
-          }
-        }
-        // hide the static search menu item by default and replace the text with an icon
-        &.menu-item-type-search {
-          display: none;
-          visibility: hidden;
-          a {
-            @include background-size( image-width( 'primary-menu-search-icon.png' ) auto );
-            background-image: image-url('primary-menu-search-icon-2x.png' );
-          }
-        }
-      }
-    }
-  }
 }
-
-
-/**
- * Size adjustments
- */
-
-/* Devices up to 748px get the mobile layout */
-@media screen and ( max-width: 748px ) {
-
-} // max-width: 740px
