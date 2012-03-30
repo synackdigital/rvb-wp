@@ -185,6 +185,7 @@ p {
     line-height: $small-line-height;
   }
   .entry-excerpt {
+    font-size: $large-font-size;
     .meta-nav {
       @include hidden;
     }
