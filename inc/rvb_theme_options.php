@@ -63,10 +63,8 @@ function rvb_contact_address_text() {
   $options = get_option('rvb_site_options');
   $address1 = ( is_array( $options ) && array_key_exists( 'contact_address1', $options ) ) ? $options['contact_address1'] : '';
   $address2 = ( is_array( $options ) && array_key_exists( 'contact_address2', $options ) ) ? $options['contact_address2'] : '';
-  $address3 = ( is_array( $options ) && array_key_exists( 'contact_address3', $options ) ) ? $options['contact_address3'] : '';
   echo '<input id="contact_address1" name="rvb_site_options[contact_address1]" size="40" type="text" value="'.$address1.'" placeholder="Räddningstjänsten Västra Blekinge" /><br>';
   echo '<input id="contact_address2" name="rvb_site_options[contact_address2]" size="40" type="text" value="'.$address2.'" placeholder="Rörvägen 3" /><br>';
-  echo '<input id="contact_address3" name="rvb_site_options[contact_address3]" size="40" type="text" value="'.$address3.'" placeholder="374 32  Karlshamn" />';
 }
 function rvb_contact_email_text() {
   $options = get_option('rvb_site_options');

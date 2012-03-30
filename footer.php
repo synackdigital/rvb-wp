@@ -24,7 +24,7 @@ $options = get_option('rvb_site_options');
     </section>
     <section id="section-4">
       <h1><?php echo $options['footer_headline4']; ?></h1>
-      <?php echo $options['contact_address1'].'<br>'.$options['contact_address2'].'<br>'.$options['contact_address3']; ?><br><br>
+      <?php echo $options['contact_address1'].'<br>'.$options['contact_address2']; ?><br><br>
       <?php echo $options['contact_phone']; ?>
     </section>
     <section id="section-5">
