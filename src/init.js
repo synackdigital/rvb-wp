@@ -23,15 +23,20 @@ var rvb = {
   campaign: {
     init: function() {
       console.log('rvb:campaign:init');
-      
+
       // start toggle timer if more than one item
       if ( rvb.campaign.domObj.children('.campaign').length > 1 ) {
+        // generate pagination indicator
+        rvb.campaign.domObj.append('<ul class="pagination"><li></li><li></li><li></li></ul>');
+        
+        // start animation
         rvb.campaign.start();
       }
     },
     start: function() {
       console.log('rvb:campaign:start');
       rvb.campaign.interval = setInterval(rvb.campaign.showNext, 6000);
+      jQuery('li', rvb.campaign.domObj).first().addClass('active');
     },
     stop: function() {
       console.log('rvb:campaign:stop');
@@ -47,6 +52,15 @@ var rvb = {
       console.log('rvb:campaign:showNext');
       
       var items = rvb.campaign.domObj.children('.campaign');
+      var page_item = jQuery('li.active', rvb.campaign.domObj);
+
+      page_item.removeClass('active');
+      if ( page_item.is(':last-child') ) {
+        jQuery('li:first-child', rvb.campaign.domObj).addClass('active');
+      }
+      else {
+        page_item.next('li').addClass('active');
+      }
       
       if (Modernizr.csstransitions && Modernizr.opacity) {
         // animate item switching

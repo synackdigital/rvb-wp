@@ -153,7 +153,6 @@ p {
   color: white;
   font-weight: bold;
   height: 240px;
-  overflow: hidden;
   position: relative;
   a {
     @include unstyled-link;
@@ -162,9 +161,11 @@ p {
     background: $bg-color;
     bottom: 0;
     left: 0;
+    overflow: hidden;
     position: absolute;
     right: 0;
     top: 0;
+    width: 100%
     img {
       @include border-bottom-radius;
     }
@@ -180,18 +181,38 @@ p {
   }
   .entry-title {
     font-family: $decor-font-family;
-    font-size: $xxxlarge-font-size;
+    font-size: $xxxxlarge-font-size;
     line-height: $small-line-height;
   }
   .entry-excerpt {
-    background: image-url('bigrarr.png') center left no-repeat;
-    font-family: $decor-font-family;
-    font-size: $xlarge-font-size;
-    line-height: $small-line-height;
-    min-height: image-height('bigrarr.png');
-    padding-left: image-width('bigrarr.png') + $base-hmargin;
     .meta-nav {
       @include hidden;
+    }
+  }
+  .pagination {
+    $item-count: 3;
+    $item-height: 8px;
+    @include unstyled-list;
+    bottom: -1.5 * $item-height;
+    height: $item-height;
+    left: 50%;
+    margin: 0;
+    margin-left: -.5 * ( $item-height * $item-count );
+    position: absolute;
+    width: $item-height * ( $item-count + ( $item-count - 1 ) );
+    li {
+      @include border-radius( 50% );
+      @include inline-block;
+      background: $line-color;
+      height: $item-height;
+      margin-right: $item-height;
+      width: $item-height;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        background: $text-color;
+      }
     }
   }
 }

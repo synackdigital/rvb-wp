@@ -13,6 +13,10 @@ function rvb_campaign_post_type () {
     'labels' => $campaign_labels,
     'description' => __('Campaigns are collections of posts and content around a common theme.', 'rvb'),
     'public' => true,
+    'rewrite' => array(
+      'slug' => 'kampanj',
+      'with_front' => false
+    ),
     'hierarchical' => false,
     'supports' => array(
       'title',

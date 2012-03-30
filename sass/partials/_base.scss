@@ -1,7 +1,7 @@
 
 /**
  * Typography
- * Roughly a Le Corbusier scale: 11, 14, 19, 30
+ * Roughly a Le Corbusier scale: 11, 14, 19, 30, 37, 48, 60
  * http://lamb.cc/typograph/
  */
 $base-font-family:        unquote('Segoe UI, Segoe, Tahoma, Geneva, Liberation Sans, FreeSans, sans-serif');
@@ -17,6 +17,7 @@ $large-font-size:         1.3571em; // ~19px
 $xlarge-font-size:        2.1428em; // ~30px
 $xxlarge-font-size:       2.6429em; // ~37px
 $xxxlarge-font-size:      3.4286em; // ~48px
+$xxxxlarge-font-size:     4.2857em; // ~60px
 
 /**
  * Colors
