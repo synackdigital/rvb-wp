@@ -21,8 +21,11 @@ $site_options = get_option('rvb_site_options');
 
 $featured_count = ( $site_options['general_homefeaturedcount'] ) ? $site_options['general_homefeaturedcount'] : 2;
 $summary_count = ( $site_options['general_homesummarycount'] ) ? $site_options['general_homesummarycount'] : 5;
+$page_count = ( is_home() ) ? $featured_count + $summary_count : get_option('posts_per_page');
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-$loop = new WP_Query( array(
+
+$wp_query = new WP_Query( array(
   'tax_query' => array(
     array(
       'taxonomy' => 'post_format',
@@ -31,25 +34,28 @@ $loop = new WP_Query( array(
       'operator' => 'NOT IN'
     )
   ),
-  'posts_per_page' => $featured_count + $summary_count
+  'posts_per_page' => $page_count,
+  'paged' => $paged
 ) );
 
 
-if ( $loop->have_posts() ) :
+if ( $wp_query->have_posts() ) :
 
   $key = 0;
 
-  while ( $loop->have_posts() ) : $loop->the_post();
+  while ( $wp_query->have_posts() ) : $wp_query->the_post();
 
-    if ( $key < $featured_count ) :
+    if ( is_home() && $key < $featured_count ):
       get_template_part( 'content', 'featured' );
     else :
       get_template_part( 'content', 'summary' );
-    endif;
+    endif; // $key < $featured_count
 
     $key++;
 
   endwhile;
+
+  echo '<a class="archives-link" href="'.get_permalink(get_page_by_path('arkiv')).'" title="'.__('More in the archives', 'rvb').'">'.__('More in the archives', 'rvb').'</a>';
 
 else : ?>
 

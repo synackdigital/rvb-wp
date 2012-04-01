@@ -275,6 +275,31 @@ p {
     font-size: $xlarge-font-size;
     margin: 0 $base-hmargin $base-vmargin $base-hmargin;
   }
+  .archives-link {
+    clear: left;
+    display: block;
+    float: left;
+    padding: .25 * $base-vmargin $base-hmargin;
+    width: 50%;
+    &:before {
+      content: '› ';
+    }
+  }
+  .nav-pagination {
+    padding: 0 $base-hmargin;
+    .nav-prev {
+      float: right;
+      &:after {
+        content: ' ›';
+      }
+    }
+    .nav-next {
+      float: left;
+      &:before {
+        content: '‹ ';
+      }
+    }
+  }
 }
 // Posts and pages
 #main .hentry {
@@ -328,7 +353,7 @@ p {
     font-size: $large-font-size;
     line-height: 1.2;
     padding: 0 $base-hmargin;
-    body.singular & {
+    body.single & {
       font-size: $xlarge-font-size;
       line-height: 1.2;
     }
@@ -375,7 +400,10 @@ p {
         margin: 0 .5 * $base-hmargin;
       }
     }
-    body.home & {
+  }
+  // Featured posts
+  &.post-featured {
+    .post-thumbnail {
       float: left;
       margin-right: $base-hmargin;
       margin-top: .25em; // align with headline
@@ -384,12 +412,11 @@ p {
   }
   // Post summary
   &.post-summary {
-    clear: left;
-    float: left;
-    width: 50%;
-  }
-  // Featured post
-  &.post-featured {
+    body.home & {
+      clear: left;
+      float: left;
+      width: 50%;
+    }
   }
 }
 

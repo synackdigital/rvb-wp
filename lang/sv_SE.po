@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-01 15:16+0100\n"
-"PO-Revision-Date: 2012-04-01 15:17+0100\n"
+"POT-Creation-Date: 2012-04-01 19:39+0100\n"
+"PO-Revision-Date: 2012-04-01 19:39+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,6 +14,14 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../archives.php:40
+msgid "Older posts"
+msgstr "Äldre inlägg"
+
+#: ../archives.php:40
+msgid "Newer posts"
+msgstr "Nyare inlägg"
 
 #: ../content-campaign.php:34
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
@@ -88,14 +96,18 @@ msgid "The post sidebar is displayed on all posts, above the main sidebar"
 msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
 #: ../loop-campaign.php:25
-#: ../loop-home.php:58
+#: ../loop-home.php:64
 msgid "Uh oh!"
 msgstr "Ojsan!"
 
 #: ../loop-campaign.php:29
-#: ../loop-home.php:62
+#: ../loop-home.php:68
 msgid "We could not find what you were looking for. Try performing a search."
 msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
+
+#: ../loop-home.php:58
+msgid "More in the archives"
+msgstr "Mer i arkivet"
 
 #: ../nav-secondary.php:19
 msgid "Secondary menu"
@@ -370,17 +382,14 @@ msgid "None"
 msgstr "Ingen"
 
 #: ../inc/rvb_user_meta.php:100
-#: ../inc/rvb_user_roles.php:10
 msgid "Board Member"
 msgstr "Ledamot"
 
 #: ../inc/rvb_user_meta.php:101
-#: ../inc/rvb_user_roles.php:16
 msgid "Staff"
 msgstr "Personal"
 
 #: ../inc/rvb_user_meta.php:102
-#: ../inc/rvb_user_roles.php:22
 msgid "Operational Staff"
 msgstr "Brandman"
 

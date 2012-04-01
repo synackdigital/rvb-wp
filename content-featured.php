@@ -38,7 +38,7 @@
       <header class="entry-header">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
         <p class="pub-info">
-          <?php printf( __( '<span class="sep">Posted on </span><time class="entry-date" datetime="%1$s" pubdate>%2$s</time>', 'synack' ), esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) ); ?>
+          <?php printf( __( '<span class="sep">Posted on </span><time class="entry-date" datetime="%1$s" pubdate>%2$s</time>', 'rvb' ), esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) ); ?>
           <?php edit_post_link(__('Edit', 'rvb')); ?>
         </p>
       </header><!-- .entry-header -->
