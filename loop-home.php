@@ -19,7 +19,7 @@
 
 $site_options = get_option('rvb_site_options');
 
-$post_count = ( $site_options['general_homepostcount'] ) ? $site_options['general_homepostcount']-1 : 8;
+$post_count = ( $site_options['general_homepostcount'] ) ? $site_options['general_homepostcount'] : 8;
 $featured_count = ( $site_options['general_homefeaturedcount'] ) ? $site_options['general_homefeaturedcount'] : 2;
 
 $loop = new WP_Query( array(
