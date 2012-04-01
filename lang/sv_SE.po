@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 09:47+0100\n"
-"PO-Revision-Date: 2012-03-29 09:48+0100\n"
+"POT-Creation-Date: 2012-04-01 13:47+0100\n"
+"PO-Revision-Date: 2012-04-01 13:48+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,11 +15,28 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
+#: ../content-campaign.php:34
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Fortsätt läsa <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../content-campaign.php:48
+msgid "Categories"
+msgstr "Kategorier"
+
+#: ../content-campaign.php:58
+msgid "Tags"
+msgstr "Etiketter"
+
 #: ../content-featured.php:41
 #: ../content-summary.php:15
 #, php-format
 msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
+
+#: ../content-featured.php:42
+#: ../content-summary.php:16
+msgid "Edit"
+msgstr "Redigera"
 
 #: ../functions.php:103
 msgid "Footer Menu 1"
@@ -69,21 +86,13 @@ msgstr "Sidfält i inlägg"
 msgid "The post sidebar is displayed on all posts, above the main sidebar"
 msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
-#: ../loop-home.php:27
-#, php-format
-msgid "Posts tagged with &#8220;%s&#8221;"
-msgstr "Inlägg med etiketten &#8220;%s&#8221;"
-
-#: ../loop-home.php:29
-#, php-format
-msgid "Posts in the &#8220;%s&#8221; category"
-msgstr "Inlägg i kategorin &#8220;%s&#8221;"
-
-#: ../loop-home.php:55
+#: ../loop-campaign.php:25
+#: ../loop-home.php:58
 msgid "Uh oh!"
 msgstr "Ojsan!"
 
-#: ../loop-home.php:59
+#: ../loop-campaign.php:29
+#: ../loop-home.php:62
 msgid "We could not find what you were looking for. Try performing a search."
 msgstr "Det gick inte att hitta det du sökte. Försök att söka istället."
 
@@ -125,7 +134,7 @@ msgid "Date and time"
 msgstr "Datum och tid"
 
 #: ../inc/rvb_alarm_post_type.php:71
-#: ../inc/rvb_theme_options.php:18
+#: ../inc/rvb_theme_options.php:23
 msgid "Address"
 msgstr "Adress"
 
@@ -162,19 +171,19 @@ msgstr "Kampanj"
 msgid "Campaigns are collections of posts and content around a common theme."
 msgstr "Kampanjer är samlingar av inlägg och innehåll kring ett gemensamt tema."
 
-#: ../inc/rvb_campaign_post_type.php:33
+#: ../inc/rvb_campaign_post_type.php:37
 msgid "Options"
 msgstr "Alternativ"
 
-#: ../inc/rvb_campaign_post_type.php:34
+#: ../inc/rvb_campaign_post_type.php:38
 msgid "Connections"
 msgstr "Kopplingar"
 
-#: ../inc/rvb_campaign_post_type.php:49
+#: ../inc/rvb_campaign_post_type.php:53
 msgid "Related categories"
 msgstr "Relaterade kategorier"
 
-#: ../inc/rvb_campaign_post_type.php:55
+#: ../inc/rvb_campaign_post_type.php:59
 msgid "Most Used"
 msgstr "Mest använda"
 
@@ -243,56 +252,67 @@ msgid "Station Map"
 msgstr "Stationskarta"
 
 #: ../inc/rvb_stationmap_widget.php:44
-#: ../inc/rvb_stationmap_widget.php:49
 msgid "Displays an interactive map of stations"
 msgstr "Visar en interaktiv karta över stationer"
 
 #: ../inc/rvb_theme_options.php:8
-#: ../inc/rvb_theme_options.php:36
+#: ../inc/rvb_theme_options.php:41
 msgid "Site Options"
 msgstr "Alternativ för webbplats"
 
 #: ../inc/rvb_theme_options.php:17
+msgid "General"
+msgstr "Generellt"
+
+#: ../inc/rvb_theme_options.php:18
+msgid "Home post count"
+msgstr "Antal inlägg på hemsidan"
+
+#: ../inc/rvb_theme_options.php:19
+msgid "Home featured count"
+msgstr "Antal toppinlägg på hemsidan"
+
+#: ../inc/rvb_theme_options.php:22
 msgid "Contact information"
 msgstr "Kontaktinformation"
 
-#: ../inc/rvb_theme_options.php:19
+#: ../inc/rvb_theme_options.php:24
 msgid "Email address"
 msgstr "Epostadress"
 
-#: ../inc/rvb_theme_options.php:20
+#: ../inc/rvb_theme_options.php:25
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: ../inc/rvb_theme_options.php:23
+#: ../inc/rvb_theme_options.php:28
 msgid "Footer"
 msgstr "Sidfot"
 
-#: ../inc/rvb_theme_options.php:24
+#: ../inc/rvb_theme_options.php:29
 msgid "Headlines"
 msgstr "Rubriker"
 
-#: ../inc/rvb_theme_options.php:25
+#: ../inc/rvb_theme_options.php:30
 msgid "Newsletter link"
 msgstr "Länk till nyhetsbrev"
 
-#: ../inc/rvb_theme_options.php:39
+#: ../inc/rvb_theme_options.php:44
 msgid "Options saved"
 msgstr "Alternativ sparades"
 
-#: ../inc/rvb_theme_options.php:91
+#: ../inc/rvb_theme_options.php:108
 msgid "Headline 1"
 msgstr "Rubrik 1"
 
-#: ../inc/rvb_theme_options.php:92
+#: ../inc/rvb_theme_options.php:109
 msgid "Headline 2"
 msgstr "Rubrik 2"
 
-#: ../inc/rvb_theme_options.php:93
+#: ../inc/rvb_theme_options.php:110
 msgid "Headline 3"
 msgstr "Rubrik 3"
 
-#: ../inc/rvb_theme_options.php:94
+#: ../inc/rvb_theme_options.php:111
 msgid "Headline 4"
 msgstr "Rubrik 4"
 
@@ -349,19 +369,25 @@ msgid "None"
 msgstr "Ingen"
 
 #: ../inc/rvb_user_meta.php:100
-#: ../inc/rvb_user_roles.php:11
+#: ../inc/rvb_user_roles.php:10
 msgid "Board Member"
 msgstr "Ledamot"
 
 #: ../inc/rvb_user_meta.php:101
-#: ../inc/rvb_user_roles.php:17
+#: ../inc/rvb_user_roles.php:16
 msgid "Staff"
 msgstr "Personal"
 
 #: ../inc/rvb_user_meta.php:102
-#: ../inc/rvb_user_roles.php:23
+#: ../inc/rvb_user_roles.php:22
 msgid "Operational Staff"
 msgstr "Brandman"
+
+#~ msgid "Posts tagged with &#8220;%s&#8221;"
+#~ msgstr "Inlägg med etiketten &#8220;%s&#8221;"
+
+#~ msgid "Posts in the &#8220;%s&#8221; category"
+#~ msgstr "Inlägg i kategorin &#8220;%s&#8221;"
 
 #~ msgid "Read the rest"
 #~ msgstr "Läs resten"

@@ -17,55 +17,58 @@
  * @subpackage RVB
  */
 
-$post_index = 0;
+$site_options = get_option('rvb_site_options');
 
-?>
+$post_count = ( $site_options['general_homepostcount'] ) ? $site_options['general_homepostcount']-1 : 8;
+$featured_count = ( $site_options['general_homefeaturedcount'] ) ? $site_options['general_homefeaturedcount'] : 2;
 
-  <?php if ( have_posts() ) : ?>
+$loop = new WP_Query( array(
+  'tax_query' => array(
+    array(
+      'taxonomy' => 'post_format',
+      'field' => 'slug',
+      'terms' => array('post-format-status'),
+      'operator' => 'NOT IN'
+    )
+  ),
+  'posts_per_page' => $post_count
+) );
 
-    <?php if ( is_tag() ) : ?>
-    <h1 class="page-title"><?php printf( __( 'Posts tagged with &#8220;%s&#8221;', 'rvb' ), '<span class="tag">' . single_tag_title( '', false ) . '</span>' ); ?></h1>
-    <?php elseif ( is_category() ) : ?>
-    <h1 class="page-title"><?php printf( __( 'Posts in the &#8220;%s&#8221; category', 'rvb' ), '<span class="cat">' . single_cat_title( '', false ) . '</span>' ); ?></h1>
-    <?php endif; ?>
 
-    <?php
-      /* Start the Loop */
-      while ( have_posts() ) : the_post();
+if ( $loop->have_posts() ) :
 
-        if ( $post_index <= 1 && is_home() ) :
-          if ( has_post_format( 'status', get_the_ID() ) ) :
-            get_template_part( 'content', 'status' );
-          else :
-            get_template_part( 'content', 'featured' );
-          endif;
-        else :
-          get_template_part( 'content', 'summary' );
-        endif;
+  $key = 0;
 
-      if ( ! is_sticky() ) // sticky posts do not count
-        $post_index++;
+  while ( $loop->have_posts() ) : $loop->the_post();
 
-      endwhile;
+    if ( $key < $featured_count ) :
+      get_template_part( 'content', 'featured' );
+    else :
+      get_template_part( 'content', 'summary' );
+    endif;
 
-    else : ?>
+    $key++;
 
-    <article id="post-0" class="post no-results not-found">
-      <header class="entry-header">
-        <h1 class="entry-title"><?php _e( 'Uh oh!', 'synack' ); ?></h1>
-      </header><!-- .entry-header -->
+  endwhile;
 
-      <div class="entry-content">
-        <p><?php _e( 'We could not find what you were looking for. Try performing a search.', 'synack' ); ?></p>
-        <?php get_search_form(); ?>
-      </div><!-- .entry-content -->
-    </article><!-- #post-0 -->
+else : ?>
 
-  <?php endif; ?>
+  <article id="post-0" class="post no-results not-found">
+    <header class="entry-header">
+      <h1 class="entry-title"><?php _e( 'Uh oh!', 'synack' ); ?></h1>
+    </header><!-- .entry-header -->
 
-  <?php if ( is_home() ) : ?>
-  <aside id="social" role="complementary">
-    <?php get_sidebar('home2'); ?>
-  </aside><!-- #social -->
+    <div class="entry-content">
+      <p><?php _e( 'We could not find what you were looking for. Try performing a search.', 'synack' ); ?></p>
+      <?php get_search_form(); ?>
+    </div><!-- .entry-content -->
+  </article><!-- #post-0 -->
+
+<?php endif; ?>
+
+<?php if ( is_home() ) : ?>
+<aside id="social" role="complementary">
+  <?php get_sidebar('home2'); ?>
+</aside><!-- #social -->
 <?php endif; ?>
 

@@ -17,3 +17,6 @@ get_template_part( 'nav', 'primary' );
 
 if ( post_type_exists('campaign') )
   get_template_part( 'masthead', 'campaign' );
+
+if ( is_home() )
+  get_template_part( 'loop', 'status' );
