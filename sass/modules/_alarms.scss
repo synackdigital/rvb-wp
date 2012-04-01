@@ -1,3 +1,5 @@
+
+
 .alarms-list {
   @include unstyled-list;
   margin: $base-vmargin $base-hmargin;
@@ -18,5 +20,24 @@
     color: $mute-color;
     padding-left: .5em;
     padding-right: .5em;
+  }
+}
+
+#main .hentry.type-alarm {
+  .alarm-number {
+    color: $mute-color;
+    display: block;
+    font-size: $large-font-size;
+    margin: 0;
+    padding: 0 $base-hmargin;
+    &:after {
+      content: ' ›';
+    }
+  }
+  .alarm-type {
+    display: block;
+    font-size: $xlarge-font-size;
+    margin: 0;
+    padding: 0 $base-hmargin;
   }
 }
