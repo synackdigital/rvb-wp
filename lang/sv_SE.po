@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-01 13:47+0100\n"
-"PO-Revision-Date: 2012-04-01 13:48+0100\n"
+"POT-Creation-Date: 2012-04-01 15:16+0100\n"
+"PO-Revision-Date: 2012-04-01 15:17+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -34,6 +34,7 @@ msgid "<span class=\"sep\">Posted on </span><time class=\"entry-date\" datetime=
 msgstr "<span class=\"sep\">Publicerades </span><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time>"
 
 #: ../content-featured.php:42
+#: ../content-status.php:14
 #: ../content-summary.php:16
 msgid "Edit"
 msgstr "Redigera"
@@ -265,12 +266,12 @@ msgid "General"
 msgstr "Generellt"
 
 #: ../inc/rvb_theme_options.php:18
-msgid "Home post count"
-msgstr "Antal inlägg på hemsidan"
+msgid "Home featured post count"
+msgstr "Antal toppinlägg på hemsidan"
 
 #: ../inc/rvb_theme_options.php:19
-msgid "Home featured count"
-msgstr "Antal toppinlägg på hemsidan"
+msgid "Home post summary count"
+msgstr "Antal sammanfattade inlägg på hemsidan"
 
 #: ../inc/rvb_theme_options.php:22
 msgid "Contact information"

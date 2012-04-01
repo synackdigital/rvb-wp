@@ -19,8 +19,8 @@
 
 $site_options = get_option('rvb_site_options');
 
-$post_count = ( $site_options['general_homepostcount'] ) ? $site_options['general_homepostcount'] : 8;
 $featured_count = ( $site_options['general_homefeaturedcount'] ) ? $site_options['general_homefeaturedcount'] : 2;
+$summary_count = ( $site_options['general_homesummarycount'] ) ? $site_options['general_homesummarycount'] : 5;
 
 $loop = new WP_Query( array(
   'tax_query' => array(
@@ -31,7 +31,7 @@ $loop = new WP_Query( array(
       'operator' => 'NOT IN'
     )
   ),
-  'posts_per_page' => $post_count
+  'posts_per_page' => $featured_count + $summary_count
 ) );
 
 

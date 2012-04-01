@@ -15,8 +15,8 @@ function rvb_site_options(){
 
   // General section
   add_settings_section('general', __('General', 'rvb'), 'rvb_general_section_text', 'rvb_site_options');
-  add_settings_field('general_homepostcount', __('Home post count', 'rvb'), 'rvb_general_homepostcount_text', 'rvb_site_options', 'general');
-  add_settings_field('general_homefeaturedcount', __('Home featured count', 'rvb'), 'rvb_general_homefeaturedcount_text', 'rvb_site_options', 'general');
+  add_settings_field('general_homefeaturedcount', __('Home featured post count', 'rvb'), 'rvb_general_homefeaturedcount_text', 'rvb_site_options', 'general');
+  add_settings_field('general_homesummarycount', __('Home post summary count', 'rvb'), 'rvb_general_homesummarycount_text', 'rvb_site_options', 'general');
 
   // Contact section
   add_settings_section('contact', __('Contact information', 'rvb'), 'rvb_contact_section_text', 'rvb_site_options');
@@ -64,15 +64,15 @@ function rvb_site_options_page_callback() {
 // Callbacks for general section
 function rvb_general_section_text() {
 }
-function rvb_general_homepostcount_text() {
-  $options = get_option('rvb_site_options');
-  $homepostcount = ( is_array( $options ) && array_key_exists( 'general_homepostcount', $options ) ) ? $options['general_homepostcount'] : '';
-  echo '<input id="general_homepostcount" name="rvb_site_options[general_homepostcount]" size="40" type="text" value="'.$homepostcount.'" placeholder="8" /><br>';
-}
 function rvb_general_homefeaturedcount_text() {
   $options = get_option('rvb_site_options');
   $homefeaturedcount = ( is_array( $options ) && array_key_exists( 'general_homefeaturedcount', $options ) ) ? $options['general_homefeaturedcount'] : '';
   echo '<input id="general_homefeaturedcount" name="rvb_site_options[general_homefeaturedcount]" size="40" type="text" value="'.$homefeaturedcount.'" placeholder="2" /><br>';
+}
+function rvb_general_homesummarycount_text() {
+  $options = get_option('rvb_site_options');
+  $homesummarycount = ( is_array( $options ) && array_key_exists( 'general_homesummarycount', $options ) ) ? $options['general_homesummarycount'] : '';
+  echo '<input id="general_homesummarycount" name="rvb_site_options[general_homesummarycount]" size="40" type="text" value="'.$homesummarycount.'" placeholder="5" /><br>';
 }
 
 // Callbacks for contact section
