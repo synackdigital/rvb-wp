@@ -86,28 +86,7 @@
  */
 .widget.widget_rvb_recentalarms_widget {
   @include box-widget( $decor-color, white );
-  .alarms-list {
-    @include unstyled-list;
-    margin: $base-vmargin $base-hmargin;
-    .alarm-title {
-      font-weight: bold;
-      .alarm-type {
-        color: $text-color;
-      }
-    }
-    .alarm-information {
-      color: $mute-color;
-      font-size: $small-font-size;
-    }
-    .alarm-maplink {
-      color: $text-color;
-    }
-    .sep {
-      color: $mute-color;
-      padding-left: .5em;
-      padding-right: .5em;
-    }
-  }
+  // the rest is inherited from .alarms-list
 }
 
 /**
