@@ -228,6 +228,11 @@ p {
     margin-top: $base-vmargin;
     a {
       @include unstyled-link;
+      &.post-edit-link {
+        &:before {
+          content: '› ';
+        }
+      }
     }
     .entry-title {
       background: mix( $message-color, $text-color, 90% );
@@ -279,6 +284,11 @@ p {
   a {
     &.permalink {
       @include unstyled-hover-link;
+    }
+    &.post-edit-link {
+      &:before {
+        content: '› ';
+      }
     }
   }
   h2, h3, h4, h5, h6 {
