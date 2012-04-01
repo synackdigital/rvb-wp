@@ -353,6 +353,7 @@ p {
     font-size: $large-font-size;
     line-height: 1.2;
     padding: 0 $base-hmargin;
+    body.page &,
     body.single & {
       font-size: $xlarge-font-size;
       line-height: 1.2;
