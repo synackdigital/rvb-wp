@@ -35,7 +35,7 @@ var rvb = {
     },
     start: function() {
       console.log('rvb:campaign:start');
-      rvb.campaign.interval = setInterval(rvb.campaign.showNext, 6000);
+      rvb.campaign.interval = setInterval(rvb.campaign.showNext, 8000);
       jQuery('li', rvb.campaign.domObj).first().addClass('active');
     },
     stop: function() {
