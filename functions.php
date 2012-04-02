@@ -103,7 +103,6 @@ function rvb_setup() {
   register_nav_menu( 'footer1', __( 'Footer Menu 1', 'rvb' ) );
   register_nav_menu( 'footer2', __( 'Footer Menu 2', 'rvb' ) );
   register_nav_menu( 'footer3', __( 'Footer Menu 3', 'rvb' ) );
-  register_nav_menu( 'footer4', __( 'Footer Menu 4', 'rvb' ) );
 
   // Add support for post formats
   add_theme_support('post-formats', array('status'));
