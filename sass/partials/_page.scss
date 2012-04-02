@@ -230,7 +230,7 @@ p {
       @include unstyled-link;
       &.post-edit-link {
         &:before {
-          content: '› ';
+          content: '‹ ';
         }
       }
     }
@@ -281,8 +281,8 @@ p {
     float: left;
     padding: .25 * $base-vmargin $base-hmargin;
     width: 50%;
-    &:before {
-      content: '› ';
+    &:after {
+      content: ' ›';
     }
   }
   .nav-pagination {
@@ -312,7 +312,7 @@ p {
     }
     &.post-edit-link {
       &:before {
-        content: '› ';
+        content: '‹ ';
       }
     }
   }
