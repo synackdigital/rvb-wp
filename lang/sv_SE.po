@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rvb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-01 19:39+0100\n"
-"PO-Revision-Date: 2012-04-01 19:39+0100\n"
+"POT-Creation-Date: 2012-04-02 18:25+0100\n"
+"PO-Revision-Date: 2012-04-02 18:25+0100\n"
 "Last-Translator: Fredrik Broman <fredrik@syn-ack.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,13 +15,15 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../archives.php:40
-msgid "Older posts"
-msgstr "Äldre inlägg"
-
+#: ../alarms.php:97
 #: ../archives.php:40
 msgid "Newer posts"
 msgstr "Nyare inlägg"
+
+#: ../alarms.php:98
+#: ../archives.php:41
+msgid "Older posts"
+msgstr "Äldre inlägg"
 
 #: ../content-campaign.php:34
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
@@ -59,47 +61,45 @@ msgstr "Sidfotsmeny 2"
 msgid "Footer Menu 3"
 msgstr "Sidfotsmeny 3"
 
-#: ../functions.php:106
-msgid "Footer Menu 4"
-msgstr "Sidfotsmeny 4"
-
-#: ../functions.php:119
+#: ../functions.php:118
 msgid "Primary Home Sidebar"
 msgstr "Primärt sidfält på startsidan"
 
-#: ../functions.php:121
+#: ../functions.php:120
 msgid "This sidebar is displayed next to the main content on the home page"
 msgstr "Sidfältet visas bredvid huvudinnehållet på startsidan"
 
-#: ../functions.php:128
+#: ../functions.php:127
 msgid "Secondary Home Sidebar"
 msgstr "Sekundärt sidfält på startsidan"
 
-#: ../functions.php:130
+#: ../functions.php:129
 msgid "This sidebar is displayed next to the news summary on the home page"
 msgstr "Sidfältet visas bredvid nyhetssammanfattingen på startsidan"
 
-#: ../functions.php:137
+#: ../functions.php:136
 msgid "Page Sidebar"
 msgstr "Sidfält på sidor"
 
-#: ../functions.php:139
+#: ../functions.php:138
 msgid "The page sidebar is displayed on all pages, above the main sidebar"
 msgstr "Sidfältet visas på alla sidor ovanför det generella sidfältet"
 
-#: ../functions.php:146
+#: ../functions.php:145
 msgid "Post Sidebar"
 msgstr "Sidfält i inlägg"
 
-#: ../functions.php:148
+#: ../functions.php:147
 msgid "The post sidebar is displayed on all posts, above the main sidebar"
 msgstr "Sidfältet visas i alla inlägg ovanför det generella sidfältet."
 
+#: ../loop-alarm.php:25
 #: ../loop-campaign.php:25
 #: ../loop-home.php:64
 msgid "Uh oh!"
 msgstr "Ojsan!"
 
+#: ../loop-alarm.php:29
 #: ../loop-campaign.php:29
 #: ../loop-home.php:68
 msgid "We could not find what you were looking for. Try performing a search."
@@ -147,7 +147,6 @@ msgid "Date and time"
 msgstr "Datum och tid"
 
 #: ../inc/rvb_alarm_post_type.php:71
-#: ../inc/rvb_theme_options.php:23
 msgid "Address"
 msgstr "Adress"
 
@@ -156,7 +155,6 @@ msgid "Pipe road"
 msgstr "Rörvägen"
 
 #: ../inc/rvb_alarm_post_type.php:75
-#: ../inc/rvb_user_meta.php:52
 msgid "Municipality"
 msgstr "Kommun"
 
@@ -382,16 +380,22 @@ msgid "None"
 msgstr "Ingen"
 
 #: ../inc/rvb_user_meta.php:100
+#: ../inc/rvb_user_roles.php:7
 msgid "Board Member"
 msgstr "Ledamot"
 
 #: ../inc/rvb_user_meta.php:101
+#: ../inc/rvb_user_roles.php:13
 msgid "Staff"
 msgstr "Personal"
 
 #: ../inc/rvb_user_meta.php:102
+#: ../inc/rvb_user_roles.php:19
 msgid "Operational Staff"
 msgstr "Brandman"
+
+#~ msgid "Footer Menu 4"
+#~ msgstr "Sidfotsmeny 4"
 
 #~ msgid "Posts tagged with &#8220;%s&#8221;"
 #~ msgstr "Inlägg med etiketten &#8220;%s&#8221;"
