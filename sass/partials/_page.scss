@@ -67,6 +67,11 @@ p {
   background: $decor-color;
   color: $decor-contrast-color;
   clear: both;
+  html.lt-ie8 {
+    a {
+      color: white !important;
+    }
+  }
   .menu {
     @include clearfix;
     .menu-item {
@@ -156,6 +161,9 @@ p {
   position: relative;
   a {
     @include unstyled-link;
+    html.lt-ie8 {
+      color: white !important;
+    }
   }
   .entry-thumbnail {
     background: $bg-color;
@@ -409,6 +417,13 @@ p {
       margin-right: $base-hmargin;
       margin-top: .25em; // align with headline
       max-width: 50%;
+      html.lt-ie9 & {
+        width: 340px;
+        img {
+          width: 340px;
+          height: auto;
+        }
+      }
     }
   }
   // Post summary
@@ -572,3 +587,29 @@ $debug: false;
   }
 }
 
+body.debug {
+  #container {
+    background: rgba( gray, .1 );
+  }
+  #header {
+    background: rgba( red, .1 );
+  }
+  #campaign {
+    background: rgba( green, .1 );
+  }
+  #main {
+    background: rgba( blue, .1 );
+  }
+  #complementary {
+    background: rgba( red, .1 );
+  }
+  #sidebar-home2 {
+    background: rgba( red, .1 );
+  }
+  #footer {
+    background: rgba( blue, .1 );
+    section {
+      background: rgba( blue, .1 );
+    }
+  }
+}
