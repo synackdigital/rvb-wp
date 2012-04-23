@@ -10,3 +10,15 @@
     }
   }
 }
+
+@media only screen and ( max-width: 1024px ) {
+  #nav-primary {
+    .menu {
+      .menu-item {
+        a {
+          padding: .5 * $base-vmargin .5 * $base-hmargin;
+        }
+      }
+    }
+  }
+}
