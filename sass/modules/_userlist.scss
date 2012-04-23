@@ -19,14 +19,8 @@
   .name {
     font-weight: bold;
   }
-  .email {
+  .email, .phone {
     font-size: $small-font-size;
     overflow: hidden;
   }
 }
-
-.userlist {
-  @include clearfix;
-  @include unstyled-list;
-}
-
