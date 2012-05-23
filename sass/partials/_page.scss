@@ -77,6 +77,13 @@ p {
     .menu-item {
       @include inline-block;
       float: left;
+      html.lt-ie9 & {
+        display: inline;
+        zoom: 1;
+        a {
+          //padding: .5 * $base-vmargin .5 * $base-hmargin;
+        }
+      }
       a {
         @include transition( background-color );
         @include unstyled-link;
@@ -230,7 +237,7 @@ p {
 #status {
   .hentry {
     @include border-radius;
-    background: $message-color;
+    background: lighten($message-color, 20%);
     color: mix( $message-color, $text-color, 10% );
     border-top: none;
     margin-top: $base-vmargin;
@@ -243,7 +250,7 @@ p {
       }
     }
     .entry-title {
-      background: mix( $message-color, $text-color, 90% );
+      background: $message-color;
       font-size: $base-font-size;
       font-weight: bold;
       padding: .25 * $base-vmargin $base-hmargin;
