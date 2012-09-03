@@ -96,10 +96,10 @@ function rvb_show_user_org_meta( $user ) {
       <fieldset>
         <legend class="screen-reader-text"><span><?php _e('Additional role', 'rvb'); ?></span></legend>
         <p>
-          <label><input name="admin_extra_role" type="radio" value="0" <?php checked( 0, $admin_extra_role ); ?> /> <?php _e('None', 'rvb'); ?></label><br />
-          <label><input name="admin_extra_role" type="radio" value="1" <?php checked( 1, $admin_extra_role ); ?> /> <?php _e('Board Member', 'rvb'); ?></label><br />
-          <label><input name="admin_extra_role" type="radio" value="2" <?php checked( 2, $admin_extra_role ); ?> /> <?php _e('Staff', 'rvb'); ?></label><br />
-          <label><input name="admin_extra_role" type="radio" value="3" <?php checked( 3, $admin_extra_role ); ?> /> <?php _e('Operational Staff', 'rvb'); ?></label>
+          <label><input name="admin_extra_role" type="radio" value="none" <?php checked( 0, $admin_extra_role ); ?> /> <?php _e('None', 'rvb'); ?></label><br />
+          <label><input name="admin_extra_role" type="radio" value="board_member" <?php checked( 1, $admin_extra_role ); ?> /> <?php _e('Board Member', 'rvb'); ?></label><br />
+          <label><input name="admin_extra_role" type="radio" value="staff" <?php checked( 2, $admin_extra_role ); ?> /> <?php _e('Staff', 'rvb'); ?></label><br />
+          <label><input name="admin_extra_role" type="radio" value="operational_staff" <?php checked( 3, $admin_extra_role ); ?> /> <?php _e('Operational Staff', 'rvb'); ?></label>
         </p>
       </fieldset>
     </td>
