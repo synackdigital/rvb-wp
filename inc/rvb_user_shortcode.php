@@ -34,7 +34,7 @@ function rvb_user_shortcode( $atts ) {
     if ( isset($user->party) && $user->roles[0] == 'board_member' )
       $return .= '<span class="party">'.$user->party.'</span> ';
 
-    if ( isset($user->phone) && ( $user->roles[0] == 'staff' || ($user->roles[0] == 'administrator' && $user->admin_extra_role == 'staff') ) )
+    if ( isset($user->phone) && ( $user->roles[0] == 'staff' || ($user->roles[0] == 'administrator' && $user->admin_extra_role == 'staff') || ($user->roles[0] == 'editor' && $user->admin_extra_role == 'staff') ) )
       $return .= '<span class="phone">'.$user->phone.'</span> ';
 
     if ( isset($user->email_is_public) && $user->email_is_public === 'true' )
