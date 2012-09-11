@@ -79,7 +79,10 @@ class RVB_EOAgenda_Widget extends WP_Widget {
     if ( ! empty( $title ) )
       echo $before_title . $title . $after_title;
 
-    $events = eo_get_events( array('numberposts'=>$post_count) );
+    $events = eo_get_events(array(
+      'event_end_after'=>'now',
+      'numberposts'=>$post_count
+    ));
 
     if ( $events ):
       echo '<ul class="events-list">';
